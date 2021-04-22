@@ -1,5 +1,6 @@
 const init = () => {
     const group = document.querySelectorAll('.item');
+    const url = location.hostname;
     group.forEach(ele => ele.addEventListener('click', () => location.href = '../study/study-detail.html'));
 
     const deleteBtn = document.querySelectorAll('.delete-btn');
