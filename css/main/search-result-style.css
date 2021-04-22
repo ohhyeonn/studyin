@@ -77,47 +77,6 @@ ol, ul , li , a {
 
 
 
-/* Common Top Category[s] */
-.top-category-title {
-    width: 100%;
-    height: 35px;
-    padding: 7px 0;
-    background-color: #fff;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    z-index: 1;
-    border-bottom: 1px solid #979797;
-    transition: all 0.2s ease;
-  }
-  
-  .top-category-title-wrapper {
-    width: 100%;
-    max-width: 780px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    column-gap: 15px;
-    overflow-x: auto;
-    align-items: center;
-  }
-  
-  .top-category-title-wrapper::-webkit-scrollbar {
-    width: 0;
-  }
-  
-  .top-category-title-wrapper > a {
-    margin: 0 auto;
-    padding: 0 15px;
-    font-weight: 500;
-  }
-  /* Common Top Category[s] */
-
-
-
-
-
-
 
 
 
@@ -206,7 +165,7 @@ ol, ul , li , a {
         
         height: 22px;
         width: 22px;
-        background: url(../images/profile.png) no-repeat ;
+        background: url(../../images/profile.png) no-repeat ;
     }
     #root > .content > ol > li > ul > li:nth-child(2) {
         
@@ -248,19 +207,19 @@ ol, ul , li , a {
         font-size: 10px;
         padding-left: 30px;
         color: #757575;
-        background: url(../images/eye.png) no-repeat 5px 2px;
+        background: url(../../images/eye.png) no-repeat 5px 2px;
     }
     #root > .content > ol > li > ul > div > li:nth-child(2) {
         font-size: 10px;
         padding-left: 30px;
         color: #757575;  
-        background: url(../images/heart.png) no-repeat 14px 2px;
+        background: url(../../images/heart.png) no-repeat 14px 2px;
     }
     #root > .content > ol > li > ul > div > li:nth-child(3) {
         font-size: 10px;
         padding-left: 30px;
         color: #757575;
-        background: url(../images/comment.png) no-repeat 13px 2px;
+        background: url(../../images/comment.png) no-repeat 13px 2px;
     }
 
 

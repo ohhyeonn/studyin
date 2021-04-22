@@ -21,7 +21,7 @@ main{
     margin-bottom: 60px;
 }
 
-.main-button>div{
+.main-button>a{
     align-self: center;
     width: 30%;
     border: 1px solid #DCDCDC;

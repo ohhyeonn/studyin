@@ -197,15 +197,17 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     color: #333333;
 }
 #root > .order-search > ul > li > a{
-    padding-right: 10px;
+    padding-right: 7.5px;
     font-size: 12px;
     color: #bbbbbb;
 }
-#root > .order-search > ul > li:nth-child(5){
+#root > .order-search > ul > li:nth-child(4){
     flex-grow: 1;
 }
 
-#root > .order-search > ul > select {
+
+#root > .order-search > ul > li> select {
+    font-size: 12px;
     cursor: pointer;
     outline: none;
     border: none;
@@ -213,10 +215,9 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     -moz-appearance: none;
       -webkit-appearance: none;
       appearance: none;
-    margin-right: 10px;
-    padding-right: 19px;
+    padding-right: 11px;
     flex-grow: 0;
-    background: url("../../images/downforward.png") no-repeat right 5px center;
+    background: url("../../images/downforward.png") no-repeat right 0px center;
 }
 
 
@@ -319,11 +320,16 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 
 
 #root > .content .content-good{
+    flex-basis: 137.5px;
     flex-shrink: 0;
     display: flex;  
     align-items: center; 
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 2px;
+    
+    
+
 }
 #root > .content .content-good > li:nth-child(1) {
     font-size: 10px;
@@ -333,15 +339,15 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 }
 #root > .content .content-good > li:nth-child(2) {
     font-size: 10px;
-    padding-left: 30px;
+    padding-left: 20px;
     color: #757575;  
-    background: url(../../images/heart.png) no-repeat 14px 2px;
+    background: url(../../images/heart.png) no-repeat 5px 2px;
 }
 #root > .content .content-good > li:nth-child(3) {
     font-size: 10px;
-    padding-left: 30px;
+    padding-left: 20px;
     color: #757575;
-    background: url(../../images/comment.png) no-repeat 13px 2px;
+    background: url(../../images/comment.png) no-repeat 5px 2px;
 }
 
 

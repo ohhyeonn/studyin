@@ -4,15 +4,24 @@ function init(){
     const nextBtn = document.querySelector('.btn-nav-wrapper > a:last-child');
 
     prevBtn.addEventListener('click', (e) => {
-        location.href = '../study/study-detail.html';
+        if(url.indexOf('127.0.0.1') === -1)
+            location.href = '/studyin/study/study-detail.html';
+        else
+            location.href = '../study/study-detail.html';
     });
 
     backBtn.addEventListener('click', (e) => {
-        location.href = '../study/study-list.html';
+        if(url.indexOf('127.0.0.1') === -1)
+            location.href = '/studyin/study/study-list.html';
+        else
+            location.href = '../study/study-list.html';
     });
 
     nextBtn.addEventListener('click', (e) => {
-        location.href = '../study/study-detail.html';
+        if(url.indexOf('127.0.0.1') === -1)
+            location.href = '/studyin/study/study-detail.html';
+        else
+            location.href = '../study/study-detail.html';
     });
 }
 
