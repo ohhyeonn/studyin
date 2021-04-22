@@ -1,0 +1,154 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+/* main-content [s] */
+
+section.list {
+  width: 80%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.list-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1.5em;
+  padding: 1.5em;
+}
+
+.list-wrapper .item {
+  padding: 1em;
+  border: 1px solid #979797;
+  cursor: pointer;
+}
+
+.list-wrapper .item > *:not(:first-child) {
+  padding-top: 5px;
+}
+
+.list-wrapper .item:focus-within,
+.list-wrapper .item:hover {
+  border: 0.15em solid var(--primary-color);
+}
+
+.study-description {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-wrapper .period {
+  font-size: 0.8rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.info .user-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.info .data-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  place-items: center;
+  gap: 1em;
+}
+
+.dropout-btn {
+  width: 100%;
+  text-align: center;
+  background-color: var(--tertiary-color) !important;
+}
+
+.terminate-btn {
+  width: 100%;
+  text-align: center;
+  background-color: var(--secondary-color) !important;
+}
+
+.empty-result {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5em;
+}
+
+.more {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.more-btn {
+  width: 200px;
+  color: var(--secondary-color);
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-size: 1.3rem;
+}
+
+/* fixed to the top button [s] */
+.fixed-toTop-btn {
+    background-color: transparent;
+    padding: 15px;
+    position: fixed;
+    bottom: 11%;
+    left: 1%;
+    z-index: 1;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* fixed to the top button [e] */
+
+/* fixed write button[s] */
+.fixed-write-btn {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 15px;
+    position: fixed;
+    bottom: 15%;
+    right: 4%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.fixed-write-btn > i {
+    color: #fff;
+}
+/* fixed write button[e] */
+
+/* main-content [e] */
+
+/* Primary main content[s] */
+/* Primary main content[e] */
+
+/* responsive */
+@media screen and (min-width: 780px) {
+}

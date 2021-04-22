@@ -1,0 +1,271 @@
+/* --------------------- reset ----------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --primary-color: #00618b;
+  --secondary-color: #e58f00;
+  --tertiary-color: #fb0603;
+  --gray-color: #f8f9fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+hr {
+  width: 15rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #181818;
+  text-decoration: none;
+}
+
+strong {
+  color: red;
+}
+
+/* ------------------ primary tag -------------------*/
+
+.header {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: all 0.5s ease-out;
+}
+
+main {
+  width: 100%;
+  /* height: calc(100% - 135px); */
+  min-height: calc(100% - 135px);
+  position: relative;
+  top: 135px;
+  padding-bottom: 100px;
+}
+
+footer {
+  position: relative;
+  /* top: 135px; */
+  bottom: 0;
+  margin-top: 35px;
+  background-color: var(--primary-color);
+  opacity: 0.9;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------Libraries-------------------------- */
+
+/* Common button */
+.btn {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+
+/* .btn {
+  color: var(—primary-color);
+  border: 1px solid var(—primary-color);
+  
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 10px 15px; 
+
+  cursor: pointer;
+  transition: all 0.4s;
+}*/
+/*
+@media screen and (min-width: 359px){
+  .btn {
+    color: #fff;
+    background-color: var(—primary-color);
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+} */
+
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* common text input */
+input[type="text"].large-input {
+  width: 100%;
+  height: 30px;
+  padding: 0 16px;
+  border: 1px solid #919191;
+  line-height: 1.5;
+  color: #333;
+  font-weight: lighter;
+  font-size: 1rem;
+  border-radius: 12px;
+  outline: none;
+}
+
+input[type="text"]:focus::placeholder {
+  color: transparent;
+}
+
+/* common text area */
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+/* common layer popup */
+
+.popup-btn-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2em;
+}
+
+.popup-btn {
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+}
+
+.popup-cancel-btn {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+.active {
+  visibility: visible !important;
+}
+
+.on {
+  display: block !important;
+}
+
+.popup {
+  border: 1px solid var(--primary-color);
+  width: 80%;
+  max-width: 400px;
+  min-height: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  font-weight: bold;
+  z-index: 4;
+  visibility: hidden;
+}
+
+.popup::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.popup p {
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+input[type="checkbox"][name="popup"] {
+  display: none;
+}
+
+input[type="checkbox"][name="popup"]:checked + .popup,
+input[type="checkbox"][name="popup"]:checked ~ .overlay {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  visibility: hidden;
+}
+
+
+/* Common Top Category[s] */
+.top-category-title {
+  width: 100%;
+  height: 35px;
+  padding: 7px 0;
+  background-color: #fff;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 1;
+  border-bottom: 1px solid #979797;
+  transition: all 0.2s ease;
+}
+
+.top-category-title-wrapper {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 15px;
+  overflow-x: auto;
+  align-items: center;
+}
+
+.top-category-title-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.top-category-title-wrapper > a {
+  margin: 0 auto;
+  /* padding: 0 15px; */
+  font-weight: 500;
+  position: relative;
+}
+
+.top-category-title-wrapper > a:hover {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Common Top Category[e] */
+

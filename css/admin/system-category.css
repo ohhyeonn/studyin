@@ -1,0 +1,79 @@
+
+/* -------메인 구역--------- */
+::-webkit-scrollbar { display: none; }
+
+/* 페이저 */
+
+.last-btn{
+    display:flex;
+    justify-content: space-between;   
+}
+
+/* ----------박스------------ */
+.every-box{
+    margin: 30px 0px;
+}
+
+.box{
+    border:1px solid #979797;
+    border-radius: 15px;
+    padding:10px;
+    margin: 5px;
+    background-color: white;
+}
+
+.box div{
+    display:flex;
+    overflow:scroll;
+    list-style: none;
+    max-height: 15%;
+    flex-wrap:wrap;
+    
+}
+
+.box label:hover{
+    opacity:0.7;
+}
+.box label{
+    border: none;
+    border-radius: 13px;
+    padding: 7px 13px;
+    margin:3px;
+    color: #fff;
+}
+
+.hidden-box{
+     display:none;
+}
+
+.upper label{
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+}
+
+.lower label{
+    background-color: var(--secondary-color);
+}
+
+input[type=checkbox], input[type=radio] {
+    display: none;
+}
+
+.box input[type=checkbox] + label, input[type=radio]{
+    cursor: pointer;
+}
+
+
+.box input[type=checkbox]:checked+label{
+    font-weight: bolder; 
+    text-align: center;
+    border: 2px solid #e55800;
+    background-color: #e55800;
+}
+
+.box input[type=radio]:checked+label{
+    font-weight: bolder; 
+    text-align: center;
+    border: 2px solid #04103d;
+    background-color: #04103d;
+}

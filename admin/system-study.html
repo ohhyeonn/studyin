@@ -1,0 +1,259 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스터디 관리 페이지</title>
+  <link href="../css/admin/system-study.css" type="text/css" rel="stylesheet">
+  <link href="../css/common/common.css" type="text/css" rel="stylesheet">
+  <link href="../css/admin/system-common.css" type="text/css" rel="stylesheet">
+  <link href="../css/common/gb-nav.css" rel="stylesheet">
+  <script defer src="../js/common/gb-nav.js"></script>
+  <script defer src="../js/admin/system-study.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+</head>
+<body>
+  <!-- Global top [s] -->
+  <header class="header">
+    <section class="gb-top-nav">
+        <div class="logo">
+            <a href="/index.html">study in</a>
+        </div>
+        <div class="search-bar">
+            <div class="search-wrapper">
+            <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
+            <a href="/index.html" class="search-btn"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div class="menu-button">
+            <input type="checkbox" name="" id="menuBtn">
+            <label for="menuBtn">
+                <span class="menu-button-bar"></span>
+                <span class="menu-button-bar"></span>
+                <span class="menu-button-bar"></span>
+            </label>
+            <aside class="menu">
+            <ul>
+                <span>STUDY IN</span>
+                <p>로그인이 필요합니다</p>
+                <p>User님, 안녕하세요</p>
+                <a href="/member/login.html"><li>Login</li></a>
+                <a href="/member/sign-up.html"><li>Sign Up</li></a>
+                <a href="/index.html"><li>Logout</li></a>
+            </ul>
+            </aside>
+            <div class="overlay"><label for="menuBtn"></label></label></div>
+        </div>
+        <div class="icon-category">
+          <i class="fas fa-grip-horizontal fa-2x"></i>
+      </div>
+    </section>
+</header>
+<nav class="sub-header">
+    <div class="menu-nav">
+        <a href="/study/study-group-list.html">STUDY</a>
+        <a href="/community/board-list.html">COMMUNITY</a>
+        <a href="/services/board-query.html">SERVICES</a>
+    </div>
+</nav>
+<!-- Global top [e] -->
+<!-- Category Side [s] -->
+<aside>
+    <div class="category-container">
+        <div class="main-category">
+            <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
+            <label for="toggle-study">
+            <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3> 
+            </label>
+            <div class="sub-category">
+                <ul>
+                    <li><a href="/study/study-list.html">IT</a></li>
+                    <li><a href="/study/study-list.html">JOB</a></li>
+                    <li><a href="/study/study-list.html">CERTIFICATION</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-category">
+            <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
+            <label for="toggle-community">
+            <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3> 
+            </label>
+            <div class="sub-category">
+                <ul>
+                    <li><a href="/community/board-list.html">게시판1</a></li>
+                    <li><a href="/community/board-list.html">게시판2</a></li>
+                    <li><a href="/community/board-list.html">게시판3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-category">
+            <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
+            <label for="toggle-services">
+            <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3> 
+            </label>
+            <div class="sub-category">
+                <ul>
+                    <li><a href="/services/board-notice.html">공지사항</a></li>
+                    <li><a href="/services/board-query.html">FAQ</a></li>
+                    <li><a href="/services/board-make-query.html">1:1문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="category-switch"></div>
+</aside>
+<!-- Category Side [e] -->
+  <nav class="top-category-title">
+    <div class="top-category-title-wrapper">
+      <a href="system-study.html">Study</a>
+      <a href="system-member.html">Member</a>
+      <a href="system-category.html">Category</a>
+      <a href="system-board.html">Board</a>
+      <a href="system-post.html">Post</a>
+    </div>
+  </nav>
+  <!-- Main [s] -->
+  <main>
+    <section class="title">
+      <h1 class="big-title">스터디 관리</h1>
+    </section>
+    <section class="sort">
+      <h1 class="d-none">정렬순</h1>
+      <div>
+        <select class="select-box">
+          <option selected>상태 분류</option>
+          <option>활성화</option>
+          <option>삭제 대기</option>
+          <option>삭제</option>
+        </select>
+        <select class="select-box">
+          <option selected>카테고리별</option>
+          <option>IT</option>
+          <option>Job</option>
+          <option>Certification</option>
+        </select>
+      </div>
+      <form>
+        <label>
+          <select class="select-box">
+            <option selected>스터디 이름</option>
+            <option>스터디장</option>
+          </select>
+        </label>
+        <input type="text" placeholder="검색">
+        <a class="btn btn-small" type="submit">검색</a>
+      </form>
+    </section>
+    <section class="main">
+      <h1 class="d-none">스터디 목록</h1>
+      <table>
+        <thead>
+          <tr>
+            <td class="w-3"><input type="checkbox"></td>
+            <td class="w-2">카테고리</td>
+            <td class="w-1">이름</td>
+            <td class="w-2">스터디장</td>
+            <td class="w-4">게시글</td>
+            <td class="w-2">생성일<br>최근글</td>
+            <td class="w-2">상태</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>IT<br>Algorithm</td>
+            <td>C++ 알고리즘</td>
+            <td>강담희</td>
+            <td>32</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>활성화</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Job</td>
+            <td>무슨무슨 스터디</td>
+            <td>강담희</td>
+            <td>54</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>삭제 대기<br>4d 23hr</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Certification</td>
+            <td>SERVICE</td>
+            <td>강담희</td>
+            <td>1</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>활성화</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="last-btn">
+        <h1 class="d-none">테이블 밑</h1>
+        <a class="btn btn-medium" type="submit">삭제</a>
+        <nav class="pager">
+          <h1 class="d-none">페이저</h1>
+          <div>이전</div>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+          <div>다음</div>
+        </nav>
+        <a class="btn btn-medium" type="submit">비활성화</a>
+      </div>
+    </section>
+  </main>
+  <!-- Main [e] -->
+  <footer>
+    <div class="footer-wrapper">
+        <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
+    </div>
+</footer>
+<!-- Global bottom[s] -->
+<nav class="gb-bottom-nav">
+  <a href="#" class="bottom-nav-btn" id="category-bottom-button">
+      <i class="fas fa-bars"></i>
+      <span>카테고리</span>
+  </a>
+  <a href="/mypage/mystudy-main-list.html" class="bottom-nav-btn">
+      <i class="fas fa-book"></i>
+      <span class="study-btn">스터디</span>
+  </a>
+  <a href="/index.html" class="bottom-nav-btn">
+      <i class="fas fa-home"></i>
+      <span class="home-btn">홈</span>
+  </a>
+  <a href="/mypage/mymessage-rec.html" class="bottom-nav-btn">
+      <i class="fas fa-envelope-square"></i>
+      <span class="message-btn">쪽지함</span>
+  </a>
+  <a href="/mypage/mypage.html" class="bottom-nav-btn">
+      <i class="far fa-user"></i>
+      <span class="mypage-btn">마이페이지</span>
+  </a>
+</nav>
+<!-- Global bottom[e] -->
+    <!-- Common popup [s] -->
+    <!-- <input type="checkbox" name="popup" id="common-popup" />
+    <div class="popup active">
+      <h1 class="d-none">delete massage</h1>
+      <form action="post-popup" method="POST">
+        <p class="popup-content">정말 삭제하시겠습니까?</p>
+        <div class="popup-btn-group">
+          <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+          <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+        </div>
+      </form>
+    </div>
+    <div class="overlay"></div> -->
+  <!-- Common popup [e] -->
+</body>
+</html>

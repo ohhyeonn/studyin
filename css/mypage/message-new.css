@@ -1,0 +1,90 @@
+ul{
+    list-style: none;
+}
+
+/*----제목----*/
+
+.title .big-title{
+    text-align: center;
+    display:inline;
+}
+
+/* -----btn-list------ */
+.btn-list{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom:10px;
+
+    display:flex;
+
+    width: 300px;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+.message-side{
+    display:none;
+}
+
+/* -----aside----- */
+@media screen and (min-width: 650px){
+        .message-side{
+            display:initial;
+            position:absolute;
+            left:30px;
+            border: solid 1px #DCDCDC;
+            border-radius:20px;
+            width: 20%;
+            padding: 20px 0px;
+            font-size:14px;
+            
+        }
+        .message-side a{
+                color:#646464;
+                display:flex;
+                justify-content: center;
+                padding: 20px;
+            }
+    }
+/* --------main section--------- */
+
+.mess-box{
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    padding: 15px;
+
+    width:300px;
+    height:400px;
+    margin: auto;
+    position: relative;
+}
+
+.mess-box .sender{
+    border:none;
+    font-size: 15px;
+    border-bottom: 1px solid #DCDCDC;
+    width:100px;
+    margin-bottom: 10px;
+}
+
+.mess-box .title{
+    border:none;
+    font-size: 15px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+textarea{
+    resize: none;
+    width:268px;
+    height:280px;
+
+    font-weight: lighter;
+    font-size: 15px;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    padding:15px;
+    margin-top:20px;
+}
+
+.mess-box input[type="text"]{
+    border-radius: 5px;
+}

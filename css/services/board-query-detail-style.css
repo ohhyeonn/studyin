@@ -1,0 +1,648 @@
+
+html{
+    min-height: 100vh;
+    margin: 0px;
+}
+
+body{
+
+    min-height: inherit;
+    margin: 0px;
+    background-color: #F8F8F8;
+}
+
+.d-none{
+    display: none;
+}
+
+ol, ul , li , a {
+    list-style-type:none;
+    text-decoration: none;
+    color: #000000;
+    margin:0px;
+    padding: 0px;
+}   
+
+
+
+
+.content{background-color: #ffffff;}
+.board-name-search{background-color:#F8F8F8;}
+.reply{background-color: #ffffff;}
+
+
+
+/*  setting */
+.icon {
+
+    text-indent:-3000px !important;
+}
+
+
+
+
+
+
+
+
+    
+    /* lay out */
+
+
+
+
+
+    main > .board-name-search{
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 55px;
+        border: solid;
+        border-color: #E3E3E3;
+        
+        border-width: 1px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    
+
+
+    .content {
+
+        padding: 15px;
+      
+        border-left: 1px solid #E3E3E3; 
+        border-right: 1px solid #E3E3E3;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .reply {
+
+        padding: 15px;
+      
+        border-left: 1px solid #E3E3E3; 
+        border-right: 1px solid #E3E3E3;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+
+    main{
+        min-height: 650px;
+    }
+    footer{
+        margin-top:50px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*board name search*/
+
+main > .board-name-search {
+    display: flex;
+    align-items: center;
+    
+}
+main > .board-name-search a {
+    font-size: 17px;
+    font-weight: bold;
+}
+main > .board-name-search > :nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0; 
+    margin-left: 15px;
+}
+main > .board-name-search > :nth-child(3) {
+    flex-basis: 100px;
+    height: 10px;
+    flex-grow: 2;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* pager */
+
+
+.pager{
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pager > ul {
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+}
+.pager a {
+    font-size: 13px;
+    color: #A6A6A6;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.pager > ul > li {
+
+    line-height:23px;
+    height: 28px;
+    width: 28px;
+    border: 1px solid #E3E3E3;
+    background-color: #ffffff;
+    
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.pager > ul > li:first-child{
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.pager > ul > li:last-child{
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+
+
+
+
+/* content  */
+
+.content-profile {
+    
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+.content-profile > div:nth-child(2) {    
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: url(../../images/profile.png) no-repeat center;
+    background-size: cover;
+}    
+
+.content-profile > ul { margin-left: 15px;}
+.content-profile > ul > li:nth-child(1){font-size : 14px; font-weight: bold;}
+.content-profile > ul > li:nth-child(2){font-size: 12px;}
+
+.content-profile > div:nth-child(4){
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-profile > div:nth-child(4) > a {
+    flex-basis: 7px;
+    background: url(../../images/icon-navigation.png) no-repeat center;
+    
+}
+
+
+
+
+.write-title > form > input{
+    margin-left: 15px;
+    width: 200px;
+}    
+
+.write-title > div {
+    padding-top: 15px;
+    font-size: 22px;
+    color: #292929;
+    
+
+}
+
+
+
+.text-area {
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* reply */
+
+
+
+
+.reply-profile {
+    
+
+    display: flex;
+    align-items: center;
+    
+    
+
+
+}
+
+
+
+.reply-profile > ul { display: flex; align-items: center; margin-left: 15px; flex-wrap: wrap;}
+.reply-profile > ul > li:nth-child(1){ font-size: 14px; font-weight: bold;}
+.reply-profile > ul > li:nth-child(2){font-size : 14px; font-weight: bold;padding-left: 10px; }
+.reply-profile > ul > li:nth-child(3){font-size: 12px; padding-left: 30px;}
+
+
+.reply-text-area {
+    padding-top: 15px;
+}
+
+.reply-text-area > form {
+    display: flex;
+    justify-content: flex-end;
+}
+.reply-text-area > form > input{
+    cursor: pointer;
+    outline: none;
+    height: 30px;
+    width: 70px;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 780px) and (max-width: 1079px){
+  
+    
+    #root{
+        
+        display: grid;
+        min-height: inherit;
+        grid-template-columns: 1fr 780px 1fr ;
+        grid-template-rows: auto auto 1fr; 
+    }
+
+
+    
+
+
+    #root > .content {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        border-top : 0px;
+
+    }
+
+    .reply {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+
+
+    /* tablet content*/
+    .content {
+
+        padding: 30px;
+    }
+
+    /*tablet reply*/
+    .reply {
+        padding:30px;
+    }
+
+
+
+    /* tablet side */
+
+
+
+
+    #root .gongzi {
+        
+        height: 200px;
+        width: 382px ;
+        background-color: #f2f2f2;
+        border: 1px solid #e3e3e3;
+
+
+    }
+    #root .gongzi > ul > li {
+        font-size: 12px;
+        padding: 5px 10px 5px 10px;
+        color: #a6a6a6;
+        height: 28px;
+        border-bottom: 1px solid #e3e3e3 ;
+        
+    }
+    #root .gongzi > ul > li > span {
+        margin-top: 2px;
+        font-size: 10px;
+        float: right;
+    }
+    #root .gongzi > ul > li:nth-child(1) {
+        color: #292929;
+        font-weight: bold;
+        height: 30x;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    #root .gongzi > ul > li:nth-child(7){
+        border-bottom: 0px;
+    }
+
+    #root .gongzi > ul > li > a {
+        color: #444444;
+    }
+
+
+
+
+
+    #root .hotnotice {
+        
+        height: 200px;
+        width: 382px ;
+        background-color: #f2f2f2;
+        border: 1px solid #e3e3e3;
+
+
+    }
+    #root .hotnotice > ul > li {
+        font-size: 12px;
+        padding: 5px 10px 5px 10px;
+        color: #a6a6a6;
+        height: 28px;
+        border-bottom: 1px solid #e3e3e3 ;
+        
+    }
+    #root .hotnotice > ul > li > span {
+        margin-top: 2px;
+        font-size: 10px;
+        float: right;
+    }
+    #root .hotnotice > ul > li:nth-child(1) {
+        color: #292929;
+        font-weight: bold;
+        height: 30x;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    #root .hotnotice > ul > li:nth-child(7){
+        border-bottom: 0px;
+    }
+
+    #root .hotnotice > ul > li > a {
+        color: #444444;
+    }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1080px){
+    
+    
+    #root{
+        min-height: inherit;
+        display: grid;
+        grid-template-columns: 1fr 780px 1fr ; 
+        grid-template-rows: auto auto 1fr; 
+        
+    }
+
+
+ 
+
+    #root > .content {
+        grid-column: 2/3; 
+        grid-row: 1/2;
+    }
+
+
+
+
+
+
+    .reply {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+
+    /* PC content*/
+
+    .content {
+
+        padding: 30px;
+    }
+
+
+    /* PC reply*/
+    .reply{
+        padding:30px
+    }
+
+
+
+
+    /* pc side */
+
+
+ 
+
+
+    #root .gongzi {
+        margin-left: 20px;
+        height: 268px;
+        width: 280px ;
+        background-color: #f2f2f2;
+        border: 1px solid #e3e3e3;
+        margin-bottom: 20px;
+
+
+    }
+
+    #root .hotnotice {
+        margin-left: 20px;
+        height: 268px;
+        width: 280px ;
+        background-color: #f2f2f2;
+        border: 1px solid #e3e3e3;
+    }
+
+
+
+
+  
+    #root .gongzi > ul > li {
+        
+        font-size: 14px;
+        padding: 10px;
+        color: #a6a6a6;
+        height: 38px;
+        border-bottom: 1px solid #e3e3e3 ;
+        
+    }
+    #root .gongzi > ul > li > span {
+        margin-top: 2px;
+        font-size: 12px;
+        float: right;
+    }
+    #root .gongzi > ul > li:nth-child(1) {
+
+        color: #292929;
+        font-weight: bold;
+        height: 40x;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    #root .gongzi > ul > li:nth-child(7){
+        border-bottom: 0px;
+    }
+
+    #root .gongzi > ul > li > a {
+        color: #444444;
+    }
+
+
+
+
+    #root .hotnotice > ul > li {
+        font-size: 14px;
+        padding: 10px;
+        color: #a6a6a6;
+        height: 38px;
+        border-bottom: 1px solid #e3e3e3 ;
+        
+    }
+    #root .hotnotice > ul > li > span {
+        margin-top: 2px;
+        font-size: 12px;
+        float: right;
+    }
+    #root .hotnotice > ul > li:nth-child(1) {
+        
+        color: #292929;
+        font-weight: bold;
+        height: 40px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    #root .hotnotice > ul > li:nth-child(7){
+        border-bottom: 0px;
+    }
+
+    #root .hotnotice > ul > li > a {
+        color: #444444;
+    }
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+}
+
+
+
+

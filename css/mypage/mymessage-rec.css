@@ -1,0 +1,128 @@
+ul{
+    list-style: none;
+}
+
+/*----제목----*/
+
+.title .big-title{
+    text-align: center;
+}
+
+/* -----btn-list------ */
+.btn-list{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom:10px;
+
+    display:flex;
+
+    width: 300px;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+.message-side{
+    display:none;
+}
+
+/* -----aside----- */
+@media screen and (min-width: 650px){
+    .message-main{
+    }
+        .message-side{
+            display:initial;
+            position:absolute;
+            left:30px;
+            border: solid 1px #DCDCDC;
+            border-radius:20px;
+            width: 20%;
+            padding: 20px 0px;
+            font-size:14px;
+        }
+        .message-side a{
+                color:#646464;
+                display:flex;
+                padding: 20px;
+                justify-content: center;
+            }
+
+        .message-side a:hover{ 
+            color: var(--primary-color);
+        }
+    .btn-list div:nth-child(2){
+        display:none;
+    }
+    .btn-list{
+        justify-content:flex-end;
+    }
+}
+/* --------main section--------- */
+.main-button{
+    display:flex;
+    height:100%;
+    margin-bottom:0px;
+    flex-flow: column;
+    align-items: center;
+}
+
+.main-button>ul{
+    width:300px;
+    height:100px;
+  
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 5px 20px;
+    padding: 10px;
+    position: relative;
+}
+.message-wrapper{
+    transition: all 0.4s;
+}
+.message-wrapper:hover{
+    background-color:var(--gray-color);
+}
+.each-box a{
+    display: flex;
+}
+
+.read{
+    color: var(--secondary);
+    /* height:30px; */
+    text-align: left;
+    align-self: center;
+    padding-right:10px;
+    color:var(--secondary-color);
+    font-weight:900;
+}
+
+.sender{
+    text-align: left;
+    padding-bottom:5px;
+    font-size:10px;
+}
+
+.mes-title{
+    text-align: left;
+    font-size:large;
+    padding-bottom:5px;
+}
+
+.preview{
+    text-align: left;
+    font-size:12px;
+    width:230px;
+    padding-bottom:5px;
+}
+
+.date{
+    text-align: left;
+    font-size:9px;
+}
+
+.main-button>ul li input[type='checkbox']{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

@@ -1,0 +1,145 @@
+main{
+    max-width:780px;
+    margin:auto;
+    padding-bottom: 80px;
+   }
+   
+.btn-small{
+    font-size: 0.4rem;
+    padding: 5px 8px;
+}
+.btn-medium{
+    font-size:0.7rem;
+    padding: 8px 10px;
+}
+
+
+input[type="text"]{
+    height: 25px;
+    padding: 0 14px;
+    margin: 0px;
+    border: 1px solid #919191;
+    line-height: 1.5;
+    color: #333;
+    font-weight: lighter;
+    font-size: 0.6rem;
+    border-radius: 12px;
+    outline: none;
+}
+
+/* ---------utils-------------------------------------------------- */
+.d-none{
+    display:none !important;
+}
+.truncate{
+    white-space:nowrap !important;
+    overflow: hidden !important;
+    text-overflow:ellipsis !important;
+}
+
+.text-align-left{
+    text-align: left !important;
+}
+
+.strong{
+    color: var(--second-color);
+}
+
+/*--------------select-box css--------*/
+.select-box{
+    border:none;
+    /* appearance:none; */
+    font-size: 5px;
+}
+
+
+.sort, .main{
+    margin:20px;
+} 
+
+/* 정렬순 */
+   .sort{
+    display:flex;
+    margin-top:40px;
+   }
+
+   .sort div{
+   }
+
+   .sort form{
+    margin-left: auto;
+    white-space: nowrap;
+    /* overflow:scroll; */
+   }
+
+/* ---------table------------ */
+table{
+    text-align: center;
+
+    width:100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    
+    padding:0px;
+}
+table thead tr{
+    background-color: #dfe7ec;
+    border: 0px;
+    height:30px;
+}
+
+table thead td{
+    padding: 1px 1px;
+}
+
+table tr{
+    font-size: 11px;
+    border-bottom: 1px solid gray;
+}
+
+table td{
+    padding:10px 0px;
+
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+table .w-1{
+    width: 40%;
+}
+table .w-2{
+    width: 20%;
+}
+table .w-3{
+    width: 30px;
+}
+.w-4{
+    width:35px;
+}
+
+
+/*------------제목---------*/
+.title{
+    border-bottom: 1px solid #DCDCDC;
+    height: 55px;
+}
+
+.title .big-title{
+    font-size:20px;
+    padding: 20px 0px 0px 20px;
+}
+
+
+
+.last-btn{
+    display:flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+}
+.last-btn>div{
+    margin-right:3px;
+}
+
+
+

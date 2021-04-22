@@ -1,0 +1,108 @@
+/*----제목----*/
+.title .big-title{
+    text-align: center;
+}
+/* --------main section--------- */
+
+main{
+ margin:5px;
+}
+.main-button{
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+
+
+.main-button li,.profile{
+    list-style: none;
+    line-height:10%;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 2px;
+    padding: 20px;
+}
+
+
+   /* ---profile button style--- */
+   
+ 
+   
+   .profile{
+       display:flex;
+   }
+   
+   .name-email{
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+       padding-left:10px;
+       height:40px;
+   }
+   
+   #profile{    
+       width:40px;
+       height:40px;
+       border: 1px solid #979797;
+       color: white;
+   }
+   
+   #name{
+       flex-basis:30px;
+       line-height: 10px;
+   }
+   
+   #email{
+       flex-basis:10px;
+       color:#979797;
+       font-size:9px;
+   }
+
+   .profile .btn{
+       line-height: 20px;
+       margin-left:auto;
+   }
+   
+
+/* ----내 정보 조회---- */
+   .activity{
+       margin-top:40px;
+   }
+
+   .profile, .activity{
+    min-width:250px;
+    width:55%;
+}
+
+   .last-btn{
+    min-width:250px;
+    width:55%;
+    display:flex;
+    justify-content: space-between;   
+}
+
+.activity table{
+    margin-bottom:20px;
+}
+
+input[disabled]{
+    background-color: #ededed;
+}
+input[type="password"]{
+    height: 25px;
+    padding: 0 14px;
+    margin: 0px;
+    border: 1px solid #919191;
+    line-height: 1.5;
+    color: #333;
+    font-weight: lighter;
+    font-size: 0.6rem;
+    border-radius: 12px;
+    outline: none;
+}

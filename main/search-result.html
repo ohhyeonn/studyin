@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/study/study-group-list.css" />
+    <link rel="stylesheet" href="../css/main/search-result-style.css" rel="stylesheet">
+    <link href="../css/common/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
+    <script defer src="../js/common/gb-nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <!-- Global top [s] -->
+    <header class="header">
+        <section class="gb-top-nav">
+            <div class="logo">
+                <a href="/index.html">study in</a>
+            </div>
+            <div class="search-bar">
+                <div class="search-wrapper">
+                <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
+                <a href="/index.html" class="search-btn"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+            <div class="menu-button">
+                <input type="checkbox" name="" id="menuBtn">
+                <label for="menuBtn">
+                    <span class="menu-button-bar"></span>
+                    <span class="menu-button-bar"></span>
+                    <span class="menu-button-bar"></span>
+                </label>
+                <aside class="menu">
+                <ul>
+                    <span>STUDY IN</span>
+                    <p>로그인이 필요합니다</p>
+                    <p>User님, 안녕하세요</p>
+                    <a href="/member/login.html"><li>Login</li></a>
+                    <a href="/member/sign-up.html"><li>Sign Up</li></a>
+                    <a href="/index.html"><li>Logout</li></a>
+                </ul>
+                </aside>
+                <div class="overlay"><label for="menuBtn"></label></label></div>
+            </div>
+            <div class="icon-category">
+                <i class="fas fa-grip-horizontal fa-2x"></i>
+            </div>
+        </section>
+    </header>
+    <nav class="sub-header">
+        <div class="menu-nav">
+            <a href="/study/study-group-list.html">STUDY</a>
+            <a href="/community/board-list.html">COMMUNITY</a>
+            <a href="/services/board-query.html">SERVICES</a>
+        </div>
+    </nav>
+    <!-- Global top [e] -->
+    <!-- Category Side [s] -->
+    <aside>
+        <div class="category-container">
+            <div class="main-category">
+                <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
+                <label for="toggle-study">
+                <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3> 
+                </label>
+                <div class="sub-category">
+                    <ul>
+                        <li><a href="/study/study-list.html">IT</a></li>
+                        <li><a href="/study/study-list.html">JOB</a></li>
+                        <li><a href="/study/study-list.html">CERTIFICATION</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-category">
+                <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
+                <label for="toggle-community">
+                <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3> 
+                </label>
+                <div class="sub-category">
+                    <ul>
+                        <li><a href="/community/board-list.html">게시판1</a></li>
+                        <li><a href="/community/board-list.html">게시판2</a></li>
+                        <li><a href="/community/board-list.html">게시판3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-category">
+                <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
+                <label for="toggle-services">
+                <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3> 
+                </label>
+                <div class="sub-category">
+                    <ul>
+                        <li><a href="/services/board-notice.html">공지사항</a></li>
+                        <li><a href="/services/board-query.html">FAQ</a></li>
+                        <li><a href="/services/board-make-query.html">1:1문의하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="category-switch"></div>
+    </aside>
+    <!-- Category Side [e] -->
+
+
+
+
+
+
+    <!-- Common Top Category[s] -->
+    <!-- <nav class="top-category-title">
+        <div class="top-category-title-wrapper">
+            <a href="#">게시판이름</a>
+            <a href="#">IT</a>
+            <a href="#">Job</a>
+            <a href="#">Certifications</a>
+        </div>
+    </nav> -->
+    <!-- Common Top Category[e] -->
+
+    
+    
+    
+    
+    
+    
+    <main>
+        <div id="root">
+            <article class="content">
+                <h1 class="d-none">게시판 목록이 나열</h1>
+                <ul>
+                    <li><a href="">스터디</a></li>
+                    <li><a href="">더보기</a></li>
+                </ul>
+                <div class="study-group-list">
+                    <div class="study-group">
+                      <h2>IT</h2>
+                      <hr />
+                      <div class="group-container">
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <!-- <div class="group-item last-item">
+                          <a href="#"><i class="fas fa-plus-circle"></i><br />More</a>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="study-group">
+                      <h2>JOB</h2>
+                      <hr />
+                      <div class="group-container">
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <!-- <div class="group-item last-item">
+                          <a href="#"><i class="fas fa-plus-circle"></i><br />More</a>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="study-group">
+                      <h2>CERTIFICATIONS</h2>
+                      <hr />
+                      <div class="group-container">
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <div class="group-item"></div>
+                        <!-- <div class="group-item last-item">
+                          <a href="#"><i class="fas fa-plus-circle"></i><br />More</a>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                <!-- <div class="study-result"> -->
+                    <!-- <ol>
+
+                        <li>
+                            <p><a href="">자바스터디</a></p>
+                            <p><a href="">처음 배우시는 분이라면 누구나 ...</a></p>
+                            <ul>
+                                <li class="icon"><a href="">프로필</a></li>
+                                <li><a href="">익명</a></li>   
+                                <li>21/03/03 10:20</li> 
+                                <li><a href="">IT</a></li> 
+                                <li></li>
+                                <div>  
+                                    <li>10</li> 
+                                    <li>5</li>
+                                    <li>2</li>
+                                </div>
+                            </ul>
+                        </li>
+    
+    
+                        <li>
+                            <p><a href="">게시판 제목</a></p>
+                            <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                            <ul>
+                                <li class="icon"><a href="">프로필</a></li>
+                                <li><a href="">익명</a></li>   
+                                <li>21/03/03 10:20</li> 
+                                <li><a href="">IT</a></li> 
+                                <li></li>
+                                <div>  
+                                    <li>10</li> 
+                                    <li>5</li>
+                                    <li>2</li>
+                                </div>
+                            </ul>
+                        </li>
+    
+    
+                        <li>
+                            <p><a href="">게시판 제목</a></p>
+                            <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                            <ul>
+                                <li class="icon"><a href="">프로필</a></li>
+                                <li><a href="">익명</a></li>   
+                                <li>21/03/03 10:20</li> 
+                                <li><a href="">JOB</a></li> 
+                                <li></li>
+                                <div>  
+                                    <li>10</li> 
+                                    <li>5</li>
+                                    <li>2</li>
+                                </div>
+                            </ul>
+                        </li>
+    
+    
+    
+                        <li>
+                            <p><a href="">게시판 제목</a></p>
+                            <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                            <ul>
+                                <li class="icon"><a href="">프로필</a></li>
+                                <li><a href="">익명</a></li>   
+                                <li>21/03/03 10:20</li> 
+                                <li><a href="">JOB</a></li> 
+                                <li></li>
+                                <div>  
+                                    <li>10</li> 
+                                    <li>5</li>
+                                    <li>2</li>
+                                </div>
+                            </ul>
+                        </li>
+    
+    
+                        <li>
+                            <p><a href="">게시판 제목</a></p>
+                            <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                            <ul>
+                                <li class="icon"><a href="">프로필</a></li>
+                                <li><a href="">익명</a></li>   
+                                <li>21/03/03 10:20</li> 
+                                <li><a href="">Certifications</a></li> 
+                                <li></li>
+                                <div>  
+                                    <li>10</li> 
+                                    <li>5</li>
+                                    <li>2</li>
+                                </div>
+                            </ul>
+                        </li>
+    
+                        <li>
+                            <p><a href="">게시판 제목</a></p>
+                            <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                            <ul>
+                                <li class="icon"><a href="">프로필</a></li>
+                                <li><a href="">익명</a></li>   
+                                <li>21/03/03 10:20</li> 
+                                <li><a href="">Certifications</a></li> 
+                                <li></li>
+                                <div>  
+                                    <li>10</li> 
+                                    <li>5</li>
+                                    <li>2</li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ol> -->
+                <!-- </div> -->
+                <!-- <section class="pager">
+                    <h1 class="d-none">pager</h1>
+                    <ul>
+                        <li><a href="">&lt;&lt;</a></li>
+                        <li><a href="">&lt;</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">...</a></li>
+                        <li><a href="">58</a></li>
+                        <li><a href="">&gt;</a></li>
+                        <li><a href="">&gt;&gt;</a></li>
+                    </ul>
+                </section> -->
+                <ul>
+                    <li><a href="">커뮤니티 게시판</a></li>
+                    <li><a href="">더보기</a></li>
+                </ul>
+                <ol>
+                    <li>
+                        <p><a href="">게시판 제목</a></p>
+                        <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <ul>
+                            <li class="icon"><a href="">프로필</a></li>
+                            <li><a href="">익명</a></li>   
+                            <li>21/03/03 10:20</li> 
+                            <li><a href="">사는이야기 게시판</a></li> 
+                            <li></li>
+                            <div>  
+                                <li>10</li> 
+                                <li>5</li>
+                                <li>2</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="">게시판 제목</a></p>
+                        <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <ul>
+                            <li class="icon"><a href="">프로필</a></li>
+                            <li><a href="">익명</a></li>   
+                            <li>21/03/03 10:20</li> 
+                            <li><a href="">it forum 게시판</a></li> 
+                            <li></li>
+                            <div>  
+                                <li>10</li> 
+                                <li>5</li>
+                                <li>2</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="">게시판 제목</a></p>
+                        <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <ul>
+                            <li class="icon"><a href="">프로필</a></li>
+                            <li><a href="">익명</a></li>   
+                            <li>21/03/03 10:20</li> 
+                            <li><a href="">it forum 게시판</a></li> 
+                            <li></li>
+                            <div>  
+                                <li>10</li> 
+                                <li>5</li>
+                                <li>2</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="">게시판 제목</a></p>
+                        <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <ul>
+                            <li class="icon"><a href="">프로필</a></li>
+                            <li><a href="">익명</a></li>   
+                            <li>21/03/03 10:20</li> 
+                            <li><a href="">it forum 게시판</a></li> 
+                            <li></li>
+                            <div>  
+                                <li>10</li> 
+                                <li>5</li>
+                                <li>2</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="">게시판 제목</a></p>
+                        <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <ul>
+                            <li class="icon"><a href="">프로필</a></li>
+                            <li><a href="">익명</a></li>   
+                            <li>21/03/03 10:20</li> 
+                            <li><a href="">it forum 게시판</a></li> 
+                            <li></li>
+                            <div>  
+                                <li>10</li> 
+                                <li>5</li>
+                                <li>2</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="">게시판 제목</a></p>
+                        <p><a href="">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <ul>
+                            <li class="icon"><a href="">프로필</a></li>
+                            <li><a href="">익명</a></li>   
+                            <li>21/03/03 10:20</li> 
+                            <li><a href="">it forum 게시판</a></li> 
+                            <li></li>
+                            <div>  
+                                <li>10</li> 
+                                <li>5</li>
+                                <li>2</li>
+                            </div>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+            <section class="pager">
+                <h1 class="d-none">pager</h1>
+                <ul>
+                    <li><a href="">&lt;&lt;</a></li>
+                    <li><a href="">&lt;</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">...</a></li>
+                    <li><a href="">58</a></li>
+                    <li><a href="">&gt;</a></li>
+                    <li><a href="">&gt;&gt;</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
+        </div>
+    </footer>
+    <!-- Global bottom[s] -->
+    <nav class="gb-bottom-nav">
+        <a href="#" class="bottom-nav-btn" id="category-bottom-button">
+            <i class="fas fa-bars"></i>
+            <span>카테고리</span>
+        </a>
+        <a href="/mypage/mystudy-main-list.html" class="bottom-nav-btn">
+            <i class="fas fa-book"></i>
+            <span class="study-btn">스터디</span>
+        </a>
+        <a href="/index.html" class="bottom-nav-btn">
+            <i class="fas fa-home"></i>
+            <span class="home-btn">홈</span>
+        </a>
+        <a href="/mypage/mymessage-rec.html" class="bottom-nav-btn">
+            <i class="fas fa-envelope-square"></i>
+            <span class="message-btn">쪽지함</span>
+        </a>
+        <a href="/mypage/mypage.html" class="bottom-nav-btn">
+            <i class="far fa-user"></i>
+            <span class="mypage-btn">마이페이지</span>
+        </a>
+    </nav>
+    <!-- Global bottom[e] -->
+</body>
+</html>

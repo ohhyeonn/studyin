@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/member/sign-up.css" />
+    <link rel="stylesheet" href="../css/common/common.css" />
+    <link rel="stylesheet" href="../css/common/gb-nav.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <script defer src="../js/common/gb-nav.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Global top [s] -->
+    <header class="header">
+      <section class="gb-top-nav">
+          <div class="logo">
+              <a href="/index.html">study in</a>
+          </div>
+          <div class="search-bar">
+              <div class="search-wrapper">
+              <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
+              <a href="/index.html" class="search-btn"><i class="fas fa-search"></i></a>
+              </div>
+          </div>
+          <div class="menu-button">
+              <input type="checkbox" name="" id="menuBtn">
+              <label for="menuBtn">
+                  <span class="menu-button-bar"></span>
+                  <span class="menu-button-bar"></span>
+                  <span class="menu-button-bar"></span>
+              </label>
+              <aside class="menu">
+              <ul>
+                  <span>STUDY IN</span>
+                  <p>로그인이 필요합니다</p>
+                  <p>User님, 안녕하세요</p>
+                  <a href="/member/login.html"><li>Login</li></a>
+                  <a href="/member/sign-up.html"><li>Sign Up</li></a>
+                  <a href="/index.html"><li>Logout</li></a>
+              </ul>
+              </aside>
+              <div class="overlay"><label for="menuBtn"></label></label></div>
+          </div>
+          <div class="icon-category">
+            <i class="fas fa-grip-horizontal fa-2x"></i>
+        </div>
+      </section>
+  </header>
+  <nav class="sub-header">
+      <div class="menu-nav">
+          <a href="/study/study-group-list.html">STUDY</a>
+          <a href="/community/board-list.html">COMMUNITY</a>
+          <a href="/services/board-query.html">SERVICES</a>
+      </div>
+  </nav>
+  <!-- Global top [e] -->
+  <!-- Category Side [s] -->
+  <aside>
+      <div class="category-container">
+          <div class="main-category">
+              <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
+              <label for="toggle-study">
+              <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3> 
+              </label>
+              <div class="sub-category">
+                  <ul>
+                      <li><a href="/study/study-list.html">IT</a></li>
+                      <li><a href="/study/study-list.html">JOB</a></li>
+                      <li><a href="/study/study-list.html">CERTIFICATION</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="main-category">
+              <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
+              <label for="toggle-community">
+              <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3> 
+              </label>
+              <div class="sub-category">
+                  <ul>
+                      <li><a href="/community/board-list.html">게시판1</a></li>
+                      <li><a href="/community/board-list.html">게시판2</a></li>
+                      <li><a href="/community/board-list.html">게시판3</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="main-category">
+              <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
+              <label for="toggle-services">
+              <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3> 
+              </label>
+              <div class="sub-category">
+                  <ul>
+                      <li><a href="/services/board-notice.html">공지사항</a></li>
+                      <li><a href="/services/board-query.html">FAQ</a></li>
+                      <li><a href="/services/board-make-query.html">1:1문의하기</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="category-switch"></div>
+  </aside>
+  <!-- Category Side [e] -->
+  <!-- Common top title[s] -->
+  <section class="top-title">
+    <div class="btn-back">
+        <a href="javascript:history.go(-1);">
+            <i class="fas fa-arrow-left" style="color: #949494;"></i>
+        </a>
+    </div>
+    <div class="top-title-content">
+        <span>Sing Up</span>
+    </div>
+</section>
+<!-- Common top title[e] -->
+    <main>
+      <section class="sign-up">
+        <h3>회원가입</h3>
+        <div class="sign-up-form">
+          <div class="data-set">
+            <label for="">아이디(이메일)<strong>*</strong></label>
+            <input type="text" name="" id="" />
+            <span class="id-result"></span>
+          </div>
+          <div class="data-set">
+            <label for="">비밀번호<strong>*</strong></label>
+            <input type="password" name="" id="" />
+            <span>영문, 숫자, 특수문자 조합 10자리 이상</span>
+            <span class="pw-result"></span>
+          </div>
+          <div class="data-set">
+            <label for="">이름<strong>*</strong></label>
+            <input type="text" name="" id="" />
+            <span class="name-result"></span>
+          </div>
+          <div class="data-set">
+            <label for="">휴대폰번호<strong>*</strong></label>
+            <div class="phone-number-container">
+              <input type="text" name="" id="" maxlength="3"/>-
+              <input type="text" name="" id="" maxlength="4"/>-
+              <input type="text" name="" id="" maxlength="4"/>
+            </div>
+            <span class="phone-result"></span>
+          </div>
+        </div>
+      </section>
+      <section class="terms">
+        <div class="terms-container">
+          <h3>약관 동의</h3>
+          <div class="agree-btn-container">
+            <input type="checkbox" name="agree" id="agree" />
+            <label for="agree">아래 약관에 동의합니다.</label>
+          </div>
+          <div class="terms-content">
+            <h5>제1조(목적)</h5>
+            <p>
+              스터디인 서비스 이용약관은 회사가 서비스를 제공함에 있어, 회사와
+              이용자간의 권리, 의무 및 책임 사항 등을 규정함을 목적으로
+              합니......이하 생략
+            </p>
+          </div>
+        </div>
+      </section>
+      <a href="" class="btn sign-up-btn">가입하기</a>
+    </main>
+    <input type="checkbox" name="popup" id="common-popup" />
+      <div class="popup">
+        <p class="popup-content">내용을 입력해주세요.내용을 입력해주세요.내용을 입력해주세요.</p>
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+      </div>
+    <div class="overlay"></div>
+    <footer>
+      <div class="footer-wrapper">
+          <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
+      </div>
+  </footer>
+  <!-- Global bottom[s] -->
+  <nav class="gb-bottom-nav">
+    <a href="#" class="bottom-nav-btn" id="category-bottom-button">
+        <i class="fas fa-bars"></i>
+        <span>카테고리</span>
+    </a>
+    <a href="/mypage/mystudy-main-list.html" class="bottom-nav-btn">
+        <i class="fas fa-book"></i>
+        <span class="study-btn">스터디</span>
+    </a>
+    <a href="/index.html" class="bottom-nav-btn">
+        <i class="fas fa-home"></i>
+        <span class="home-btn">홈</span>
+    </a>
+    <a href="/mypage/mymessage-rec.html" class="bottom-nav-btn">
+        <i class="fas fa-envelope-square"></i>
+        <span class="message-btn">쪽지함</span>
+    </a>
+    <a href="/mypage/mypage.html" class="bottom-nav-btn">
+        <i class="far fa-user"></i>
+        <span class="mypage-btn">마이페이지</span>
+    </a>
+</nav>
+<!-- Global bottom[e] -->
+  </body>
+</html>
