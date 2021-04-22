@@ -2,7 +2,7 @@ function init(){
     const item = document.querySelectorAll('.item');
     item.forEach( ele => {
         ele.addEventListener('click', (e) =>{
-            location.href = 'study-main-detail.html';
+            location.href = '../study/study-main-detail.html';
         });
     })
 }

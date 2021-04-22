@@ -4,13 +4,13 @@ function init(){
     const lastItem = document.querySelectorAll('.last-item');
     groupItem.forEach( ele => {
         ele.addEventListener('click', (e) => {
-            location.href = '/study/study-main-detail.html';
+            location.href = '../study/study-main-detail.html';
         })
     });
 
     lastItem.forEach( ele => {
         ele.addEventListener('click', (e) => {
-            location.href = '/study/study-main-list.html';
+            location.href = '../study/study-main-list.html';
         })
     })
 };
