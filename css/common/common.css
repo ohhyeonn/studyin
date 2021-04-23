@@ -1,5 +1,6 @@
 /* --------------------- reset ----------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
 
 :root {
   --primary-color: #00618b;
@@ -22,7 +23,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', 'Noto Sans KR', sans-serif;
   font-size: 1rem;
   color: #333;
 }
