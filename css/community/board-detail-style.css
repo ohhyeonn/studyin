@@ -628,6 +628,11 @@ main .board-name-search > div:nth-child(4) > div {
     color: #a9a9a9;
 }
 
+/* section bottom added */
+section {
+    margin-bottom: 40px;
+}
+
 
 
 
