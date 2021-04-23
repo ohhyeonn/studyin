@@ -155,3 +155,12 @@ const initGlobalNav = function () {
 }; // end main function
 
 window.addEventListener('load', initGlobalNav);
+window.addEventListener('resize', () => {
+  let width = window.innerWidth;
+  let bottomNav = document.querySelector('.gb-bottom-nav');
+  if(width >= '780'){
+    bottomNav.style.display = 'none';
+  } else{
+    bottomNav.style.display = 'flex';
+  }
+});
