@@ -629,7 +629,7 @@ main .board-name-search > div:nth-child(4) > div {
 }
 
 /* section bottom added */
-section {
+section.coments {
     margin-bottom: 40px;
 }
 
