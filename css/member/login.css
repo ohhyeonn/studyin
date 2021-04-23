@@ -107,9 +107,11 @@ a {
 
 .login-page-main {
     top: 35px !important;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: calc(100% - 135px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 2em;
+    /* height: calc(100% - 135px); */
     padding: 0;
 }
 
