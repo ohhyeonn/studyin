@@ -278,6 +278,7 @@
 .menu-nav a {
   margin: 0 auto;
   font-weight: bold;
+  padding-bottom: 7px;
 }
 
 .menu-nav a:hover {
@@ -286,6 +287,11 @@
 
 .menu-on {
   color: var(--secondary-color);
+}
+
+.currentMenu {
+  color: var(--secondary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 /* sub header [e] */
 
