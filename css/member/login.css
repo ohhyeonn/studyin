@@ -101,6 +101,17 @@ a {
     opacity: 0.8;    
 }
 
+.login-page-top {
+    top: 0 !important;
+}
+
+.login-page-main {
+    top: 35px !important;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: calc(100% - 135px);
+    padding: 0;
+}
 
 @media screen and (min-width: 1040px) {
     .btn-back {
