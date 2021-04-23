@@ -133,28 +133,25 @@ const initGlobalNav = function () {
     });
 
     ele.addEventListener('blur', (e) => {
-      bottomNavBar.style.display = 'flex';
+      if (window.innerWidth <= '780') bottomNavBar.style.display = 'flex';
     });
   });
 
-// display current menu
-const menuItems = document.querySelectorAll('.menu-nav>a');
-const menuItems_arr = Array.from(menuItems);
-const locationItems = menuItems_arr.map(ele => {
-      let path = ele.href.split('/');
-      return path[path.length-2];
+  // display current menu
+  const menuItems = document.querySelectorAll('.menu-nav>a');
+  const menuItems_arr = Array.from(menuItems);
+  const locationItems = menuItems_arr.map((ele) => {
+    let path = ele.href.split('/');
+    return path[path.length - 2];
   });
-let currentLocation = (() => {
-      let arr = location.href.split('/');
-      return arr[arr.length-2];
+  let currentLocation = (() => {
+    let arr = location.href.split('/');
+    return arr[arr.length - 2];
   })();
-let idx = locationItems.indexOf(currentLocation);
-  if(idx !== -1){
+  let idx = locationItems.indexOf(currentLocation);
+  if (idx !== -1) {
     menuItems[idx].classList.add('currentMenu');
   }
-
 }; // end main function
-
-
 
 window.addEventListener('load', initGlobalNav);
