@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카테고리 관리</title>
-  <link href="../css/admin/system-category.css" type="text/css" rel="stylesheet">
+  <title>게시판 관리 페이지</title>
   <link href="../css/common/common.css" type="text/css" rel="stylesheet">
-  <link href="../css/admin/system-common.css" type="text/css" rel="stylesheet">
+  <link href="../css/admin/board.css" type="text/css" rel="stylesheet">
+  <link href="../css/admin/admin.css" type="text/css" rel="stylesheet">
   <link href="../css/common/gb-nav.css" rel="stylesheet">
   <script defer src="../js/common/gb-nav.js"></script>
-  <script defer src="../js/admin/system-category.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
+  <script defer src="../js/admin/board.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+  crossorigin="anonymous"
+/>
 </head>
-
 <body>
   <!-- Global top [s] -->
   <header class="header">
@@ -117,97 +119,93 @@
       <a href="../admin/system-post.html">Post</a>
     </div>
   </nav>
-
-  <!-- Main [s] -->
-  <main>
+<!-- Main [s] -->
+<main>
     <section class="title">
-      <h1 class="big-title">카테고리 관리</h1>
+      <h1 class="big-title">게시판 관리</h1>
     </section>
     <section class="sort">
       <h1 class="d-none">정렬순</h1>
       <div>
         <select class="select-box">
           <option selected>생성순</option>
-          <option>이름순</option>
           <option>활성화순</option>
         </select>
+        <select class="select-box">
+          <option selected>분류</option>
+          <option>탈퇴</option>
+          <option>휴면</option>
+        </select>
       </div>
+      <form>
+        <label>
+          <select class="select-box">
+            <option selected>이름</option>
+            <option>이름</option>
+          </select>
+        </label>
+        <input type="text" placeholder="검색">
+        <a class="btn btn-small" type="submit">검색</a>
+      </form>
     </section>
     <section class="main">
-
-      <!-- first-box -->
-      <div class="every-box">
-        <h1>STUDY 게시판</h1>
-        <h1 class="d-none">카테고리 목록</h1>
-        <div class="box upper">
-          <div>
-            <input type="radio" id="u1" name="0"><label for="u1">IT</label>
-            <input type="radio" id="u2" name="0"><label for="u2">Job</label>
-            <input type="radio" id="u3" name="0"><label for="u3">Certification</label>
-          </div>
-        </div>
-        <div class="box lower">
-          <div>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l2" name="0"><label for="l2">Algorithm</label>
-            <input type="checkbox" id="l3" name="0"><label for="l3">Algorithm</label>
-            <input type="checkbox" id="l4" name="0"><label for="l4">Algorithm</label>
-            <input type="checkbox" id="l5" name="0"><label for="l5">Algorithm</label>
-            <input type="checkbox" id="l6" name="0"><label for="l6">Algorithm</label>
-            <input type="checkbox" id="l7" name="0"><label for="l7">Algorithm</label>
-            <input type="checkbox" id="l8" name="0"><label for="l8">Algorithm</label>
-            <input type="checkbox" id="l9" name="0"><label for="l9">Algorithm</label>
-            <input type="checkbox" id="l10" name="0"><label for="l10">Algorithm</label>
-            <input type="checkbox" id="l11" name="0"><label for="l11">Algorithm</label>
-           </div>
-        </div>
-      </div>
-
-      <!-- second-box -->
-      <div class="every-box">
-        <h1>COMMUNITY 게시판</h1>
-        <h1 class="d-none">카테고리 목록</h1>
-        <div class="box upper">
-          <div>
-            <input type="checkbox" id="u1" name="0"><label for="u1">IT</label>
-            <input type="checkbox" id="u2" name="0"><label for="u2">Job</label>
-            <input type="checkbox" id="u3" name="0"><label for="u3">Certification</label>
-          </div>
-        </div>
-        <div class="box lower">
-          <div>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l2" name="0"><label for="l2">Algorithm</label>
-            <input type="checkbox" id="l3" name="0"><label for="l3">Algorithm</label>
-            <input type="checkbox" id="l4" name="0"><label for="l4">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-          </div>
-        </div>
-      </div>
-
+      <table>
+        <thead>
+          <tr>
+            <td class="w-3"><input type="checkbox"></td>
+            <td class="w-1">게시판</td>
+            <td class="w-2">카테고리</td>
+            <td class="w-2">게시글</td>
+            <td class="w-2">생성일<br>최근글</td>
+            <td class="w-2">상태</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>STUDY</td>
+            <td>4</td>
+            <td>32</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>삭제 대기<br>4d 23hr</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>COMMUNITY</td>
+            <td>3</td>
+            <td>54</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>비활성화</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>SERVICE</td>
+            <td>2</td>
+            <td>1</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>활성화</td>
+          </tr>
+        </tbody>
+      </table>
       <div class="last-btn">
-        <h1 class="d-none">테이블 밑</h1>
-        <a class="btn btn-medium delete-btn" type="submit">삭제</a>
+        <h1 class="d-none">마지막 버튼</h1>
         <div>
-          <a class="btn btn-medium inactive-btn" type="submit">비활성화</a>
-          <a class="btn btn-medium modify-btn" type="submit">수정</a>
-          <a class="btn btn-medium add-btn" type="submit">추가</a>
+          <a class="btn btn-medium" type="submit">▲</a>
+          <a class="btn btn-medium" type="submit">▼</a>
+          <a class="btn btn-medium" type="submit">삭제</a>
+          
         </div>
-      </div>
+        <div>
+          <a class="btn btn-medium" type="submit">추가</a>
+          <a class="btn btn-medium" type="submit">비활성화</a>
+        </div>
     </section>
-  </main>
-
-  <!-- Main [e] -->
-  <footer>
-    <div class="footer-wrapper">
-        <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
-    </div>
+    </main>
+<!-- Main [e] -->
+<footer>
+  <div class="footer-wrapper">
+      <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
+  </div>
 </footer>
 <!-- Global bottom[s] -->
 <nav class="gb-bottom-nav">
@@ -233,7 +231,6 @@
   </a>
 </nav>
 <!-- Global bottom[e] -->
-
   <!-- Common popup [s] -->
     <!-- <input type="checkbox" name="popup" id="common-popup" />
     <div class="popup active">
@@ -248,7 +245,5 @@
     </div>
     <div class="overlay"></div> -->
   <!-- Common popup [e] -->
-
 </body>
-
 </html>
