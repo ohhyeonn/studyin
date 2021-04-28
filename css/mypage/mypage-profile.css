@@ -38,13 +38,6 @@ main{
     display:flex;
 }
 
-.name-email{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left:10px;
-    height:40px;
-}
 
 .icon{    
     background: url(../../images/profile.png) no-repeat center;
@@ -56,17 +49,6 @@ main{
     border-radius:26px;
     margin-bottom:10px;
 }
-   
-   #name{
-       flex-basis:30px;
-       line-height: 10px;
-   }
-   
-   #email{
-       flex-basis:10px;
-       color:#979797;
-       font-size:9px;
-   }
 
    .profile .btn{
        line-height: 20px;

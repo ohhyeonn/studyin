@@ -42,7 +42,7 @@ main{
     color: white;
 }
 
-@media screen and (min-width: 780px){
+@media screen and (min-width: 500px){
 
 .main-button{
     width: 400px;
