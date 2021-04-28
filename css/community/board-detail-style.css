@@ -392,6 +392,10 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 /* good  */
+.content > .good {
+    margin-top : 15px;
+}
+
 .content > .good > div{
     display: flex;
     padding-top: 2px;

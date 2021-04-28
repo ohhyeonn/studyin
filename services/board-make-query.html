@@ -17,10 +17,35 @@
    <title>Document</title>
 
    <script>
-       function resize(obj) {
-         obj.style.height = "1px";
-         obj.style.height = (obj.scrollHeight)+"px";
-        }
+    window.addEventListener("load", function(){
+        var content= window.document.querySelector(".content");
+     
+        content.addEventListener("keydown",function(e){
+
+            if(e.target.classList.contains("text-area")){
+                e.target.style.height = "1px";
+                e.target.style.height = (e.target.scrollHeight)+"px";
+            }
+
+
+        });
+        
+        
+        content.addEventListener("keyup",function(e){
+            if(e.target.classList.contains("text-area")){
+                e.target.style.height = "1px";
+                e.target.style.height = (e.target.scrollHeight)+"px";
+
+            }
+
+            
+        });
+
+
+
+
+
+    });
    </script>
 </head>
 <body>
@@ -186,7 +211,7 @@
 
                    
                     <form>
-                        <textarea name="" id=""  rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="문의 제목을 입력하세요"></textarea>
+                        <textarea class="text-area"  placeholder="문의 제목을 입력하세요"></textarea>
                     </form>
                     <div>
                         <div></div>
@@ -199,7 +224,7 @@
                 <section class="write-content">
                     <h1 class="d-none">write-content</h1>
                     
-                    <textarea name="" id=""  rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="문의할 내용을 입력하세요"></textarea>
+                    <textarea class="text-area"  placeholder="문의할 내용을 입력하세요"></textarea>
 
                 </section>
 
