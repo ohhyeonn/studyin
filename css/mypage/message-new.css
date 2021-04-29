@@ -6,9 +6,10 @@ ul{
 
 .title .big-title{
     text-align: center;
-    display:inline;
 }
-
+.message-main .main{
+    margin:0;
+}
 /* -----btn-list------ */
 .btn-list{
     margin: auto;
@@ -74,7 +75,7 @@ ul{
 
 textarea{
     resize: none;
-    width:268px;
+    width:95%;
     height:280px;
 
     font-weight: lighter;
