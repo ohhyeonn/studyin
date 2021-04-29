@@ -124,91 +124,60 @@
       <section class="title">
         <h1 class="big-title">게시글 관리</h1>
       </section>
-      <section class="sort">
-        <h1 class="d-none">정렬순</h1>
+      <section class="first-btn">
+        <h1 class="d-none">첫번째 버튼</h1>
         <div>
-          <select class="select-box">
-            <option selected>최근순</option>
-            <option>최근댓글순</option>
-            <option>조회수순</option>
-          </select>
-          <select class="select-box">
-            <option selected>게시판별</option>
-            <option>STUDY</option>
-            <option>COMMUNITY</option>
-            <option>SERVICE</option>
-          </select>
+          <a class="btn btn-small entire-check" type="submit">전체 선택</a>
         </div>
         <form>
           <label>
-            <select class="select-box">
-              <option selected>제목</option>
-              <option>번호</option>
-              <option>작성자</option>
+            <select>
+              <option selected>이름</option>
+              <option>이름</option>
             </select>
           </label>
           <input type="text" placeholder="검색">
           <a class="btn btn-small" type="submit">검색</a>
         </form>
       </section>
-      <section class="main">
-        <h1 class="d-none">게시글 목록</h1>
-        <table>
-          <thead>
-            <tr>
-              <td class="w-3"><input type="checkbox"></td>
-              <td class="w-2">게시판</td>
-              <td class="w-3">번호</td>
-              <td class="w-1">제목</td>
-              <td class="w-2">작성자</td>
-              <td class="w-2">작성일</td>
-              <td class="w-3">댓글</td>
-              <td class="w-4">조회수</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>STUDY<br>IT</td>
-              <td>1</td>
-              <td><a href="">스터디 가입하고 싶습니다</a></td>
-              <td>강담희</td>
-              <td>21/03/04</td>
-              <td>3</td>
-              <td>43</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>STUDY<br>IT</td>
-              <td>2</td>
-              <td><a href="">스터디 가입하고 싶습니다</a></td>
-              <td>강담희</td>
-              <td>21/03/04</td>
-              <td>3</td>
-              <td>43</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>STUDY<br>IT</td>
-              <td>3</td>
-              <td><a href="">스터디 가입하고 싶습니다</a></td>
-              <td>강담희</td>
-              <td>21/03/04</td>
-              <td>3</td>
-              <td>43</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>STUDY<br>IT</td>
-              <td>4</td>
-              <td><a href="">스터디 가입하고 싶습니다</a></td>
-              <td>강담희</td>
-              <td>21/03/04</td>
-              <td>3</td>
-              <td>43</td>
-            </tr>
-          </tbody>
-        </table>
+      <select class="select-box">
+        <option selected>분류</option>
+        <option>카테고리별</option>
+        <option>비활성화</option>
+      </select>
+      <section class="main-card">
+        <h1 class="d-none">게시판 목록</h1>
+        <div class="card-wrapper">
+          <input class="check" type="checkbox">
+          <span class="card-content">
+            <span class="card-title truncate">게시글 제목입니다</span>
+            <span class="card-preview truncate">게시글 내용입니다 게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다</span>
+            <span class="writer-id">작성자: <span class="writer">작성자 이름</span></span>
+            <span class="category">카테고리: STUDY / IT</span>
+            <span class="replay">댓글: 3개</span>
+          </span>
+        </div>
+        <div class="card-wrapper">
+          <input class="check" type="checkbox">
+          <span class="card-content">
+            <span class="card-title truncate">게시글 제목입니다</span>
+            <span class="card-preview truncate">게시글 내용입니다 게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다</span>
+            <span class="writer-id">작성자: <span class="writer">작성자 이름</span></span>
+            <span class="category">카테고리: STUDY / IT</span>
+            <span class="replay">댓글: 3개</span>
+          </span>
+        </div>
+        <div class="card-wrapper">
+          <input class="check" type="checkbox">
+          <span class="card-content">
+            <span class="card-title truncate">게시글 제목입니다</span>
+            <span class="card-preview truncate">게시글 내용입니다 게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다</span>
+            <span class="writer-id">작성자: <span class="writer">작성자 이름</span></span>
+            <span class="category">카테고리: STUDY / IT</span>
+            <span class="replay">댓글: 3개</span>
+          </span>
+        </div>
+      </section>
         <div class="last-btn">
           <h1 class="d-none">테이블 밑</h1>
           <a class="btn btn-medium" type="submit">삭제</a>

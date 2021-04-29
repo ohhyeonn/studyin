@@ -58,8 +58,8 @@ ul{
 /* --------main section--------- */
 .main-button{
     display:flex;
-    height:100%;
-    margin-bottom:0px;
+    height:auto;
+    margin-bottom:40px;
     flex-flow: column;
     align-items: center;
 }
@@ -115,4 +115,12 @@ ul{
 
 .message-content .date{
     font-size:9px;
+}
+
+.message-wrapper .message-check{
+    position: absolute;
+    right:12px;
+}
+.btn-list{
+    padding-right:10px;
 }

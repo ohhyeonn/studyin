@@ -121,26 +121,15 @@
     <section class="title">
       <h1 class="big-title">스터디 관리</h1>
     </section>
-    <section class="sort">
-      <h1 class="d-none">정렬순</h1>
+    <section class="first-btn">
+      <h1 class="d-none">첫번째 버튼</h1>
       <div>
-        <select class="select-box">
-          <option selected>상태 분류</option>
-          <option>활성화</option>
-          <option>삭제 대기</option>
-          <option>삭제</option>
-        </select>
-        <select class="select-box">
-          <option selected>카테고리별</option>
-          <option>IT</option>
-          <option>Job</option>
-          <option>Certification</option>
-        </select>
+        <a class="btn btn-small entire-check" type="submit">전체 선택</a>
       </div>
       <form>
         <label>
-          <select class="select-box">
-            <option selected>스터디 이름</option>
+          <select>
+            <option selected>스터디명</option>
             <option>스터디장</option>
           </select>
         </label>
@@ -148,51 +137,23 @@
         <a class="btn btn-small" type="submit">검색</a>
       </form>
     </section>
-    <section class="main">
-      <h1 class="d-none">스터디 목록</h1>
-      <table>
-        <thead>
-          <tr>
-            <td class="w-3"><input type="checkbox"></td>
-            <td class="w-2">카테고리</td>
-            <td class="w-1">이름</td>
-            <td class="w-2">스터디장</td>
-            <td class="w-4">게시글</td>
-            <td class="w-2">생성일<br>최근글</td>
-            <td class="w-2">상태</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>IT<br>Algorithm</td>
-            <td>C++ 알고리즘</td>
-            <td>강담희</td>
-            <td>32</td>
-            <td>21/03/21<br>21/04/30</td>
-            <td>활성화</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>Job</td>
-            <td>무슨무슨 스터디</td>
-            <td>강담희</td>
-            <td>54</td>
-            <td>21/03/21<br>21/04/30</td>
-            <td>삭제 대기<br>4d 23hr</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>Certification</td>
-            <td>SERVICE</td>
-            <td>강담희</td>
-            <td>1</td>
-            <td>21/03/21<br>21/04/30</td>
-            <td>활성화</td>
-          </tr>
-        </tbody>
-      </table>
-
+    <select class="select-box">
+      <option selected>분류</option>
+      <option>카테고리별</option>
+      <option>수준별</option>
+    </select>
+    <section class="main-card">
+      <h1 class="d-none">게시판 목록</h1>
+      <div class="card-wrapper">
+        <input class="check" type="checkbox">
+        <span class="card-content">
+          <span class="card-title truncate">스터디 이름</span>
+          <span class="card-preview truncate">게시글 내용입니다 게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다게시글 내용입니다</span>
+          <span class="writer-id">작성자: <span class="writer">작성자 이름</span></span>
+          <span class="category">카테고리: STUDY / IT</span>
+          <span class="date">생성일: 21/21/21</span>
+        </span>
+    </section>
       <div class="last-btn">
         <h1 class="d-none">테이블 밑</h1>
         <a class="btn btn-medium" type="submit">삭제</a>
