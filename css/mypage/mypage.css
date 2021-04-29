@@ -85,11 +85,11 @@ main{
     font-weight: bold;
 }
 
-@media screen and (min-width: 780px){
-    .main-button{
+@media screen and (min-width: 500px){
+    .account, .activity{
         width: 400px;
     }
-        .main-button>a{
-            border-radius: 5px;
-        }
+    .main-button a{
+        border-radius: 5px;
+    }
 }
