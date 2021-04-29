@@ -29,6 +29,7 @@ ul{
 /* -----aside----- */
 @media screen and (min-width: 650px){
         .message-side{
+            background-color: white;
             display:initial;
             position:absolute;
             left:30px;
@@ -49,6 +50,7 @@ ul{
 /* --------main section--------- */
 
 .mess-box{
+    background-color: white;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
     padding: 15px;

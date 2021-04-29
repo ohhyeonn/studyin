@@ -37,6 +37,7 @@ ul{
             width: 20%;
             padding: 20px 0px;
             font-size:14px;
+            background-color: white;
         }
         .message-side a{
                 color:#646464;
@@ -67,7 +68,8 @@ ul{
 .main-button .message-wrapper{
     width:300px;
     height:auto;
-  
+
+    background-color: white;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
     text-align: center;
@@ -80,7 +82,7 @@ ul{
     transition: all 0.4s;
 }
 .message-wrapper:hover{
-    background-color:var(--gray-color);
+    border:1px solid var(--primary-color);
 }
 .message-wrapper{
     display: flex;
