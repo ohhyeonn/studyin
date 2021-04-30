@@ -15,6 +15,50 @@
         crossorigin="anonymous" />
     <title>Document</title>
     <script>
+
+
+        window.addEventListener("load", function(){
+            var section = document.querySelector("#root");
+            var dots = section.querySelectorAll(".dotdotdot");
+
+            section.addEventListener("click", function(e){
+                
+                if(e.target.classList.contains("dotdotdot")){
+                    
+                    e.preventDefault();
+                    e.target.parentNode.style.position = "relative";
+                    e.target.parentNode.style.position = "relative";
+                    e.target.nextElementSibling.classList.toggle("d-none");
+                }else if (e.target.classList.contains("dotdotdot-sibling")){
+                    e.target.classList.toggle("d-none");
+                }
+
+            });
+
+
+            section.addEventListener("mousedown",function(e){
+                
+                if (e.target.classList.contains("dotdotdot-sibling")){
+                    return;
+                }else if(!e.target.classList.contains("dotdotdot")){
+                    for(var d of dots){
+                        d.nextElementSibling.classList.add("d-none");
+                    }
+                } 
+
+
+            });
+
+
+
+
+        });
+
+
+
+
+
+
         window.addEventListener('load', function(){
             var body = document.querySelector("body");
             var section = document.querySelector('main .board-name-search ');
@@ -241,7 +285,11 @@
                         <li>작성자</li>
                         <li>03/03 10:12</li>
                     </ul>
-                    <div><a class="icon" href="">땡떙땡</a></div>
+                    <div>
+                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                        <div class="d-none dotdotdot-sibling"></div>
+
+                    </div>
                 </section>
 
 
@@ -288,7 +336,11 @@
                         <ul>
                             <li class="icon">프로필</li>
                             <li>작성자</li>
-                            <li><a href="" class="icon">땡땡땡</a></li>
+                            <li>
+                                <a class="icon dotdotdot" href="">땡떙땡</a>
+                                <div class="d-none dotdotdot-sibling"></div>
+                            </li>
+                            
                         </ul>
                         <div>댓글입니다 만나서 반갑습니다</div>
                         <div>03/03 10:30</div>
@@ -299,31 +351,13 @@
                                 <ul>
                                     <li class="icon">프로필</li>
                                     <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
+                                    <li><a class="icon dotdotdot" href="">땡떙땡</a><div class="d-none dotdotdot-sibling"></div></li>
                                 </ul>
                                 <div>대댓글입니다 만나서 l lorem 반갑습니다</div>
                                 <div>03/03 10:30</div>
                             </li>
 
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 lorem 반갑습니다</div>
-                                <div>03/03 10:30</div>
-                            </li>
-
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 반갑습니다</div>
-                                <div>03/03 10:30</div>
-                            </li>
+                           
 
 
 
