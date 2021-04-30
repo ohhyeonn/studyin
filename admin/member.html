@@ -9,7 +9,7 @@
   <link href="../css/common/common.css" type="text/css" rel="stylesheet">
   <link href="../css/admin/admin.css" type="text/css" rel="stylesheet">
   <link href="../css/common/gb-nav.css" rel="stylesheet">
-  <script defer src="../js/comon/gb-nav.js"></script>
+  <script defer src="../js/common/gb-nav.js"></script>
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -123,67 +123,62 @@
     <section class="title">
       <h1 class="big-title">회원 관리</h1>
     </section>
-    <section class="sort">
-      <h1 class="d-none">정렬순</h1>
+    <section class="first-btn">
+      <h1 class="d-none">첫번째 버튼</h1>
       <div>
-        <select class="select-box">
-          <option selected>가입일순</option>
-          <option>이름순</option>
-          <option>번호순</option>
-        </select>
-        <select class="select-box">
-          <option selected>분류</option>
-          <option>탈퇴</option>
-          <option>휴면</option>
-        </select>
+        <a class="btn btn-small entire-check" type="submit">전체 선택</a>
       </div>
       <form>
         <label>
-          <select class="select-box">
-            <option selected>회원 번호</option>
+          <select>
+            <option selected>이름</option>
             <option>이름</option>
-            <option>ID</option>
           </select>
         </label>
         <input type="text" placeholder="검색">
         <a class="btn btn-small" type="submit">검색</a>
       </form>
     </section>
-    <section class="main">
-      <h1 class="d-none">회원 목록</h1>
-      <table>
-        <thead>
-          <tr>
-            <td class="w-3"><input type="checkbox"></td>
-            <td class="w-3">번호</td>
-            <td class="w-2">이름(닉네임)</td>
-            <td class="w-1">이메일</td>
-            <td class="w-2">연락처</td>
-            <td class="w-2">가입일</td>
-            <td class="w-3">비고</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>1</td>
-            <td>강담희(다미)</td>
-            <td>Mark(Mark1022@gmail.com)</td>
-            <td>010-3333-3333</td>
-            <td>21/03/04</td>
-            <td>탈퇴</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2</td>
-            <td>강담희(다미)</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>휴면</td>
-          </tr>
-        </tbody>
-      </table>
+    <select class="select-box">
+      <option selected>가입일순</option>
+      <option>이름순</option>
+      <option>번호순</option>
+    </select>
+    <select class="select-box">
+      <option selected>분류</option>
+      <option>탈퇴</option>
+      <option>휴면</option>
+    </select>
+    <section class="main-card">
+      <h1 class="d-none">게시판 목록</h1>
+      <div class="card-wrapper">
+        <input class="check" type="checkbox">
+        <span class="card-content">
+          <span class="card-title">닉네임(이름)</span>
+          <span class="email-form">이메일:  <span class="email"> eee@gmail.com</span></span>
+          <span class="phone">연락처: 010-0000-0000</span>
+          <span class="join-">가입일: 21/03/03</span>
+        </span>
+      </div>
+      <div class="card-wrapper">
+        <input class="check" type="checkbox">
+        <span class="card-content">
+          <span class="card-title">닉네임(이름)</span>
+          <span class="email-form">이메일:  <span class="email"> eee@gmail.com</span></span>
+          <span class="phone">연락처: 010-0000-0000</span>
+          <span class="join-">가입일: 21/03/03</span>
+        </span>
+      </div>
+      <div class="card-wrapper">
+        <input class="check" type="checkbox">
+        <span class="card-content">
+          <span class="card-title">닉네임(이름)</span>
+          <span class="email-form">이메일:  <span class="email"> eee@gmail.com</span></span>
+          <span class="phone">연락처: 010-0000-0000</span>
+          <span class="join-">가입일: 21/03/03</span>
+        </span>
+      </div>
+    </section>
       <div class="last-btn">
         <h1 class="d-none">테이블 밑</h1>
         <a class="btn btn-medium" type="submit">삭제</a>
@@ -201,7 +196,6 @@
         </nav>
         <a class="btn btn-medium" type="submit">비활성화</a>
       </div>
-    </section>
   </main>
 <!-- Main [e] -->
 <footer>

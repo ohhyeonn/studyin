@@ -17,28 +17,12 @@
         padding:0px 3px;
     }
 
-    .last-btn{
-        display:flex;
-        justify-content: space-between;
-        margin: 5px 20px;
-    }
     
-    @media screen and (max-width: 359px){
-    .table th:nth-child(6), td:nth-child(6){
-        display:none;
-    }
-    
+@media screen and (max-width: 359px){    
     .pager{
         padding: 8px 0px;
     }
-    .sort, .main, .last-btn{
+    .last-btn{
         margin:1px;
     } 
-    .sort div{
-        display:none;
-    }
-    .last-btn{
-        overflow:scroll;
-        white-space:nowrap;
-    }
-    }
+}

@@ -31,6 +31,7 @@ ul{
             display:initial;
             position:absolute;
             left:30px;
+            background-color: white;
             border: solid 1px #DCDCDC;
             border-radius:20px;
             width: 20%;
@@ -38,6 +39,7 @@ ul{
             font-size:14px;
         }
         .message-side a{
+            
                 color:#646464;
                 display:flex;
                 padding: 20px;
@@ -58,8 +60,8 @@ ul{
 /* --------main section--------- */
 .main-button{
     display:flex;
-    height:100%;
-    margin-bottom:0px;
+    height:auto;
+    margin-bottom:40px;
     flex-flow: column;
     align-items: center;
 }
@@ -68,6 +70,7 @@ ul{
     width:300px;
     height:auto;
   
+    background-color: white;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
     text-align: center;
@@ -80,7 +83,7 @@ ul{
     transition: all 0.4s;
 }
 .message-wrapper:hover{
-    background-color:var(--gray-color);
+    border:1px solid var(--primary-color);
 }
 .message-wrapper{
     display: flex;
@@ -116,4 +119,11 @@ ul{
 
 .message-content .date{
     font-size:9px;
+}
+.message-wrapper .message-check{
+    position: absolute;
+    right:12px;
+}
+.btn-list{
+    padding-right:10px;
 }
