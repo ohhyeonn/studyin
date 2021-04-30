@@ -5,6 +5,7 @@ function init(){
     const url = location.hostname;
     groupItem.forEach( ele => {
         ele.addEventListener('click', (e) => {
+            e.stopPropagation();
             if(url.indexOf('127.0.0.1') === -1)
                 location.href = '/studyin/study/study-main-detail.html';
             else

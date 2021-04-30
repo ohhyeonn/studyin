@@ -23,7 +23,8 @@
         margin: 5px 20px;
     }
     
-   
+
+/* ---card---- */
     @media screen and (max-width: 359px){
     table th:nth-child(6), td:nth-child(6), th:nth-child(8), td:nth-child(8){
         display:none;
