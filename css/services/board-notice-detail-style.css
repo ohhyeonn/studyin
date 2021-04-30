@@ -738,9 +738,15 @@ section.coments {
         
     }
     #root .gongzi > ul > li > span {
+        display: inline-block;
+        width: 80px;
         margin-top: 2px;
         font-size: 10px;
-        float: right;
+        float: right;        
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        
     }
     #root .gongzi > ul > li:nth-child(1) {
         color: #292929;
@@ -753,6 +759,11 @@ section.coments {
     }
 
     #root .gongzi > ul > li > a {
+        display: inline-block;
+        width: 280px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         color: #444444;
     }
 
@@ -778,9 +789,14 @@ section.coments {
         
     }
     #root .hotnotice > ul > li > span {
+        display: inline-block;
+        width: 80px;
         margin-top: 2px;
         font-size: 10px;
-        float: right;
+        float: right;        
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     #root .hotnotice > ul > li:nth-child(1) {
         color: #292929;
@@ -793,6 +809,11 @@ section.coments {
     }
 
     #root .hotnotice > ul > li > a {
+        display: inline-block;
+        width: 280px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         color: #444444;
     }
 

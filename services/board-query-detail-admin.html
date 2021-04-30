@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/community/board-detail-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/services/board-query-detail-admin-style.css" rel="stylesheet">
     <link href="../css/common/common.css" type="text/css" rel="stylesheet">
     
     <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
@@ -14,73 +14,42 @@
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <title>Document</title>
-    <script>
-        window.addEventListener('load', function(){
-            var body = document.querySelector("body");
-            var section = document.querySelector('main .board-name-search ');
-            var div = section.querySelector('div:nth-child(4)');
-            var inputDiv  = section.querySelector('div:nth-child(4) > div:nth-child(1)');
-            var input= section.querySelector('div:nth-child(4) > div:nth-child(1) > input')
-            var button = section. querySelector('div:nth-child(4) > div:nth-child(2)');
-            var searchBarFunction = function(e){
-
-                body.classList.toggle("clicked-search-bar");
-                div.classList.toggle("clicked-1");
-                inputDiv.classList.toggle("clicked-2");
-                window.setTimeout(function(){input.classList.toggle("block");},600);
-    
-                
-                button.onclick = function(e) {
-                    console.log("search");
-
-                    /*여기다가 검색시 구현*/
-
-                };
-
-                div.onmousedown = function(e){
-                        e.stopPropagation();
-                };
-         
-            };
-
-            
-            
-            button.onclick = searchBarFunction;
-            
-
-
-            body.addEventListener("mousedown", function(){
-
-                if(body.classList.contains("clicked-search-bar")){
-                    body.classList.toggle("clicked-search-bar");
-                    div.classList.toggle("clicked-1");
-                    inputDiv.classList.toggle("clicked-2");
-                    input.classList.toggle("block");
-
-                    button.onclick = searchBarFunction;
-                }
-
-
-            });
-        
-        
-        
-        
-        
-       
-       
-       
-       
-       
-       
-        });
-    </script>
 </head>
-<body>
-
-
-
+<script>
     
+    window.addEventListener("load", function(){
+        var content= window.document.querySelector(".reply");
+     
+        content.addEventListener("keydown",function(e){
+
+            if(e.target.classList.contains("text-area")){
+                e.target.style.height = "1px";
+                e.target.style.height = (e.target.scrollHeight)+"px";
+            }
+
+
+        });
+        
+        
+        content.addEventListener("keyup",function(e){
+            if(e.target.classList.contains("text-area")){
+                e.target.style.height = "1px";
+                e.target.style.height = (e.target.scrollHeight)+"px";
+
+            }
+
+            
+        });
+
+
+
+
+
+    });
+
+</script>
+
+<body>
     <!-- Global top [s] -->
     <header class="header">
         <section class="gb-top-nav">
@@ -176,23 +145,12 @@
     <!-- Common Top Category[s] -->
     <nav class="top-category-title">
         <div class="top-category-title-wrapper">
-            <a href="../community/board-list.html">사는이야기</a>
-            <a href="../community/board-list.html">IT</a>
-            <a href="../community/board-list.html">Job</a>
-            <a href="../community/board-list.html">Certifications</a>
+            <a href="../services/board-query.html">FAQ</a>
+            <a href="../services/board-make-query.html">1:1 문의하기</a>
+            <a href="../services/board-notice.html">공지사항</a>
         </div>
     </nav>
     <!-- Common Top Category[e] -->
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -202,14 +160,15 @@
 
 
 
+
+
+
+
+
         <section class="board-name-search">
             <h1 class="d-none">게시판 이름과 검색바</h1>
-            <div><a>사는이야기</a></div>
+            <div><a>1:1 문의하기</a></div>
             <div></div>
-            <div>
-                <div><input type="text"></div>
-                <div></div>
-            </div>
         </section>
 
 
@@ -268,62 +227,61 @@
 
                 </section>
 
-                <section class="good">
-                    <h1 class="d-none" >좋아요 구독 알림설정 부탁드려요</h1>
-                    <div>  
-                        <a href="" >10</a> 
-                        <a >5</a>
-                        <a>0</a>
-                    </div>
+
+
+                <section class="text-reply-button">
+                    <h1 class="d-none">답변달기</h1>
+                    <form action="">    
+                        <input type="button" value="답변달기">
+                    </form>
+                </section>
+
+
+
+            </article>
+
+
+           
+            <article class="reply">
+                <h1 class="d-none">reply</h1>
+              
+
+
+
+                <section class="reply-profile">
+                    <h1 class="d-none">content-profile</h1>
+                    <ul>
+                        <li>reply : </li>
+                        <li>운영자이름</li>
+                        <li>03/03 10:12</li>
+
+                    </ul>
+                    <li><a class="icon" href="">땡떙땡</a></li>
+                </section>
+
+
+
+
+
+            
+
+                
+                <section class="reply-text-area">
+                    <h1 class="d-none">text-area</h1>
+                    <textarea class = "text-area" rows="10"  placeholder="내용을 입력하세요"></textarea>
+                    <form action="">    
+                        <input type="button" value="답변완료">
+                    </form>
                 </section>
 
             </article>
 
 
-            <section class="coments">
-                <h1 class="d-none">coments</h1>
 
-                <ol class="main-coments">
-                    <li>
-                        <ul>
-                            <li class="icon">프로필</li>
-                            <li>작성자</li>
-                            <li><a href="" class="icon">땡땡땡</a></li>
-                        </ul>
-                        <div>댓글입니다 만나서 반갑습니다</div>
-                        <div>03/03 10:30</div>
 
 
-                        <ol class="sub-coments">
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 l lorem 반갑습니다</div>
-                                <div>03/03 10:30</div>
-                            </li>
 
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 lorem 반갑습니다</div>
-                                <div>03/03 10:30</div>
-                            </li>
 
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 반갑습니다</div>
-                                <div>03/03 10:30</div>
-                            </li>
 
 
 
@@ -332,15 +290,6 @@
 
 
 
-                        </ol>
-                        <form class="coment-input-text-sub" action="">
-                            <input type="text" placeholder="댓글을 입력하세요">
-                            <input type="button" value="작성">
-                            <div>
-                                <input type="checkbox">&nbsp;&nbsp;비공개
-                            </div>
-                        </form>
-                    </li>
 
 
 
@@ -355,85 +304,11 @@
 
 
 
-                </ol>
-                <form class="coment-input-text-main" action="">
-                    <input type="text" placeholder="댓글을 입력하세요">
-                    <input type="button" value="작성">
-                    <div>
-                        <input type="checkbox">&nbsp;&nbsp;비공개
-                    </div>
-                </form>
-            </section>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <aside class="side">
-                <h1 class="d-none">notice or hot</h1>
-
-                <section class="gongzi">
-                    <h1 class="d-none">공지사항</h1>
-                    <ul>
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                    </ul>
-
-
-                </section>
-
-
-                <section class="hotnotice">
-                    <h1 class="d-none">hot notice</h1>
-                    <ul>
-                        <li><a href="">HOT 게시글</a></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                    </ul>
-                </section>
-
-
-
-            </aside>
 
 
 
@@ -494,6 +369,5 @@
 </nav>
 <!-- Global bottom[e] -->
 </body>
-
 
 </html>
