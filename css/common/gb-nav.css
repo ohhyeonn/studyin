@@ -410,6 +410,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .bottom-nav-btn:hover > * {
@@ -418,6 +419,20 @@
 
 .bottom-nav-btn span {
   font-size: 0.5rem;
+}
+
+.badge-count {
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 1.5;
+  position: absolute;
+  top: 1em;
+  right: 30%;
+
 }
 
 /* bottom nav [e] */
