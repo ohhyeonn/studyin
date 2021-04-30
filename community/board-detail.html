@@ -16,37 +16,52 @@
     <title>Document</title>
     <script>
         window.addEventListener('load', function(){
-        
+            var body = document.querySelector("body");
             var section = document.querySelector('main .board-name-search ');
             var div = section.querySelector('div:nth-child(4)');
             var inputDiv  = section.querySelector('div:nth-child(4) > div:nth-child(1)');
             var input= section.querySelector('div:nth-child(4) > div:nth-child(1) > input')
             var button = section. querySelector('div:nth-child(4) > div:nth-child(2)');
-        
-            button.addEventListener('click', function() {
+            var searchBarFunction = function(e){
 
-                
-                div.style.flexBasis = '200px';
-                div.style.display = 'flex';
-                div.style.justifyContent = 'flex-end';
-                div.style.transition = '0.5s';
-
-
-                inputDiv.style.display = 'block';
-                inputDiv.style.flexBasis = '157px';
-                inputDiv.style.transition = '0.5s';
-
-                window.setTimeout(function(){input.style.display = 'block';},600);
+                body.classList.toggle("clicked-search-bar");
+                div.classList.toggle("clicked-1");
+                inputDiv.classList.toggle("clicked-2");
+                window.setTimeout(function(){input.classList.toggle("block");},600);
     
                 
+                button.onclick = function(e) {
+                    console.log("search");
 
-                    
-                
-                
-                
+                    /*여기다가 검색시 구현*/
+
+                };
+
+                div.onmousedown = function(e){
+                        e.stopPropagation();
+                };
+         
+            };
+
+            
+            
+            button.onclick = searchBarFunction;
+            
+
+
+            body.addEventListener("mousedown", function(){
+
+                if(body.classList.contains("clicked-search-bar")){
+                    body.classList.toggle("clicked-search-bar");
+                    div.classList.toggle("clicked-1");
+                    inputDiv.classList.toggle("clicked-2");
+                    input.classList.toggle("block");
+
+                    button.onclick = searchBarFunction;
+                }
+
 
             });
-        
         
         
         
