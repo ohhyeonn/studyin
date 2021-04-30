@@ -153,7 +153,7 @@ main > .board-name-search > :nth-child(3) {
 
 
 
-/* content */
+/* table */
 
 
 #root > .content > .table {
@@ -181,6 +181,7 @@ main > .board-name-search > :nth-child(3) {
 #root > .content > .table > ul:nth-child(2) > li:nth-child(2) {
     text-align: center;
     flex-basis: 400px;
+    flex-shrink: 1.5;
 }
 #root > .content > .table > ul:nth-child(2) > li:nth-child(3) {
     text-align: center;
@@ -193,6 +194,7 @@ main > .board-name-search > :nth-child(3) {
 #root > .content > .table > ul:nth-child(2) > li:nth-child(5) {
     text-align: center;
     flex-basis: 60px;
+    padding-right: 10px;
 }
 
 
@@ -233,6 +235,7 @@ main > .board-name-search > :nth-child(3) {
     padding-left: 10px;
     flex-basis: 400px;
     text-align: left;
+    flex-shrink: 1.5;
 
 }
 #root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(3) {
@@ -250,6 +253,7 @@ main > .board-name-search > :nth-child(3) {
 }
 #root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(5) {
     padding-left: 10px;
+    padding-right: 10px;
     flex-basis: 60px;
     text-align: center;
 
@@ -373,6 +377,7 @@ main > .board-name-search > :nth-child(3) {
 #root > .content > ol > li + div {
     padding: 15px 30px 15px 30px;
 }
+
 
 
 

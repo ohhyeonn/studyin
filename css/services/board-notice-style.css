@@ -279,14 +279,9 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 #root > .content > ol > li > div {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     
 }
-
-
-
-
-
-
 
 #root > .content .content-title {
     overflow: hidden;
@@ -311,13 +306,8 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     
     font-size: 12px;
     color: #292929;
-
-    
-}
-#root > .content  .content-profile > li:nth-child(3) {
     padding-left: 5px;
-    font-size: 12px;
-    color: #A6A6A6;
+    
 }
 
 
@@ -341,10 +331,10 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 }
 
 
-#root > .content .content-good{
-    flex-basis: 137.5px;
+#root > .content .content-date{
+    font-size: 12px;
+    flex-basis: 50px;
     flex-shrink: 0;
-    display: flex;  
     align-items: center; 
     justify-content: space-between;
     flex-wrap: wrap;
@@ -353,25 +343,6 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     
 
 }
-#root > .content .content-good > li:nth-child(1) {
-    font-size: 10px;
-    padding-left: 30px;
-    color: #757575;
-    background: url(../../images/eye.png) no-repeat 5px 2px;
-}
-#root > .content .content-good > li:nth-child(2) {
-    font-size: 10px;
-    padding-left: 20px;
-    color: #757575;  
-    background: url(../../images/heart.png) no-repeat 5px 2px;
-}
-#root > .content .content-good > li:nth-child(3) {
-    font-size: 10px;
-    padding-left: 20px;
-    color: #757575;
-    background: url(../../images/comment.png) no-repeat 5px 2px;
-}
-
 
 
 
