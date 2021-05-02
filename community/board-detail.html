@@ -7,65 +7,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/community/board-detail-style.css" rel="stylesheet">
     <link href="../css/common/common.css" type="text/css" rel="stylesheet">
-    
+
     <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
     <script defer src="../js/common/gb-nav.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <title>Document</title>
     <script>
-        window.addEventListener('load', function(){
+
+        // window.addEventListener("load", function () {
+
+        //     var dropdown = document.querySelector("main .dropdown");
+            
+        //     console.log(true);
+        //     dropdown.addEventListener("focus", function (e) {
+
+        //         var menu = dropdown.querySelector(".menu");
+        //         menu.classList.remove("d-none");
+        //     });
+
+        //     dropdown.addEventListener("blur", function (e) {
+
+        //         var menu = dropdown.querySelector(".menu");
+        //         menu.classList.add("d-none");
+        //     });
+        // });
+
         
-            var section = document.querySelector('main .board-name-search ');
-            var div = section.querySelector('div:nth-child(4)');
-            var inputDiv  = section.querySelector('div:nth-child(4) > div:nth-child(1)');
-            var input= section.querySelector('div:nth-child(4) > div:nth-child(1) > input')
-            var button = section. querySelector('div:nth-child(4) > div:nth-child(2)');
-        
-            button.addEventListener('click', function() {
+        window.addEventListener("load", function () {
+            var section = document.querySelector("#root");
+            var dots = section.querySelectorAll(".dotdotdot");
 
-                
-                div.style.flexBasis = '200px';
-                div.style.display = 'flex';
-                div.style.justifyContent = 'flex-end';
-                div.style.transition = '2s';
+            section.addEventListener("click", function (e) {
 
+                if (e.target.classList.contains("dotdotdot")) {
 
-                inputDiv.style.display = 'block';
-                inputDiv.style.flexBasis = '157px';
-                inputDiv.style.transition = '2s';
-
-                window.setTimeout(function(){input.style.display = 'block';},2000);
-    
-                
-
-                    
-                
-                
-                
+                    e.preventDefault();
+                    e.target.parentNode.style.position = "relative";
+                    e.target.parentNode.style.position = "relative";
+                    e.target.nextElementSibling.classList.toggle("d-none");
+                } else if (e.target.classList.contains("dotdotdot-sibling")) {
+                    e.target.classList.toggle("d-none");
+                }
 
             });
-        
-        
-        
-        
-        
-        
-       
-       
-       
-       
-       
-       
+
+
+            section.addEventListener("mousedown", function (e) {
+
+                if (e.target.classList.contains("dotdotdot-sibling")) {
+                    return;
+                } else if (!e.target.classList.contains("dotdotdot")) {
+                    for (var d of dots) {
+                        d.nextElementSibling.classList.add("d-none");
+                    }
+                }
+
+
+            });
+
+
+
+
+        });
+
+
+
+
+
+
+        window.addEventListener('load', function () {
+            var body = document.querySelector("body");
+            var section = document.querySelector('main .board-name-search ');
+            var div = section.querySelector('div:nth-child(4)');
+            var inputDiv = section.querySelector('div:nth-child(4) > div:nth-child(1)');
+            var input = section.querySelector('div:nth-child(4) > div:nth-child(1) > input')
+            var button = section.querySelector('div:nth-child(4) > div:nth-child(2)');
+            var searchBarFunction = function (e) {
+
+                body.classList.toggle("clicked-search-bar");
+                div.classList.toggle("clicked-1");
+                inputDiv.classList.toggle("clicked-2");
+                window.setTimeout(function () { input.classList.toggle("block"); }, 600);
+
+
+                button.onclick = function (e) {
+                    console.log("search");
+
+                    /*여기다가 검색시 구현*/
+
+                };
+
+                div.onmousedown = function (e) {
+                    e.stopPropagation();
+                };
+
+            };
+
+
+
+            button.onclick = searchBarFunction;
+
+
+
+            body.addEventListener("mousedown", function () {
+
+                if (body.classList.contains("clicked-search-bar")) {
+                    body.classList.toggle("clicked-search-bar");
+                    div.classList.toggle("clicked-1");
+                    inputDiv.classList.toggle("clicked-2");
+                    input.classList.toggle("block");
+
+                    button.onclick = searchBarFunction;
+                }
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
         });
     </script>
 </head>
+
 <body>
 
 
 
-    
+
     <!-- Global top [s] -->
     <header class="header">
         <section class="gb-top-nav">
@@ -74,8 +152,8 @@
             </div>
             <div class="search-bar">
                 <div class="search-wrapper">
-                <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
-                <a href="../index.html" class="search-btn"><i class="fas fa-search"></i></a>
+                    <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
+                    <a href="../index.html" class="search-btn"><i class="fas fa-search"></i></a>
                 </div>
             </div>
             <div class="menu-button">
@@ -86,15 +164,23 @@
                     <span class="menu-button-bar"></span>
                 </label>
                 <aside class="menu">
-                <ul>
-                    <span>STUDY IN</span>
-                    <p>로그인이 필요합니다</p>
-                    <p>User님, 안녕하세요</p>
-                    <a href="../member/login.html"><li>Login</li></a>
-                    <a href="../member/sign-up.html"><li>Sign Up</li></a>
-                    <a href="../index.html"><li>Logout</li></a>
-                    <a href="../mypage/mypage.html"><li>My page</li></a>
-                </ul>
+                    <ul>
+                        <span>STUDY IN</span>
+                        <p>로그인이 필요합니다</p>
+                        <p>User님, 안녕하세요</p>
+                        <a href="../member/login.html">
+                            <li>Login</li>
+                        </a>
+                        <a href="../member/sign-up.html">
+                            <li>Sign Up</li>
+                        </a>
+                        <a href="../index.html">
+                            <li>Logout</li>
+                        </a>
+                        <a href="../mypage/mypage.html">
+                            <li>My page</li>
+                        </a>
+                    </ul>
                 </aside>
                 <div class="overlay"><label for="menuBtn"></label></label></div>
             </div>
@@ -117,7 +203,7 @@
             <div class="main-category">
                 <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
                 <label for="toggle-study">
-                <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3> 
+                    <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3>
                 </label>
                 <div class="sub-category">
                     <ul>
@@ -130,7 +216,7 @@
             <div class="main-category">
                 <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
                 <label for="toggle-community">
-                <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3> 
+                    <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3>
                 </label>
                 <div class="sub-category">
                     <ul>
@@ -143,7 +229,7 @@
             <div class="main-category">
                 <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
                 <label for="toggle-services">
-                <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3> 
+                    <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3>
                 </label>
                 <div class="sub-category">
                     <ul>
@@ -216,21 +302,24 @@
             <article class="content">
                 <h1 class="d-none">게시글</h1>
 
+                <section class="content-header">
+                    <h1 class="d-none">content header</h1>
 
-
-
-                <section class="content-profile">
-                    <h1 class="d-none">content-profile</h1>
-                    <div class="icon">프로필</div>
-                    <ul>
-                        <li>작성자</li>
-                        <li>03/03 10:12</li>
+                    <ul class="writer-profile">
+                        <li class="image icon">프로필 이미지</li>
+                        <li class="name">작성자</li>
                     </ul>
-                    <div><a class="icon" href="">땡떙땡</a></div>
+                    <span class="reg-date">03/03 10:12</span>
+                    <ul class="dropdown">
+                        <li>
+                            <a class="trigger icon" href="#">메뉴</a>
+                            <ul class="menu d-none">
+                                <li><a class="item" href="#">수정</a></li>
+                                <li><a class="item" href="#">삭제</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </section>
-
-
-
 
 
                 <section class="write-title">
@@ -254,100 +343,72 @@
                 </section>
 
                 <section class="good">
-                    <h1 class="d-none" >좋아요 구독 알림설정 부탁드려요</h1>
-                    <div>  
-                        <a href="" >10</a> 
-                        <a >5</a>
+                    <h1 class="d-none">좋아요 구독 알림설정 부탁드려요</h1>
+                    <div>
+                        <a href="">10</a>
+                        <a>5</a>
                         <a>0</a>
                     </div>
                 </section>
 
             </article>
 
+            <section class="comments">
+                <h1 class="d-none">댓글 영역</h1>
 
-            <section class="coments">
-                <h1 class="d-none">coments</h1>
-
-                <ol class="main-coments">
-                    <li>
-                        <ul>
-                            <li class="icon">프로필</li>
-                            <li>작성자</li>
-                            <li><a href="" class="icon">땡땡땡</a></li>
+                <ol class="comment-list">
+                    <li class="item">
+                        <ul class="writer-profile">
+                            <li class="image icon">프로필 이미지</li>
+                            <li class="name">작성자</li>
                         </ul>
-                        <div>댓글입니다 만나서 반갑습니다</div>
-                        <div>03/03 10:30</div>
-
-
-                        <ol class="sub-coments">
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
+                        <ul class="dropdown">
+                            <li><a class="trigger icon" href="#">메뉴</a>
+                                <ul class="menu d-none">
+                                    <li><a class="item" href="#">수정</a></li>
+                                    <li><a class="item" href="#">삭제</a></li>
                                 </ul>
-                                <div>대댓글입니다 만나서 반갑습니다</div>
-                                <div>03/03 10:30</div>
+                            </li>
+                        </ul>
+                        <span class="item-text">댓글입니다 만나서 반갑습니다</span>
+                        <span class="reg-date">03/03 10:30</span>
+
+                        <ol class="reply-list">
+                            <li class="item">
+                                <ul class="writer-profile">
+                                    <li class="image icon">프로필 이미지</li>
+                                    <li class="name">서현오(글쓴이)</li>
+                                </ul>
+                                <ul class="dropdown">
+                                    <li><a class="trigger icon" href="#">메뉴</a>
+                                        <ul class="menu d-none">
+                                            <li><a class="item" href="#">수정</a></li>
+                                            <li><a class="item" href="#">삭제</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <span class="item-text">답글입니다 만나서 반갑습니다</span>
+                                <span class="reg-date">03/03 10:30</span>
                             </li>
 
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 반갑습니다</div>
-                                <div>03/03 10:30</div>
+                            <li class="item input-area">
+                                <form action="">
+                                    <input type="text" placeholder="댓글을 입력하세요">
+                                    <input type="button" value="작성">
+                                    <span><input type="checkbox">&nbsp;&nbsp;비공개</span>
+                                </form>
                             </li>
-
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li><a href="" class="icon">땡땡땡</a></li>
-                                </ul>
-                                <div>대댓글입니다 만나서 반갑습니다</div>
-                                <div>03/03 10:30</div>
-                            </li>
-
-
-
-
-
-
-
-
                         </ol>
-                        <form class="coment-input-text-sub" action="">
-                            <input type="text" placeholder="댓글을 입력하세요">
-                            <input type="button" value="작성">
-                            <div>
-                                <input type="checkbox">&nbsp;&nbsp;비공개
-                            </div>
-                        </form>
                     </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <li class="item input-area">
+                        <form action="">
+                            <input type="text" placeholder="댓글을 입력하세요">
+                            <input type="button" value="작성">
+                            <span><input type="checkbox">&nbsp;&nbsp;비공개</span>
+                        </form>
+                    </li>
                 </ol>
-                <form class="coment-input-text-main" action="">
-                    <input type="text" placeholder="댓글을 입력하세요">
-                    <input type="button" value="작성">
-                    <div>
-                        <input type="checkbox">&nbsp;&nbsp;비공개
-                    </div>
-                </form>
             </section>
 
 
@@ -448,36 +509,36 @@
 
     </main>
 
-<!-- Main [e] -->
-<footer>
-    <div class="footer-wrapper">
-        <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
-    </div>
-</footer>
-<!-- Global bottom[s] -->
-<nav class="gb-bottom-nav">
-    <a href="#" class="bottom-nav-btn" id="category-bottom-button">
-        <i class="fas fa-bars"></i>
-        <span>카테고리</span>
-    </a>
-    <a href="../mypage/mystudy-main-list.html" class="bottom-nav-btn">
-        <i class="fas fa-book"></i>
-        <span class="study-btn">스터디</span>
-    </a>
-    <a href="../index.html" class="bottom-nav-btn">
-        <i class="fas fa-home"></i>
-        <span class="home-btn">홈</span>
-    </a>
-    <a href="../mypage/mymessage-rec.html" class="bottom-nav-btn">
-        <i class="fas fa-envelope-square"></i>
-        <span class="message-btn">쪽지함</span>
-    </a>
-    <a href="../mypage/mypage.html" class="bottom-nav-btn">
-        <i class="far fa-user"></i>
-        <span class="mypage-btn">마이페이지</span>
-    </a>
-</nav>
-<!-- Global bottom[e] -->
+    <!-- Main [e] -->
+    <footer>
+        <div class="footer-wrapper">
+            <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
+        </div>
+    </footer>
+    <!-- Global bottom[s] -->
+    <nav class="gb-bottom-nav">
+        <a href="#" class="bottom-nav-btn" id="category-bottom-button">
+            <i class="fas fa-bars"></i>
+            <span>카테고리</span>
+        </a>
+        <a href="../mypage/mystudy-main-list.html" class="bottom-nav-btn">
+            <i class="fas fa-book"></i>
+            <span class="study-btn">스터디</span>
+        </a>
+        <a href="../index.html" class="bottom-nav-btn">
+            <i class="fas fa-home"></i>
+            <span class="home-btn">홈</span>
+        </a>
+        <a href="../mypage/mymessage-rec.html" class="bottom-nav-btn">
+            <i class="fas fa-envelope-square"></i>
+            <span class="message-btn">쪽지함</span>
+        </a>
+        <a href="../mypage/mypage.html" class="bottom-nav-btn">
+            <i class="far fa-user"></i>
+            <span class="mypage-btn">마이페이지</span>
+        </a>
+    </nav>
+    <!-- Global bottom[e] -->
 </body>
 
 
