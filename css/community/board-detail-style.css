@@ -41,7 +41,7 @@ ol, ul , li , a {
 }
 
 
-.dotdotdot-sibling {
+/* .dotdotdot-sibling {
     width: 80px; 
     height:50px; 
     background-color: gray; 
@@ -49,16 +49,21 @@ ol, ul , li , a {
     right: 0px;
     top: 0px;
     z-index: 100;
-    opacity: 0.5;
+    opacity: 0.5; */
     /* <a class="icon dotdotdot" href="">땡떙땡</a>
 <div class="d-none dotdotdot-sibling"></div> */
-}
+/* } */
 
-.dropdown {
+/* .dropdown {
 
+} */
+
+.dropdown > li {
+    
     width: 40px;
     height: 40px;
     padding: 8px;
+    position: relative;
 }
 
     .dropdown .trigger {
@@ -69,10 +74,23 @@ ol, ul , li , a {
         background: url(../../images/icon-navigation.png) no-repeat center;
     }
 
-    .dropdown .trigger > .menu {
+    .dropdown .menu {
 
         position: absolute;
+        width: 72px;
+        right: 0;
+        font-size: 16px;
+        padding: 8px 0;
+        border: 1px solid #E3E3E3;
+        background-color: #fff;
+        top: 40px;
+        z-index: 10;
     }
+        .dropdown .menu > li {
+            text-indent: 16px;
+            height: 32px;
+            line-height: 32px;
+        }
 
 
 
