@@ -23,6 +23,15 @@ ol, ul , li , a {
     padding: 0px;
 }   
 
+.order-search label{
+    margin-left: 5px;
+}
+.order-search input[type="checkbox"]{
+    margin-left: 5px;
+}
+p input[type="checkbox"]{
+    margin-left: 620px;
+}
 
 
 

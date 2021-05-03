@@ -142,9 +142,17 @@ main > .board-name-search > :nth-child(3) {
 }
 #root >.content > .table-order > ul > li{
     padding-left: 10px;
+    display: flex;
+    align-items: center;
 
 }
-
+#root >.content > .table-order > ul > li:nth-child(4){
+    margin-left: auto;
+    margin-right: 5px;
+}
+#root >.content > .table-order > ul > li:nth-child(4) > input{
+    margin-left: 5px;
+}
 
 
 
@@ -258,6 +266,15 @@ main > .board-name-search > :nth-child(3) {
     text-align: center;
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
