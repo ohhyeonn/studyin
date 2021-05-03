@@ -29,9 +29,7 @@ ol, ul , li , a {
 .order-search input[type="checkbox"]{
     margin-left: 5px;
 }
-p input[type="checkbox"]{
-    margin-left: 620px;
-}
+
 
 
 
@@ -290,6 +288,8 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     font-weight: bold;
     font-size: 14px;
     color: #292929;
+    display: flex;
+    justify-content: space-between;
 }
 #root > .content > ol > li >p:nth-child(2) {
     padding-top: 8px;
