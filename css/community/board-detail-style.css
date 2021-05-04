@@ -46,23 +46,6 @@ button {
 }
 
 
-/* .dotdotdot-sibling {
-    width: 80px; 
-    height:50px; 
-    background-color: gray; 
-    position: absolute; 
-    right: 0px;
-    top: 0px;
-    z-index: 100;
-    opacity: 0.5; */
-    /* <a class="icon dotdotdot" href="">땡떙땡</a>
-<div class="d-none dotdotdot-sibling"></div> */
-/* } */
-
-/* .dropdown {
-
-} */
-
 .dropdown > li {
     
     width: 40px;

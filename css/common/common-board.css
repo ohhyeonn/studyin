@@ -1,0 +1,51 @@
+
+
+
+/*  */
+
+.dotdotdot-sibling { 
+    cursor: pointer;
+    border: 1px solid #E3E3E3;
+    background-color: white; 
+    position: absolute; 
+    right: 0px;
+    top: 0px;
+    z-index: 100;
+    
+}
+.dotdotdot-sibling-noright{
+    text-align: center;
+    height: 25px;
+    width: 80px;
+    
+    color: #444;
+}
+    .dotdotdot-sibling-noright:hover{
+        background-color:#F8F8F8;
+        color: #444;
+    }
+.dotdotdot-sibling-modify{
+    text-align: center;
+
+    height: 25px;
+    width: 80px;
+    margin-top: -1px;
+    color: #444;
+    
+}
+    .dotdotdot-sibling-modify:hover{
+        background-color:#F8F8F8;
+        color: #444;
+    }
+.dotdotdot-sibling-delete{
+    text-align: center;
+
+    height: 25px;
+    width: 80px;
+    
+    color: #444;
+}
+    .dotdotdot-sibling-delete:hover{
+        background-color:#F8F8F8;
+        color: #444;
+    }
