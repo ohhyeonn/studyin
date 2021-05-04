@@ -40,6 +40,11 @@ ol, ul , li , a {
     text-indent:-3000px !important;
 }
 
+button {
+
+    border: initial;
+}
+
 
 /* .dotdotdot-sibling {
     width: 80px; 
@@ -79,15 +84,17 @@ ol, ul , li , a {
         position: absolute;
         width: 72px;
         right: 0;
-        font-size: 16px;
         padding: 8px 0;
         border: 1px solid #E3E3E3;
         background-color: #fff;
-        top: 40px;
+        top: 0;
         z-index: 10;
+        font-size: 16px;
+        text-indent: 16px;
     }
+    
         .dropdown .menu > li {
-            text-indent: 16px;
+            
             height: 32px;
             line-height: 32px;
         }
