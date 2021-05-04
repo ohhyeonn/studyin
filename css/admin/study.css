@@ -1,0 +1,28 @@
+
+/* 페이저 */
+.pager{
+    display:flex;
+    justify-content: center;
+    font-size:10px;
+    font-weight: bold;
+    color:#979797;
+    padding:10px;
+}
+    .pager>ul{
+        padding:0px 5px;
+        display:flex;
+    }
+    .pager>ul>li{
+        list-style: none;
+        padding:0px 3px;
+    }
+
+    
+@media screen and (max-width: 359px){    
+    .pager{
+        padding: 8px 0px;
+    }
+    .last-btn{
+        margin:1px;
+    } 
+}

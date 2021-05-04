@@ -1,0 +1,6 @@
+/* -------359px 미만일 때-------- */
+@media screen and (max-width: 359px){
+    .first-btn, .main, .last-btn{
+        margin:0px;
+    }
+}

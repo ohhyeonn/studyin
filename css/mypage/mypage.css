@@ -1,34 +1,33 @@
 
 
 /*----제목----*/
-
 .title .big-title{
     text-align: center;
 }
+
 /* --------main section--------- */
-
 main{
- margin:5px;
-
+ margin:5px; 
 }
+
 .main-button{
     display:flex;
     flex-flow: column; 
     justify-content: center;
     align-items: center;
     margin-top:40px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .main-button a{
     display:block;
     line-height:10%;
     border: 1px solid #DCDCDC;
-    border-radius: 5px;
+    border-radius: 20px;
     text-align: center;
     cursor: pointer;
     transition: all 0.4s;
-    background-color: #F8F8F8;
+    background-color: white;
     
     margin: 10px;
     padding: 20px;
@@ -36,9 +35,10 @@ main{
 
 .main-button a:hover{
     opacity: 0.7;
-    background-color: var(--primary-color);
-    color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
+
 /* ---button style--- */
 
 .account{
@@ -57,11 +57,14 @@ main{
     height:40px;
 }
 
-#profile{    
+.icon{    
+    background: url(../../images/profile.png) no-repeat center;
+    background-size: contain;
     width:40px;
     height:40px;
     border: 1px solid #979797;
     color: white;
+    border-radius:13px;
 }
 
 #name{
@@ -76,11 +79,18 @@ main{
 }
 
 .account, .activity{
-    min-width:250px;
-    width:55%;
+    width:90%;
 }
 
 .span{
     font-weight: bold;
-    text
+}
+
+@media screen and (min-width: 500px){
+    .account, .activity{
+        width: 400px;
+    }
+    .main-button a{
+        border-radius: 5px;
+    }
 }

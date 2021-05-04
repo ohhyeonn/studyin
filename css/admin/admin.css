@@ -1,0 +1,154 @@
+body{
+    
+    background-color: var(--gray-color);
+}
+
+main{
+    max-width:780px;
+    margin:auto auto 40px auto;
+    height:auto;
+}
+   
+.btn-small{
+    font-size: 0.4rem;
+    padding: 5px 8px;
+}
+.btn-medium{
+    font-size:0.7rem;
+    padding: 8px 10px;
+}
+
+input[type="text"]{
+    height: 25px;
+    padding: 0 14px;
+    margin: 0px;
+    border: 1px solid #919191;
+    line-height: 1.5;
+    color: #333;
+    font-weight: lighter;
+    font-size: 0.6rem;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* ---------utils-------------------------------------------------- */
+.d-none{
+    display:none !important;
+}
+.truncate{
+    white-space:nowrap !important;
+    overflow: hidden !important;
+    text-overflow:ellipsis !important;
+}
+
+.text-align-left{
+    text-align: left !important;
+}
+
+.strong{
+    color: var(--second-color);
+}
+
+/*--------------select-box btn css--------*/
+select{
+    border:none;
+    font-size: 9px;
+    margin-left:9px;
+    background-color: var(--gray-color);
+}
+
+/* 정렬순 */
+   .first-btn{
+    display:flex;
+    margin: 40px 5px 10px 5px;
+   }
+
+   .first-btn form{
+    margin-left: auto;
+    white-space: nowrap;
+    /* overflow:scroll; */
+   }
+
+.last-btn{
+    display:flex;
+    justify-content: space-between;
+    margin: 15px 5px 0px 5px;
+    margin-bottom: 40px;
+}
+    .last-btn>div{
+        margin-right:3px;
+}
+
+/*---------title---------*/
+.title{
+    border-bottom: 1px solid #DCDCDC;
+    height: 55px;
+}
+
+.title .big-title{
+    font-size:20px;
+    padding: 20px 0px 0px 20px;
+}
+
+/* --card-- */
+.main-card{
+    display:flex;
+    height:auto;
+    /* margin-bottom:0px; */
+    flex-flow: column;
+    align-items: center;
+    position:relative;
+}
+
+    .main-card .card-wrapper{
+        width:100%;
+        height:auto;
+        
+        background-color: white;
+        border: 1px solid #DCDCDC;
+        border-radius: 5px;
+        text-align: center;
+
+        margin: 5px 20px;
+        padding: 13px 10px;
+        position: relative;
+
+        transition: all 0.4s;
+
+        display:flex;
+    }
+        .card-wrapper:hover{
+            border: 1px solid var(--primary-color);
+        }
+
+.card-content{
+    padding-left:10px;
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+    .card-content>span {
+        text-align: left;
+    }
+
+    .card-content .card-title{
+        font-size:large;
+        font-weight: bolder;
+        padding-bottom:5px;
+    }
+
+
+    .card-content span{
+        font-size:9px;
+    }
+
+    .card-wrapper .check{
+    align-self: center;
+    margin: 0px 5px;
+    }
+
+.entire-check{
+margin-right:auto;
+line-height: 2.5;
+}

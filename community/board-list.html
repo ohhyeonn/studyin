@@ -16,38 +16,54 @@
 
     <title>Document</title>
     <script>
-        window.addEventListener('load', function(){
         
+        window.addEventListener('load', function(){
+            var body = document.querySelector("body");
             var section = document.querySelector('main .board-name-search ');
             var div = section.querySelector('div:nth-child(4)');
             var inputDiv  = section.querySelector('div:nth-child(4) > div:nth-child(1)');
             var input= section.querySelector('div:nth-child(4) > div:nth-child(1) > input')
             var button = section. querySelector('div:nth-child(4) > div:nth-child(2)');
-        
-            button.addEventListener('click', function() {
+            var searchBarFunction = function(e){
 
-                
-                div.style.flexBasis = '200px';
-                div.style.display = 'flex';
-                div.style.justifyContent = 'flex-end';
-                div.style.transition = '2s';
-
-
-                inputDiv.style.display = 'block';
-                inputDiv.style.flexBasis = '157px';
-                inputDiv.style.transition = '2s';
-
-                window.setTimeout(function(){input.style.display = 'block';},2000);
+                body.classList.toggle("clicked-search-bar");
+                div.classList.toggle("clicked-1");
+                inputDiv.classList.toggle("clicked-2");
+                window.setTimeout(function(){input.classList.toggle("block");},600);
     
                 
+                button.onclick = function(e) {
+                    console.log("search");
 
-                    
-                
-                
-                
+                    /*여기다가 검색시 구현*/
+
+                };
+
+                div.onmousedown = function(e){
+                        e.stopPropagation();
+                };
+         
+            };
+
+            
+            
+            button.onclick = searchBarFunction;
+            
+
+
+            body.addEventListener("mousedown", function(){
+
+                if(body.classList.contains("clicked-search-bar")){
+                    body.classList.toggle("clicked-search-bar");
+                    div.classList.toggle("clicked-1");
+                    inputDiv.classList.toggle("clicked-2");
+                    input.classList.toggle("block");
+
+                    button.onclick = searchBarFunction;
+                }
+
 
             });
-        
         
         
         
@@ -236,7 +252,7 @@
 
                     <li>
                         <p><a href="../community/board-detail.html">게시판 제목</a></p>
-                        <p><a href="../community/board-list.html">게시글 미리보기 입니다 람쥐 구멍 개 ...</a></p>
+                        <p><a href="../community/board-list.html">게시글 미리보기 입니다 람쥐 구멍 개 ... lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem adipisci suscipit animi, debitis consequuntur eius unde dolores! Ea ab dignissimos ratione possimus perspiciatis, voluptate reiciendis veniam, exercitationem maiores odio iste.</a></p>
                         <ul>
                             <li class="icon"><a href="">프로필</a></li>
                             <li><a href="">익명</a></li>   

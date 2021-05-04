@@ -6,9 +6,10 @@ ul{
 
 .title .big-title{
     text-align: center;
-    display:inline;
 }
-
+.message-main .main{
+    margin:0;
+}
 /* -----btn-list------ */
 .btn-list{
     margin: auto;
@@ -28,6 +29,7 @@ ul{
 /* -----aside----- */
 @media screen and (min-width: 650px){
         .message-side{
+            background-color: white;
             display:initial;
             position:absolute;
             left:30px;
@@ -48,6 +50,7 @@ ul{
 /* --------main section--------- */
 
 .mess-box{
+    background-color: white;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
     padding: 15px;
@@ -55,6 +58,7 @@ ul{
     width:300px;
     height:400px;
     margin: auto;
+    margin-bottom: 40px;
     position: relative;
 }
 
@@ -74,7 +78,7 @@ ul{
 
 textarea{
     resize: none;
-    width:268px;
+    width:95%;
     height:280px;
 
     font-weight: lighter;

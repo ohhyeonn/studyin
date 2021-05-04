@@ -38,7 +38,6 @@ ol, ul , li , a {
     text-indent:-3000px !important;
 }
 
-
 .dotdotdot-sibling {
     width: 80px; 
     height:50px; 
@@ -62,7 +61,9 @@ ol, ul , li , a {
     
     /* lay out */
 
-
+    #root {
+        margin-bottom: 30px;
+    }
 
 
 
@@ -286,6 +287,31 @@ main > .board-name-search > :nth-child(3) {
 
 
 
+/* text-reply-button*/
+
+.text-reply-button {
+    padding-top: 15px;
+}
+
+.text-reply-button > form {
+    display: flex;
+    justify-content: flex-end;
+}
+.text-reply-button > form > input{
+    cursor: pointer;
+    outline: none;
+    height: 30px;
+    width: 70px;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+}
+
+
+
+
+
 
 
 
@@ -319,7 +345,34 @@ main > .board-name-search > :nth-child(3) {
 
 .reply-text-area {
     padding-top: 15px;
+    margin-left: 15px;
 }
+
+
+
+
+
+.reply-text-area > textarea {
+    font-size: 16px;
+    color: #333333;
+    min-height: 400px;
+    width:100%; 
+    resize:none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 .reply-text-area > form {
     display: flex;

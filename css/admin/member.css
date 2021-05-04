@@ -16,35 +16,17 @@
         padding:0px 3px;
     }
 
-    .last-btn{
-        display:flex;
-        justify-content: space-between;
-    }
-
 
 /* -------359px 미만일 때-------- */
 @media screen and (max-width: 359px){
-    table th:nth-child(6), td:nth-child(6){
-        display:none;
-    }
-    
     .pager{
         padding: 8px 0px;
-    }
-
-    .sort, .main, .last-btn{
-        margin:1px;
-    } 
-    
-    .sort div{
-        display:none;
-    }
-
-    .pager{
         margin: 0px 5px;
     }
-    
-    main{
-        white-space: nowrap;
+}
+/* -------359px 미만일 때-------- */
+@media screen and (max-width: 359px){
+    .first-btn, .main, .last-btn{
+        margin:0px;
     }
-    }
+}

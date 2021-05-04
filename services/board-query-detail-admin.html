@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/community/board-write-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/services/board-query-detail-admin-style.css" rel="stylesheet">
     <link href="../css/common/common.css" type="text/css" rel="stylesheet">
+    
     <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
     <script defer src="../js/common/gb-nav.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
-
-
-
-   <title>Document</title>
-
-   <script>
-
+    <title>Document</title>
+</head>
+<script>
+    
     window.addEventListener("load", function(){
-        var content= window.document.querySelector(".content");
+            var section = document.querySelector("#root");
+            var dots = section.querySelectorAll(".dotdotdot");
+
+            section.addEventListener("click", function(e){
+                
+                if(e.target.classList.contains("dotdotdot")){
+                    
+                    e.preventDefault();
+                    e.target.parentNode.style.position = "relative";
+                    e.target.nextElementSibling.classList.toggle("d-none");
+                }else if (e.target.classList.contains("dotdotdot-sibling")){
+                    e.target.classList.toggle("d-none");
+                }
+
+            });
+
+
+            section.addEventListener("mousedown",function(e){
+                
+                if (e.target.classList.contains("dotdotdot-sibling")){
+                    return;
+                }else if(!e.target.classList.contains("dotdotdot")){
+                    for(var d of dots){
+                        d.nextElementSibling.classList.add("d-none");
+                    }
+                } 
+
+
+            });
+
+
+
+
+        });
+
+
+        
+    
+    window.addEventListener("load", function(){
+        var content= window.document.querySelector(".reply");
      
         content.addEventListener("keydown",function(e){
 
@@ -48,8 +86,8 @@
 
     });
 
-   </script>
-</head>
+</script>
+
 <body>
     <!-- Global top [s] -->
     <header class="header">
@@ -146,38 +184,37 @@
     <!-- Common Top Category[s] -->
     <nav class="top-category-title">
         <div class="top-category-title-wrapper">
-            <a href="../community/board-list.html">사는이야기</a>
-            <a href="../community/board-list.html">IT</a>
-            <a href="../community/board-list.html">Job</a>
-            <a href="../community/board-list.html">Certifications</a>
+            <a href="../services/board-query.html">FAQ</a>
+            <a href="../services/board-make-query.html">1:1 문의하기</a>
+            <a href="../services/board-notice.html">공지사항</a>
         </div>
     </nav>
     <!-- Common Top Category[e] -->
 
-    
-    
-    
-    
-    <main>
-    
 
-        
-        
-        
-        
-        
-        <section class="board-name-write">
-            <h1 class="d-none">게시판 이름과 검색바</h1> 
-            <div><a>사는이야기</a></div>
+
+
+
+    <main>
+
+
+
+
+
+
+
+
+        <section class="board-name-search">
+            <h1 class="d-none">게시판 이름과 검색바</h1>
+            <div><a>1:1 문의하기</a></div>
             <div></div>
-            <div><a href="">완료</a></div>
         </section>
-    
-    
+
+
         <div id="root">
 
 
-  
+
 
 
 
@@ -190,11 +227,11 @@
 
 
             <article class="content">
-                <h1 class="d-none">게시판 목록이 나열</h1>
-                
+                <h1 class="d-none">게시글</h1>
 
 
-                
+
+
                 <section class="content-profile">
                     <h1 class="d-none">content-profile</h1>
                     <div class="icon">프로필</div>
@@ -202,125 +239,126 @@
                         <li>작성자</li>
                         <li>03/03 10:12</li>
                     </ul>
-                
+                    <div>
+                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                        <div class="d-none dotdotdot-sibling"></div>
+                    </div>
                 </section>
 
 
 
 
-                <section class="write-title" >
+
+                <section class="write-title">
                     <h1 class="d-none">제목입력</h1>
 
-                   
-                    <form>
-                        <textarea class="text-area" rows="10"  placeholder="제목을 입력하세요"></textarea>
-                    </form>
+
                     <div>
-                        <div></div>
+                        안녕하세요 잘부탁드려요
                     </div>
 
 
+                </section>
+
+
+                <section class="text-area">
+                    <h1 class="d-none">text-area</h1>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sunt tenetur aperiam iste
+                    consequatur voluptatibus quo autem ea quia expedita, itaque iusto possimus similique odit ipsa
+                    voluptatem! Harum, similique maiores.
 
                 </section>
 
-                <section class="write-content">
-                    <h1 class="d-none">write-content</h1>
-                    
-                    <textarea class = "text-area" rows="10"  placeholder="내용을 입력하세요"></textarea>
 
+
+                <section class="text-reply-button">
+                    <h1 class="d-none">답변달기</h1>
+                    <form action="">    
+                        <input type="button" value="답변달기">
+                    </form>
                 </section>
 
-                
+
+
             </article>
 
 
-            <section class="board-bottom-nav">
-                <h1 class="d-none">board-bottom-nav</h1>
-                <div><div></div></div>
-                <ul>
-                    <a href="" class="icon">파일첨부</a>
-                    <a href="" class="icon">사진첨부</a>
+           
+            <article class="reply">
+                <h1 class="d-none">reply</h1>
+              
+
+
+
+                <section class="reply-profile">
+                    <h1 class="d-none">content-profile</h1>
+                    <ul>
+                        <li>reply : </li>
+                        <li>운영자이름</li>
+                        <li>03/03 10:12</li>
+
+                    </ul>
                     <li>
-                        <input id="bottom-check" type="checkbox"><label for="bottom-check">비공개</label>
+                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                        <div class="d-none dotdotdot-sibling"></div>
                     </li>
-                </ul>
-                
-            </section>
+                </section>
+
+
+
+
+
             
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <aside class="side">
-                <h1 class="d-none">notice or hot</h1>
-
-                <section class="gongzi">
-                    <h1 class="d-none" >공지사항</h1>
-                    <ul >
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
-                    </ul>
-
-
+                
+                <section class="reply-text-area">
+                    <h1 class="d-none">text-area</h1>
+                    <textarea class = "text-area" rows="10"  placeholder="내용을 입력하세요"></textarea>
+                    <form action="">    
+                        <input type="button" value="답변완료">
+                    </form>
                 </section>
 
-
-                <section class="hotnotice">
-                    <h1 class="d-none" >hot notice</h1>
-                    <ul >
-                        <li><a href="">HOT 게시글</a></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                        <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
-                    </ul>
-                </section>
-
-
-
-            </aside>
+            </article>
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -344,7 +382,6 @@
 
 
     </main>
-        
 
 <!-- Main [e] -->
 <footer>
@@ -377,4 +414,5 @@
 </nav>
 <!-- Global bottom[e] -->
 </body>
+
 </html>

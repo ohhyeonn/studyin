@@ -1,23 +1,20 @@
-html {
-    
+html{
     min-height: 100vh;
     margin: 0px;
 }
 
-body {
+body{
 
     min-height: inherit;
     margin: 0px;
     background-color: #F8F8F8;
 }
 
-.d-none {
-
+.d-none{
     display: none;
 }
 
 ol, ul , li , a {
-
     list-style-type:none;
     text-decoration: none;
     color: #000000;
@@ -40,64 +37,19 @@ ol, ul , li , a {
     text-indent:-3000px !important;
 }
 
-button {
-
-    border: initial;
-}
-
-
-/* .dotdotdot-sibling {
+.dotdotdot-sibling {
     width: 80px; 
     height:50px; 
     background-color: gray; 
     position: absolute; 
-    right: 0px;
-    top: 0px;
     z-index: 100;
-    opacity: 0.5; */
+    opacity: 0.5;
     /* <a class="icon dotdotdot" href="">땡떙땡</a>
 <div class="d-none dotdotdot-sibling"></div> */
-/* } */
-
-/* .dropdown {
-
-} */
-
-.dropdown > li {
-    
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    position: relative;
 }
 
-    .dropdown .trigger {
-        
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background: url(../../images/icon-navigation.png) no-repeat center;
-    }
 
-    .dropdown .menu {
 
-        position: absolute;
-        width: 72px;
-        right: 0;
-        padding: 8px 0;
-        border: 1px solid #E3E3E3;
-        background-color: #fff;
-        top: 0;
-        z-index: 10;
-        font-size: 16px;
-        text-indent: 16px;
-    }
-    
-        .dropdown .menu > li {
-            
-            height: 32px;
-            line-height: 32px;
-        }
 
 
 
@@ -113,6 +65,7 @@ button {
     main > .board-name-search{
 
         min-height: 55px;
+    
         border-bottom:1px #e3e3e3 solid;
     }
 
@@ -125,7 +78,7 @@ button {
 
     .content {
 
-        padding: 16px;
+        padding: 15px;
       
         border-left: 1px solid #E3E3E3; 
         border-right: 1px solid #E3E3E3;
@@ -197,7 +150,7 @@ main > .board-name-search > :nth-child(2) {
     display: flex;
     justify-content: center;
     flex-shrink: 0; 
-    margin-left: 16px;
+    margin-left: 15px;
 
 }
 main > .board-name-search > :nth-child(3) {
@@ -212,8 +165,8 @@ main .board-name-search > div:nth-child(4) {
     flex-basis: 30px;
     flex-shrink: 0;
     flex-grow: 0;
-    margin-right: 16px;
-    border-radius: 16px;
+    margin-right: 15px;
+    border-radius: 15px;
     background-color: #fff;
     position: relative;
     transition: 0.5s;
@@ -256,6 +209,7 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
                     justify-content: flex-end;
                     transition: 0.5s;
                 }
+
 
 /*for toggle*/  .clicked-2{
                     display: block !important;
@@ -389,43 +343,41 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-/* content */
+/* content  */
 
-.content-header {
+.content-profile {
+    
 
-    position: relative;    
+    display: flex;
+    align-items: center;
+
+
 }
 
-    .content-header > .writer-profile > .image {
+.content-profile > div:nth-child(2) {    
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: url(../../images/profile.png) no-repeat center;
+    background-size: cover;
+}    
 
-        width: 40px;
-        height: 40px;
-        background: url(../../images/profile.png) no-repeat center;
-        background-size: cover;
-    }    
+.content-profile > ul { margin-left: 15px;}
+.content-profile > ul > li:nth-child(1){font-size : 14px; font-weight: bold;}
+.content-profile > ul > li:nth-child(2){font-size: 12px;}
 
-    .content-header > .writer-profile > .name {
-        
-        font-size : 14px;
-        font-weight: bold;
-        position: absolute;
-        left: 48px;
-        top: 0;
-    }
+.content-profile > div:nth-child(4){
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-profile > div:nth-child(4) > a {
+    flex-basis: 7px;
+    background: url(../../images/icon-navigation.png) no-repeat center;
+    
+}
 
-    .content-header > .reg-date {
-        font-size: 12px;
-        position: absolute;
-        left: 48px;
-        bottom: 0;
-    }
 
-    .content-header > .dropdown {
-
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
 
 
 
@@ -436,12 +388,12 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 .write-title > form > input{
-    margin-left: 16px;
+    margin-left: 15px;
     width: 200px;
 }    
 
 .write-title > div {
-    padding-top: 16px;
+    padding-top: 15px;
     font-size: 22px;
     color: #292929;
     
@@ -453,7 +405,7 @@ main .board-name-search > div:nth-child(4) > div {
 /* text area*/
 
 .text-area {
-    padding-top: 16px;
+    padding-top: 15px;
 }
 
 
@@ -467,7 +419,7 @@ main .board-name-search > div:nth-child(4) > div {
 
 /* good  */
 .content > .good {
-    margin-top : 16px;
+    margin-top : 15px;
 }
 
 .content > .good > div{
@@ -500,142 +452,130 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-/* comments */
-
-.comments {
-
-    padding: 16px;
+/* coments */
+.coments {
     background-color: #ffffff;
-    border: 1px solid #E3E3E3;
-    border-top: none;
+    border-left: 1px solid #E3E3E3; 
+    border-right: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
 }
 
-    .reply-list {
-
-        margin: 16px 0 0 16px;
-    }
 
 
-
-.comment-list > .item,
-.reply-list > .item {
-
-    position: relative;
-    margin-top: 16px;
+.coments  .main-coments > li {    
+    padding: 15px;
+    border-bottom: 1px solid #E3E3E3;
 }
 
-.comment-list > .item:first-child,
-.reply-list > .item:first-child {
+                    .coments .main-coments > li:last-child {
+                        border:none;
+                    }
 
-    margin-top: 0;
+.coments  .main-coments > li  > ul {
+    display:flex ;
+    align-items: center;
 }
 
-    .item > .writer-profile {
+.coments  .main-coments > li  > ul > li:nth-child(1) {
+    background: url(../../images/profile.png) no-repeat center;
+    height: 35px;
+    flex-basis:35px;
+}
+.coments  .main-coments > li  > ul > li:nth-child(2) {
+    font-size: 14px;
+    font-weight: bold;
+    color: #292929;
+
+}
+.coments  .main-coments > li  > ul > li:nth-child(3) {
     
-        height: 32px;
-        padding: 4px 0;
-    }
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.coments  .main-coments > li  > ul > li:nth-child(3) > a {
+    width: 7px;
+    background: url(../../images/icon-navigation.png) no-repeat center;
+    
+}
 
-        .item > .writer-profile > .image {
-            
-            width: 24px;
-            height: 24px;
-            background: url(../../images/profile.png) no-repeat center;
-            background-size: cover;
-        }
+.coments  .main-coments > li > div:nth-child(2) {
+    font-size: 14px;
+    color: #444;
+    padding-left: 5px;
 
-        .item > .writer-profile > .name {
 
-            position: absolute;
-            left: 32px;
-            top: 4px;
-            line-height: 24px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #292929;
-        }
+}
+.coments  .main-coments > li > div:nth-child(3) {
+    font-size: 12px;
+    color: #a6a6a6; 
+    padding-left: 5px;
 
-    .item > .dropdown {
+}
 
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 32px;
-        height: 32px;
-        padding: 4px;
-    }
 
-    .item > .item-text {
+.coments .sub-coments > li {
 
-        font-size: 14px;
-        color: #444;
-    }
-
-    .item > .reg-date {
-
-        font-size: 12px;
-        color: #a6a6a6;
-    }
+    padding: 10px 1px 0px 20px;
+    
+}
 
 
 
-.input-area > form {
+.coments  .sub-coments > li  > ul {
+    
+    display:flex ;
+    align-items: center;
+}
 
+.coments  .sub-coments > li  > ul > li:nth-child(1) {
+    background: url(../../images/profile.png) no-repeat center;
+    height: 35px;
+    flex-basis:35px;
+}
+.coments  .sub-coments > li  > ul > li:nth-child(2) {
+    font-size: 14px;
+    font-weight: bold;
+    color: #292929;
+
+}
+.coments  .sub-coments > li  > ul > li:nth-child(3) {
+    
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.coments  .sub-coments > li  > ul > li:nth-child(3) > a {
+    width: 5px;
+    background: url(../../images/icon-navigation.png) no-repeat;
+    
+}
+
+.coments  .sub-coments > li > div:nth-child(2) {
+    font-size: 14px;
+    color: #444;
+    padding-left: 5px;
+
+
+}
+.coments  .sub-coments > li > div:nth-child(3) {
+    font-size: 12px;
+    color: #a6a6a6; 
+    padding-left: 5px;
+}
+
+
+
+.coment-input-text-sub {
     display: flex;
     align-items: center;
+    padding: 10px 0px 0px 20px;
     position: relative;
 }
 
-    .input-area > form > input[type="text"] {
- 
-        border-radius: 3px 0px 0px 3px;
-        border: 1px solid #e3e3e3;
-        outline: none;
-        padding: 5px 70px 5px 10px;
-        color: #444444;
-        width: 100%;
-        height: 30px;    
-    }
-
-    .input-area > form > input[type="button"] {
-
-        flex-basis: 58px;
-        color: white;
-        border: 1px solid #e3e3e3;
-        margin-left: -1px;
-        height: 30px;
-        width: 30px;
-        background-color: #00618b;
-        border-radius: 0px 3px 3px 0px;
-        cursor: pointer;
-    }
-
-    .input-area > form > span {
-        
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 60px;   
-        font-size: 12px;
-        color: #a9a9a9;
-    }
-
-
-
-
-
-
-
-.comment-input-text-main {
-    display: flex;
-    align-items: center;
-
-    margin-bottom: -3px;
-
-    position: relative;
-}
-
-.comment-input-text-main > input:nth-child(1){
+.coment-input-text-sub > input:nth-child(1){
  
     border-radius: 3px 0px 0px 3px;
     border: 1px solid #e3e3e3;
@@ -648,7 +588,58 @@ main .board-name-search > div:nth-child(4) > div {
     
 }
 
-.comment-input-text-main > input:nth-child(2){
+.coment-input-text-sub > input:nth-child(2){
+    flex-basis: 58px;
+    color: white;
+    border: 1px solid #e3e3e3;
+    margin-left: -1px;
+    height: 30px;
+    width: 30px;
+    background-color: #00618b;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+}
+
+
+.coment-input-text-sub > div {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 60px;
+    
+    font-size: 12px;
+    color: #a9a9a9;
+}
+
+
+
+
+
+
+
+.coment-input-text-main {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: -3px;
+
+    position: relative;
+}
+
+.coment-input-text-main > input:nth-child(1){
+ 
+    border-radius: 3px 0px 0px 3px;
+    border: 1px solid #e3e3e3;
+    outline: none;
+    padding: 5px 70px 5px 10px;
+    color: #444444;
+    width: 100%;
+    height: 30px;
+
+    
+}
+
+.coment-input-text-main > input:nth-child(2){
     flex-basis: 58px;
     color: white;
     border: 1px solid #e3e3e3;
@@ -660,7 +651,7 @@ main .board-name-search > div:nth-child(4) > div {
 }
 
 
-.comment-input-text-main > div {
+.coment-input-text-main > div {
     display: flex;
     align-items: center;
     position: absolute;
@@ -671,7 +662,7 @@ main .board-name-search > div:nth-child(4) > div {
 }
 
 /* section bottom added */
-section.comments {
+section.coments {
     margin-bottom: 40px;
 }
 
@@ -714,7 +705,7 @@ section.comments {
 
     }
 
-    .comments {
+    .coments {
         grid-column: 2/3;
         grid-row: 3/last-line;
     }
@@ -758,9 +749,15 @@ section.comments {
         
     }
     #root .gongzi > ul > li > span {
+        display: inline-block;
+        width: 80px;
         margin-top: 2px;
         font-size: 10px;
-        float: right;
+        float: right;        
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        
     }
     #root .gongzi > ul > li:nth-child(1) {
         color: #292929;
@@ -773,6 +770,11 @@ section.comments {
     }
 
     #root .gongzi > ul > li > a {
+        display: inline-block;
+        width: 280px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         color: #444444;
     }
 
@@ -798,9 +800,14 @@ section.comments {
         
     }
     #root .hotnotice > ul > li > span {
+        display: inline-block;
+        width: 80px;
         margin-top: 2px;
         font-size: 10px;
-        float: right;
+        float: right;        
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     #root .hotnotice > ul > li:nth-child(1) {
         color: #292929;
@@ -813,6 +820,11 @@ section.comments {
     }
 
     #root .hotnotice > ul > li > a {
+        display: inline-block;
+        width: 280px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         color: #444444;
     }
 
@@ -822,7 +834,7 @@ section.comments {
     
     
     .coments  .main-coments > li {    
-        padding: 16px 32px 16px 32px;
+        padding: 15px 30px 15px 30px;
         border-bottom: 1px solid #E3E3E3;
     }
     

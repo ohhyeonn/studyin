@@ -15,6 +15,46 @@
         crossorigin="anonymous" />
     <title>Document</title>
 </head>
+<script>
+    
+    window.addEventListener("load", function(){
+            var section = document.querySelector("#root");
+            var dots = section.querySelectorAll(".dotdotdot");
+
+            section.addEventListener("click", function(e){
+                
+                if(e.target.classList.contains("dotdotdot")){
+                    
+                    e.preventDefault();
+                    e.target.parentNode.style.position = "relative";
+                    e.target.nextElementSibling.classList.toggle("d-none");
+                }else if (e.target.classList.contains("dotdotdot-sibling")){
+                    e.target.classList.toggle("d-none");
+                }
+
+            });
+
+
+            section.addEventListener("mousedown",function(e){
+                
+                if (e.target.classList.contains("dotdotdot-sibling")){
+                    return;
+                }else if(!e.target.classList.contains("dotdotdot")){
+                    for(var d of dots){
+                        d.nextElementSibling.classList.add("d-none");
+                    }
+                } 
+
+
+            });
+
+
+
+
+        });
+
+
+</script>
 
 <body>
     <!-- Global top [s] -->
@@ -167,7 +207,10 @@
                         <li>작성자</li>
                         <li>03/03 10:12</li>
                     </ul>
-                    <div><a class="icon" href="">땡떙땡</a></div>
+                    <div>
+                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                        <div class="d-none dotdotdot-sibling"></div>
+                    </div>
                 </section>
 
 
@@ -212,7 +255,12 @@
                         <li>reply : </li>
                         <li>운영자이름</li>
                         <li>03/03 10:12</li>
+
                     </ul>
+                    <li>
+                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                        <div class="d-none dotdotdot-sibling"></div>
+                    </li>
                 </section>
 
 
@@ -221,7 +269,7 @@
 
             
 
-
+                
                 <section class="reply-text-area">
                     <h1 class="d-none">text-area</h1>
                     <P> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sunt tenetur aperiam iste

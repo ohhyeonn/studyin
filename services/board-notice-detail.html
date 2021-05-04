@@ -1,29 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/community/board-write-style.css">
+    <link rel="stylesheet" href="../css/services/board-notice-detail-style.css" rel="stylesheet">
     <link href="../css/common/common.css" type="text/css" rel="stylesheet">
+    
     <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
     <script defer src="../js/common/gb-nav.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function(){
+            var section = document.querySelector("#root");
+            var dots = section.querySelectorAll(".dotdotdot");
+
+            section.addEventListener("click", function(e){
+                
+                if(e.target.classList.contains("dotdotdot")){
+                    
+                    e.preventDefault();
+                    e.target.parentNode.style.position = "relative";
+                    e.target.nextElementSibling.classList.toggle("d-none");
+                }else if (e.target.classList.contains("dotdotdot-sibling")){
+                    e.target.classList.toggle("d-none");
+                }
+
+            });
+
+
+            section.addEventListener("mousedown",function(e){
+                
+                if (e.target.classList.contains("dotdotdot-sibling")){
+                    return;
+                }else if(!e.target.classList.contains("dotdotdot")){
+                    for(var d of dots){
+                        d.nextElementSibling.classList.add("d-none");
+                    }
+                } 
+
+
+            });
 
 
 
-   <title>Document</title>
 
-   <script>
-       function resize(obj) {
-         obj.style.height = "1px";
-         obj.style.height = (obj.scrollHeight)+"px";
-        }
-   </script>
+        });
+        
+
+
+
+        window.addEventListener('load', function(){
+            var body = document.querySelector("body");
+            var section = document.querySelector('main .board-name-search ');
+            var div = section.querySelector('div:nth-child(4)');
+            var inputDiv  = section.querySelector('div:nth-child(4) > div:nth-child(1)');
+            var input= section.querySelector('div:nth-child(4) > div:nth-child(1) > input')
+            var button = section. querySelector('div:nth-child(4) > div:nth-child(2)');
+            var searchBarFunction = function(e){
+
+                body.classList.toggle("clicked-search-bar");
+                div.classList.toggle("clicked-1");
+                inputDiv.classList.toggle("clicked-2");
+                window.setTimeout(function(){input.classList.toggle("block");},600);
+    
+                
+                button.onclick = function(e) {
+                    console.log("search");
+
+                    /*여기다가 검색시 구현*/
+
+                };
+
+                div.onmousedown = function(e){
+                        e.stopPropagation();
+                };
+         
+            };
+
+            
+            
+            button.onclick = searchBarFunction;
+            
+
+
+            body.addEventListener("mousedown", function(){
+
+                if(body.classList.contains("clicked-search-bar")){
+                    body.classList.toggle("clicked-search-bar");
+                    div.classList.toggle("clicked-1");
+                    inputDiv.classList.toggle("clicked-2");
+                    input.classList.toggle("block");
+
+                    button.onclick = searchBarFunction;
+                }
+
+
+            });
+        
+        
+        
+        
+        
+       
+       
+       
+       
+       
+       
+        });
+    </script>
 </head>
 <body>
+
+
+
+    
     <!-- Global top [s] -->
     <header class="header">
         <section class="gb-top-nav">
@@ -119,38 +215,46 @@
     <!-- Common Top Category[s] -->
     <nav class="top-category-title">
         <div class="top-category-title-wrapper">
-            <a href="../community/board-list.html">게시판1</a>
-            <a href="../community/board-list.html">게시판2</a>
-            <a href="../community/board-list.html">게시판3</a>
-            <a href="../community/board-list.html">게시판4</a>
+            <a href="../services/board-query.html">FAQ</a>
+            <a href="../services/board-make-query.html">1:1 문의하기</a>
+            <a href="../services/board-notice.html">공지사항</a>        
         </div>
     </nav>
     <!-- Common Top Category[e] -->
 
-    
-    
-    
-    
-    <main>
-    
 
-        
-        
-        
-        
-        
-        <section class="board-name-write">
-            <h1 class="d-none">게시판 이름과 검색바</h1> 
-            <div><a>게시판이름</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+
+
+
+        <section class="board-name-search">
+            <h1 class="d-none">게시판 이름과 검색바</h1>
+            <div><a>공지사항</a></div>
             <div></div>
-            <div><a href="">완료</a></div>
+            <div>
+                <div><input type="text"></div>
+                <div></div>
+            </div>
         </section>
-    
-    
+
+
         <div id="root">
 
 
-  
+
 
 
 
@@ -163,11 +267,11 @@
 
 
             <article class="content">
-                <h1 class="d-none">게시판 목록이 나열</h1>
-                
+                <h1 class="d-none">게시글</h1>
 
 
-                
+
+
                 <section class="content-profile">
                     <h1 class="d-none">content-profile</h1>
                     <div class="icon">프로필</div>
@@ -175,51 +279,145 @@
                         <li>작성자</li>
                         <li>03/03 10:12</li>
                     </ul>
-                
+                    <div>
+                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                        <div class="d-none dotdotdot-sibling"></div>
+                    </div>
                 </section>
 
 
 
 
-                <section class="write-title" >
+
+                <section class="write-title">
                     <h1 class="d-none">제목입력</h1>
 
-                   
-                    <form>
-                        <textarea name="" id=""  rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="문의 제목을 입력하세요"></textarea>
-                    </form>
+
                     <div>
-                        <div></div>
+                        이번주 경험치 4배 이벤트!
                     </div>
 
 
+                </section>
+
+
+                <section class="text-area">
+                    <h1 class="d-none">text-area</h1>
+                     로램스 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sunt tenetur aperiam iste
+                    consequatur voluptatibus quo autem ea quia expedita, itaque iusto possimus similique odit ipsa
+                    voluptatem! Harum, similique maiores.
 
                 </section>
 
-                <section class="write-content">
-                    <h1 class="d-none">write-content</h1>
-                    
-                    <textarea name="" id=""  rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="문의할 내용을 입력하세요"></textarea>
-
+                <section class="good">
+                    <h1 class="d-none" >좋아요 구독 알림설정 부탁드려요</h1>
+                    <div>  
+                        <a href="" >10</a> 
+                        <a >5</a>
+                        <a>0</a>
+                    </div>
                 </section>
 
-                
             </article>
 
 
-            <section class="board-bottom-nav">
-                <h1 class="d-none">board-bottom-nav</h1>
-                <div><div></div></div>
-                <ul>
-                    <a href="" class="icon">파일첨부</a>
-                    <a href="" class="icon">사진첨부</a>
+            <section class="coments">
+                <h1 class="d-none">coments</h1>
+
+                <ol class="main-coments">
                     <li>
-                        <input id="bottom-check" type="checkbox"><label for="bottom-check">비공개</label>
+                        <ul>
+                            <li class="icon">프로필</li>
+                            <li>메이플</li>
+                            <li>
+                                <a class="icon dotdotdot" href="">땡떙땡</a>
+                                <div class="d-none dotdotdot-sibling"></div>
+                            </li>
+                        </ul>
+                        <div>넥슨은요?</div>
+                        <div>03/03 10:30</div>
+
+
+                        <ol class="sub-coments">
+                            <li>
+                                <ul>
+                                    <li class="icon">프로필</li>
+                                    <li>서현오(글쓴이)</li>
+                                    <li>
+                                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                                        <div class="d-none dotdotdot-sibling"></div>
+                                    </li>
+                                </ul>
+                                <div>대댓글입니다 만나서 l lorem 반갑습니다</div>
+                                <div>03/03 10:30</div>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li class="icon">프로필</li>
+                                    <li>서현오(글쓴이)</li>
+                                    <li>
+                                         <a class="icon dotdotdot" href="">땡떙땡</a>
+                                         <div class="d-none dotdotdot-sibling"></div>
+                                    </li>
+                                </ul>
+                                <div>대댓글입니다 만나서 lorem 반갑습니다</div>
+                                <div>03/03 10:30</div>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li class="icon">프로필</li>
+                                    <li>서현오(글쓴이)</li>
+                                    <li>
+                                        <a class="icon dotdotdot" href="">땡떙땡</a>
+                                        <div class="d-none dotdotdot-sibling"></div>
+                                    </li>
+                                </ul>
+                                <div>대댓글입니다 만나서 반갑습니다</div>
+                                <div>03/03 10:30</div>
+                            </li>
+
+
+
+
+
+
+
+
+                        </ol>
+                        <form class="coment-input-text-sub" action="">
+                            <input type="text" placeholder="댓글을 입력하세요">
+                            <input type="button" value="작성">
+                            <div>
+                                <input type="checkbox">&nbsp;&nbsp;비공개
+                            </div>
+                        </form>
                     </li>
-                </ul>
-                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ol>
+                <form class="coment-input-text-main" action="">
+                    <input type="text" placeholder="댓글을 입력하세요">
+                    <input type="button" value="작성">
+                    <div>
+                        <input type="checkbox">&nbsp;&nbsp;비공개
+                    </div>
+                </form>
             </section>
-            
+
 
 
 
@@ -258,8 +456,8 @@
                 <h1 class="d-none">notice or hot</h1>
 
                 <section class="gongzi">
-                    <h1 class="d-none" >공지사항</h1>
-                    <ul >
+                    <h1 class="d-none">공지사항</h1>
+                    <ul>
                         <li><a href="">공지사항</a></li>
                         <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
                         <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
@@ -267,6 +465,7 @@
                         <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
                         <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
                         <li><a href="">게시판에 낙서 하지마세요</a> <span>작성자 21/03/03</span></li>
+
                     </ul>
 
 
@@ -274,8 +473,8 @@
 
 
                 <section class="hotnotice">
-                    <h1 class="d-none" >hot notice</h1>
-                    <ul >
+                    <h1 class="d-none">hot notice</h1>
+                    <ul>
                         <li><a href="">HOT 게시글</a></li>
                         <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
                         <li><a href="">이거보세요오오오오!</a> <span>작성자 21/03/03</span></li>
@@ -293,7 +492,7 @@
 
 
 
-    
+
 
 
 
@@ -317,7 +516,6 @@
 
 
     </main>
-        
 
 <!-- Main [e] -->
 <footer>
@@ -350,4 +548,6 @@
 </nav>
 <!-- Global bottom[e] -->
 </body>
+
+
 </html>
