@@ -43,43 +43,55 @@ ol, ul , li , a {
 button {
 
     border: initial;
+    cursor: pointer;
 }
 
+.dropdown {
 
-.dropdown > li {
-    
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
 }
+
+    .dropdown > li {
+        
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        position: relative;
+    }
 
     .dropdown .trigger {
         
         display: inline-block;
         width: 24px;
         height: 24px;
-        background: url(../../images/icon-navigation.png) no-repeat center;
+        background: url("../../images/icon-navigation.png") no-repeat center;
     }
 
     .dropdown .menu {
 
         position: absolute;
-        width: 72px;
+        width: 6rem;
         right: 0;
-        padding: 8px 0;
+        padding: 0.5rem 0;
         border: 1px solid #E3E3E3;
         background-color: #fff;
         top: 0;
         z-index: 10;
-        font-size: 16px;
-        text-indent: 16px;
     }
     
-        .dropdown .menu > li {
-            
-            height: 32px;
-            line-height: 32px;
+    .dropdown .menu > li {
+        
+            text-indent: 1rem;
+            height: 2rem;
+            line-height: 2rem;
+        }
+
+        .dropdown .menu > li:hover {
+
+            background-color: #F8F8F8;
         }
 
 
@@ -224,7 +236,7 @@ main .board-name-search > div:nth-child(4) > div:nth-child(1) > input {
 }
 
 main .board-name-search > div:nth-child(4) > div:nth-child(2) {
-    background: url(../../images/dotbogi.png) no-repeat center;
+    background: url("../../images/dotbogi.png") no-repeat center;
     height: 30px;
     width: 30px;
     cursor: pointer;
@@ -379,35 +391,25 @@ main .board-name-search > div:nth-child(4) > div {
     position: relative;    
 }
 
-    .content-header > .writer-profile > .image {
+    .content-header > .writer.image {
 
         width: 40px;
         height: 40px;
-        background: url(../../images/profile.png) no-repeat center;
-        background-size: cover;
+        background: center / cover url("../../images/profile.png");
+        float: left;
     }    
 
-    .content-header > .writer-profile > .name {
+    .content-header > .writer.name {
         
         font-size : 14px;
         font-weight: bold;
-        position: absolute;
-        left: 48px;
-        top: 0;
+        padding-left: 12px;
     }
 
     .content-header > .reg-date {
+
         font-size: 12px;
-        position: absolute;
-        left: 48px;
-        bottom: 0;
-    }
-
-    .content-header > .dropdown {
-
-        position: absolute;
-        right: 0;
-        top: 0;
+        padding-left: 12px;
     }
 
 
@@ -513,51 +515,39 @@ main .board-name-search > div:nth-child(4) > div {
     margin-top: 0;
 }
 
-    .item > .writer-profile {
-    
-        height: 32px;
-        padding: 4px 0;
+    .item > .writer.image {
+        
+        width: 24px;
+        height: 24px;
+        background: center / cover url("../../images/profile.png");
+        display: inline-block;
+        margin: 4px 0;
     }
 
-        .item > .writer-profile > .image {
-            
-            width: 24px;
-            height: 24px;
-            background: url(../../images/profile.png) no-repeat center;
-            background-size: cover;
-        }
+    .item > .writer.name {
 
-        .item > .writer-profile > .name {
+        padding-left: 4px;
+        line-height: 24px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #292929;
+        line-height: 32px;
+    }
 
-            position: absolute;
-            left: 32px;
-            top: 4px;
-            line-height: 24px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #292929;
-        }
+    .item > .reg-date {
 
-    .item > .dropdown {
-
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 32px;
-        height: 32px;
-        padding: 4px;
+        font-size: 12px;
+        line-height: 24px;
+        color: #a6a6a6;
+        padding-left: 8px;
+        line-height: 32px;
     }
 
     .item > .item-text {
 
         font-size: 14px;
         color: #444;
-    }
-
-    .item > .reg-date {
-
-        font-size: 12px;
-        color: #a6a6a6;
+        display: block;
     }
 
 
