@@ -40,64 +40,6 @@ ol, ul , li , a {
     text-indent:-3000px !important;
 }
 
-button {
-
-    border: initial;
-    cursor: pointer;
-}
-
-.dropdown {
-
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-}
-
-    .dropdown > li {
-        
-        width: 40px;
-        height: 40px;
-        padding: 8px;
-        position: relative;
-    }
-
-    .dropdown .trigger {
-        
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background: url("../../images/icon-navigation.png") no-repeat center;
-    }
-
-    .dropdown .menu {
-
-        position: absolute;
-        width: 6rem;
-        right: 0;
-        padding: 0.5rem 0;
-        border: 1px solid #E3E3E3;
-        background-color: #fff;
-        top: 0;
-        z-index: 10;
-    }
-    
-    .dropdown .menu > li {
-        
-            text-indent: 1rem;
-            height: 2rem;
-            line-height: 2rem;
-        }
-
-        .dropdown .menu > li:hover {
-
-            background-color: #F8F8F8;
-        }
-
-
-
-
-
     
     /* lay out */
 
@@ -384,33 +326,6 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-/* content */
-
-.content-header {
-
-    position: relative;    
-}
-
-    .content-header > .writer.image {
-
-        width: 40px;
-        height: 40px;
-        background: center / cover url("../../images/profile.png");
-        float: left;
-    }    
-
-    .content-header > .writer.name {
-        
-        font-size : 14px;
-        font-weight: bold;
-        padding-left: 12px;
-    }
-
-    .content-header > .reg-date {
-
-        font-size: 12px;
-        padding-left: 12px;
-    }
 
 
 
@@ -487,68 +402,13 @@ main .board-name-search > div:nth-child(4) > div {
 
 /* comments */
 
-.comments {
-
-    padding: 16px;
-    background-color: #ffffff;
-    border: 1px solid #E3E3E3;
-    border-top: none;
-}
-
-    .reply-list {
-
-        margin: 16px 0 0 16px;
-    }
-
-
-
-.comment-list > .item,
-.reply-list > .item {
-
-    position: relative;
-    margin-top: 16px;
-}
-
-.comment-list > .item:first-child,
-.reply-list > .item:first-child {
-
-    margin-top: 0;
-}
-
-    .item > .writer.image {
-        
-        width: 24px;
-        height: 24px;
-        background: center / cover url("../../images/profile.png");
-        display: inline-block;
-        margin: 4px 0;
-    }
-
-    .item > .writer.name {
-
-        padding-left: 4px;
-        line-height: 24px;
-        font-size: 14px;
-        font-weight: bold;
-        color: #292929;
-        line-height: 32px;
-    }
-
-    .item > .reg-date {
-
-        font-size: 12px;
-        line-height: 24px;
-        color: #a6a6a6;
-        padding-left: 8px;
-        line-height: 32px;
-    }
 
     .item > .item-text {
 
         font-size: 14px;
         color: #444;
-        display: block;
     }
+
 
 
 

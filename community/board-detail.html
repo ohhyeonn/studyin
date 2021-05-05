@@ -11,6 +11,7 @@
     <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
     <link href="../css/community/board-detail-style.css" type="text/css" rel="stylesheet">
     <script defer src="../js/common/gb-nav.js"></script>
+    <script defer src="../js/common/common-board.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -75,36 +76,6 @@
 
 
 
-        });
-
-
-
-        // dropdown menu를 위한 구현
-        window.addEventListener("load", function () {
-
-            var main = document.querySelector("main");
-
-            main.addEventListener("click", function (e) {
-
-                if (!(main.querySelector(".dropdown.selected") == null)) {
-                    var dropdown = main.querySelector(".dropdown.selected");
-                    var menu = dropdown.querySelector(".menu");
-                    menu.classList.toggle("d-none");
-                    dropdown.classList.toggle("selected");
-                    return;
-                }
-
-                if (!(e.target.classList.contains("trigger") || e.target.classList.contains("dropdown")))
-                    return;
-                else if (e.target.classList.contains("trigger"))
-                    var dropdown = e.target.parentElement.parentElement;
-                else if (e.target.classList.contains("dropdown"))
-                    var dropdown = e.target;
-
-                var menu = dropdown.querySelector(".menu");
-                dropdown.classList.toggle("selected");
-                menu.classList.toggle("d-none");
-            });
         });
     </script>
 </head>
@@ -276,9 +247,8 @@
                     <h1 class="d-none">content header</h1>
 
                     <div class="writer image icon">프로필 이미지</div>
-                    <span class="writer name">작성자</span>
-                    <br>
-                    <span class="reg-date">03/03 10:12</span>
+                    <p class="writer name">작성자</p>
+                    <p class="reg-date">03/03 10:12</p>
                     <ul class="dropdown">
                         <li>
                             <button class="trigger icon">메뉴</button>
@@ -326,12 +296,12 @@
             <section class="comments">
                 <h1 class="d-none">댓글 영역</h1>
 
-                <ol class="comment-list">
+                <ol class="comment list">
                     <li class="item">
                         <span class="writer image icon">프로필 이미지</span>
                         <span class="writer name">작성자</span>
                         <span class="reg-date">03/03 10:30</span>
-                        <span class="item-text">댓글입니다 만나서 반갑습니다</span>
+                        <p class="item-text">댓글입니다 만나서 반갑습니다</p>
                         <ul class="dropdown">
                             <li><button class="trigger icon">메뉴</button>
                                 <ul class="menu d-none">
@@ -342,12 +312,12 @@
                             </li>
                         </ul>
                         
-                        <ol class="reply-list">
+                        <ol class="reply list">
                             <li class="item">
                                 <span class="writer image icon">프로필 이미지</span>
                                 <span class="writer name">서현오(글쓴이)</span>
                                 <span class="reg-date">03/03 10:30</span>
-                                <span class="item-text">답글입니다 만나서 반갑습니다</span>
+                                <p class="item-text">답글입니다 만나서 반갑습니다</p>
                                 <ul class="dropdown">
                                     <li><button class="trigger icon">메뉴</button>
                                         <ul class="menu d-none">

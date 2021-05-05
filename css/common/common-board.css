@@ -1,51 +1,169 @@
+/* -------------------------------------------------------------------------- */
 
+body {
 
+    background-color: #F8F8F8;
+}
 
-/*  */
+ol, ul, li, a {
 
-.dotdotdot-sibling { 
+    list-style-type: none;
+    text-decoration: none;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.d-none {
+    
+    display: none;
+}
+
+.icon {
+
+    text-indent: -3000px !important;
+}
+
+/* -------------------------------------------------------------------------- */
+
+button {
+    
+    border: initial;
     cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+    .dropdown > li {
+        
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .dropdown .trigger {
+        
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url("../../images/icon-navigation.png") no-repeat center;
+    }
+
+    .dropdown .menu {
+
+        position: absolute;
+        width: 6rem;
+        right: 0;
+        padding: 0.5rem 0;
+        border: 1px solid #E3E3E3;
+        background-color: #fff;
+        top: 0;
+        z-index: 10;
+    }
+    
+    .dropdown .menu > li {
+        
+            text-indent: 1rem;
+            height: 2rem;
+            line-height: 2rem;
+        }
+
+        .dropdown .menu > li:hover {
+
+            background-color: #F8F8F8;
+        }
+
+/* -------------------------------------------------------------------------- */
+
+.content-header {
+
+    position: relative;    
+}
+
+    .content-header > .writer.image {
+
+        width: 40px;
+        height: 40px;
+        background: center / cover url("../../images/profile.png");
+        float: left;
+    }    
+
+    .content-header > .writer.name {
+        
+        font-size : 14px;
+        font-weight: bold;
+        text-indent: 14px;
+    }
+
+    .content-header > .reg-date {
+
+        font-size: 12px;
+        text-indent: 14px;
+    }
+
+/* -------------------------------------------------------------------------- */
+
+
+
+.area {
+
+    padding: 16px;
+    background-color: #ffffff;
     border: 1px solid #E3E3E3;
-    background-color: white; 
-    position: absolute; 
-    right: 0px;
-    top: 0px;
-    z-index: 100;
-    
+    border-top: none;
 }
-.dotdotdot-sibling-noright{
-    text-align: center;
-    height: 25px;
-    width: 80px;
-    
-    color: #444;
-}
-    .dotdotdot-sibling-noright:hover{
-        background-color:#F8F8F8;
-        color: #444;
-    }
-.dotdotdot-sibling-modify{
-    text-align: center;
 
-    height: 25px;
-    width: 80px;
-    margin-top: -1px;
-    color: #444;
-    
-}
-    .dotdotdot-sibling-modify:hover{
-        background-color:#F8F8F8;
-        color: #444;
-    }
-.dotdotdot-sibling-delete{
-    text-align: center;
+    .reply.list {
 
-    height: 25px;
-    width: 80px;
-    
-    color: #444;
-}
-    .dotdotdot-sibling-delete:hover{
-        background-color:#F8F8F8;
-        color: #444;
+        margin: 16px 0 0 16px;
     }
+
+
+
+.list > .item {
+
+    position: relative;
+    margin-top: 16px;
+}
+
+.list > .item:first-child {
+
+    margin-top: 0;
+}
+
+    .item > .writer.image {
+        
+        width: 24px;
+        height: 24px;
+        background: center / cover url("../../images/profile.png");
+        display: inline-block;
+        margin: 4px 0;
+    }
+
+    .item > .writer.name {
+
+        padding-left: 4px;
+        line-height: 32px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #292929;
+    }
+
+    .item > .reg-date {
+
+        font-size: 12px;
+        line-height: 32px;
+        color: #a6a6a6;
+        padding-left: 8px;
+    }
+
+/* -------------------------------------------------------------------------- */
+
