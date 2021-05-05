@@ -17,13 +17,6 @@
     }
 
 
-    #root .side{
-        display: none;
-
-    }
-
-
-
     main{
         min-height: 650px;
     }
@@ -419,23 +412,10 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-
-
-
-
 @media screen and (min-width: 780px) {
   
     
-    /* tablet side */
-
-
-    #root .side {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
+    
     #root .gongzi {
         
         height: 200px;
@@ -511,62 +491,4 @@ main .board-name-search > div:nth-child(4) > div {
     #root .hotnotice > ul > li > a {
         color: #444444;
     }
-
-
-
-    /*tablet coments*/
-    
-    
-    .coments  .main-coments > li {    
-        padding: 16px 32px 16px 32px;
-        border-bottom: 1px solid #E3E3E3;
-    }
-    
-    
-    
-        .coments .sub-coments > li {
-    
-            padding: 10px 0px 0px 40px;
-            
-        }
-
-
-        .coment-input-text-sub {
-            padding: 10px 0px 0px 35px;
-        }
-    
-        
-        .coment-input-text-sub > input:nth-child(1){
-
-            height: 40px;   
-        }
-    
-        .coment-input-text-sub > input:nth-child(2){
-    
-            height: 40px;
-            flex-basis: 70px;
-        
-        }
-        .coment-input-text-sub > div {
-            right: 72px;
-        }
-    
-
-    
-    
-        .coment-input-text-main > input:nth-child(1){
-            height: 40px;
-            
-        }
-        .coment-input-text-main > input:nth-child(2){
-            flex-basis: 70px;
-            height: 40px;
-        }
-
-        .coment-input-text-main > div {
-            right: 72px;
-        }
-
-    }
-
-
+}

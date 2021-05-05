@@ -20,12 +20,6 @@
     }
 
 
-    #root .side{
-        display: none;
-
-    }
-
-
     main{
         min-height: 650px;
     }
@@ -324,7 +318,16 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-/* coments */
+/* comments */
+
+
+.item > .item-text {
+
+    font-size: 14px;
+    color: #444;
+}
+
+
 
 .input-form > form {
 
@@ -373,16 +376,6 @@ main .board-name-search > div:nth-child(4) > div {
 
 @media screen and (min-width: 780px) {
       
-
-    /* tablet side */
-
-
-    #root .side {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
 
     #root .gongzi {
         

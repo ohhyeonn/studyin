@@ -97,6 +97,14 @@ button.button {
     padding-bottom: 3rem;
 }
 
+.side {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
 .area {
 
     padding: 16px;
@@ -181,6 +189,14 @@ button.button {
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+@media screen and (max-width: 779px) {
+
+    #root .side{
+  
+        display: none;
+    }
+}
+
 @media screen and (min-width: 780px) {
 
     #root {
@@ -191,17 +207,23 @@ button.button {
         grid-template-rows: auto auto 1fr;
     }
 
-        .content {
+        .side {
 
             grid-column: 2/3;
             grid-row: 1/2;
+        }
+
+        .content {
+
+            grid-column: 2/3;
+            grid-row: 2/3;
             border-top : 0px;
         }
 
         .comments {
             
             grid-column: 2/3;
-            grid-row: 2/3;
+            grid-row: 3/4;
         }
 
     .area {
