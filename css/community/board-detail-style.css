@@ -1,44 +1,7 @@
-html {
-    
-    min-height: 100vh;
-    margin: 0px;
-}
 
-body {
-
-    min-height: inherit;
-    margin: 0px;
-    background-color: #F8F8F8;
-}
-
-.d-none {
-
-    display: none;
-}
-
-ol, ul , li , a {
-
-    list-style-type:none;
-    text-decoration: none;
-    color: #000000;
-    margin:0px;
-    padding: 0px;
-}   
-
-
-
-
-.content{background-color: #ffffff;}
 .side{background-color: #F8F8F8;}
 .board-name-search{background-color:#F8F8F8;}
 
-
-
-/*  setting */
-.icon {
-
-    text-indent:-3000px !important;
-}
 
     
     /* lay out */
@@ -59,15 +22,6 @@ ol, ul , li , a {
 
     }
 
-
-    .content {
-
-        padding: 16px;
-      
-        border-left: 1px solid #E3E3E3; 
-        border-right: 1px solid #E3E3E3;
-        border-bottom: 1px solid #e3e3e3;
-    }
 
 
     main{
@@ -412,14 +366,14 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-.input-area > form {
+.input-form > form {
 
     display: flex;
     align-items: center;
     position: relative;
 }
 
-    .input-area > form > input[type="text"] {
+    .input-form > form > input[type="text"] {
  
         border-radius: 3px 0px 0px 3px;
         border: 1px solid #e3e3e3;
@@ -430,7 +384,7 @@ main .board-name-search > div:nth-child(4) > div {
         height: 30px;    
     }
 
-    .input-area > form > input[type="button"] {
+    .input-form > form > input[type="button"] {
 
         flex-basis: 58px;
         color: white;
@@ -443,7 +397,7 @@ main .board-name-search > div:nth-child(4) > div {
         cursor: pointer;
     }
 
-    .input-area > form > span {
+    .input-form > form > span {
         
         display: flex;
         align-items: center;
@@ -459,54 +413,6 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
-.comment-input-text-main {
-    display: flex;
-    align-items: center;
-
-    margin-bottom: -3px;
-
-    position: relative;
-}
-
-.comment-input-text-main > input:nth-child(1){
- 
-    border-radius: 3px 0px 0px 3px;
-    border: 1px solid #e3e3e3;
-    outline: none;
-    padding: 5px 70px 5px 10px;
-    color: #444444;
-    width: 100%;
-    height: 30px;
-
-    
-}
-
-.comment-input-text-main > input:nth-child(2){
-    flex-basis: 58px;
-    color: white;
-    border: 1px solid #e3e3e3;
-    margin-left: -1px;
-    height: 30px;
-    background-color: #00618b;
-    border-radius: 0px 3px 3px 0px;
-    cursor: pointer;
-}
-
-
-.comment-input-text-main > div {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 62px;
-    
-    font-size: 12px;
-    color: #a9a9a9;
-}
-
-/* section bottom added */
-section.comments {
-    margin-bottom: 40px;
-}
 
 
 
@@ -517,52 +423,9 @@ section.comments {
 
 
 
-
-
-
-
-@media screen and (min-width: 780px){
+@media screen and (min-width: 780px) {
   
     
-    #root{
-        
-        display: grid;
-        min-height: inherit;
-        grid-template-columns: 1fr 780px 1fr ;
-        grid-template-rows: 225px 1fr; 
-    }
-
-    #root .side{
-            display: block;
-            grid-column: 2/3;
-            grid-row: 1/2;
-    
-    }
-
-
-    #root > .content {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        border-top : 1px solid #E3E3E3;
-
-    }
-
-    .comments {
-        grid-column: 2/3;
-        grid-row: 3/last-line;
-    }
-
-
-
-    /* tablet content*/
-    .content {
-
-        padding: 30px;
-    }
-
-
-
-
     /* tablet side */
 
 
@@ -705,25 +568,5 @@ section.comments {
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -1,4 +1,3 @@
-.content{background-color: #ffffff;}
 .board-name-search{background-color:#F8F8F8;}
 
 
@@ -189,24 +188,10 @@ main > .board-name-search > :nth-child(3) {
         margin-top: 16px;
     }
 
+    .item > form {
 
-
-.item > form {
-
-    display: flex;
-    justify-content: flex-end;
-}
-
-    .item > form > button {
-
-        cursor: pointer;
-        outline: none;
-        height: 32px;
-        width: 72px;
-        border: none;
-        color: #fff;
-        border-radius: 16px;
-        background-color: var(--primary-color);
+        margin-top: 1rem;
+        text-align: right;
     }
 
 
@@ -238,45 +223,6 @@ main > .board-name-search > :nth-child(3) {
 @media screen and (min-width: 780px) and (max-width: 1079px){
   
     
-    #root{
-        
-        display: grid;
-        min-height: inherit;
-        grid-template-columns: 1fr 780px 1fr ;
-        grid-template-rows: auto auto 1fr; 
-    }
-
-
-    
-
-
-    #root > .content {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        border-top : 0px;
-
-    }
-
-    .reply {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-
-
-    /* tablet content*/
-    .content {
-
-        padding: 30px;
-    }
-
-    /*tablet reply*/
-    .reply {
-        padding:30px;
-    }
-
-
-
     /* tablet side */
 
 
@@ -382,50 +328,6 @@ main > .board-name-search > :nth-child(3) {
 
 @media screen and (min-width: 1080px){
     
-    
-    #root{
-        min-height: inherit;
-        display: grid;
-        grid-template-columns: 1fr 780px 1fr ; 
-        grid-template-rows: auto auto 1fr; 
-        
-    }
-
-
- 
-
-    #root > .content {
-        grid-column: 2/3; 
-        grid-row: 1/2;
-    }
-
-
-
-
-
-
-    .reply {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-
-    /* PC content*/
-
-    .content {
-
-        padding: 30px;
-    }
-
-
-    /* PC reply*/
-    .reply{
-        padding:30px
-    }
-
-
-
-
     /* pc side */
 
 
