@@ -102,12 +102,13 @@ button.button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E3E3E3;
 }
 
 .area {
 
-    padding: 16px;
+    padding: 1rem;
     background-color: #ffffff;
     border: 1px solid #E3E3E3;
     border-top: none;

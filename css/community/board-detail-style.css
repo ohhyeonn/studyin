@@ -407,88 +407,51 @@ main .board-name-search > div:nth-child(4) > div {
 
 
 
+/* side */
 
 
+    .top-posts {
 
-
-
-@media screen and (min-width: 780px) {
-  
-    
-    
-    #root .gongzi {
-        
         height: 200px;
-        width: 382px ;
+        width: 382px;
         background-color: #f2f2f2;
         border: 1px solid #e3e3e3;
-
-
-    }
-    #root .gongzi > ul > li {
-        font-size: 12px;
-        padding: 5px 10px 5px 10px;
-        color: #a6a6a6;
-        height: 28px;
-        border-bottom: 1px solid #e3e3e3 ;
-        
-    }
-    #root .gongzi > ul > li > span {
-        margin-top: 2px;
-        font-size: 10px;
-        float: right;
-    }
-    #root .gongzi > ul > li:nth-child(1) {
-        color: #292929;
-        font-weight: bold;
-        height: 30x;
-        border-bottom: 1px solid #e3e3e3;
-    }
-    #root .gongzi > ul > li:nth-child(7){
-        border-bottom: 0px;
     }
 
-    #root .gongzi > ul > li > a {
-        color: #444444;
-    }
+        .top-posts > ul > li {
 
+            font-size: 12px;
+            padding: 4px 8px;
+            color: #a6a6a6;
+            height: 28px;
+            border-bottom: 1px solid #e3e3e3;
+        }
 
+            .top-posts > ul > li:first-child {
 
+                color: #292929;
+                font-weight: bold;
+                height: 32px;
+            }
 
+            .top-posts > ul > li:last-child {
+                
+                border-bottom: none;
+            }
 
-    #root .hotnotice {
-        
-        height: 200px;
-        width: 382px ;
-        background-color: #f2f2f2;
-        border: 1px solid #e3e3e3;
+        .top-posts > ul > li > a {
 
+            display: inline-block;
+            width: 280px;
+            color: #444;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
 
-    }
-    #root .hotnotice > ul > li {
-        font-size: 12px;
-        padding: 5px 10px 5px 10px;
-        color: #a6a6a6;
-        height: 28px;
-        border-bottom: 1px solid #e3e3e3 ;
-        
-    }
-    #root .hotnotice > ul > li > span {
-        margin-top: 2px;
-        font-size: 10px;
-        float: right;
-    }
-    #root .hotnotice > ul > li:nth-child(1) {
-        color: #292929;
-        font-weight: bold;
-        height: 30x;
-        border-bottom: 1px solid #e3e3e3;
-    }
-    #root .hotnotice > ul > li:nth-child(7){
-        border-bottom: 0px;
-    }
+        .top-posts > ul > li > span {
 
-    #root .hotnotice > ul > li > a {
-        color: #444444;
-    }
-}
+            float: right;
+            font-size: 10px;
+            line-height: 12px;
+        }
