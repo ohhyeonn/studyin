@@ -10,7 +10,7 @@
 }
 
 .study-board-btn {
-    width: 10em;
+    width: 100%;
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 5px;
@@ -26,13 +26,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     row-gap: 10px;
     padding: 0.8em;
 }
 
 .btn-group > a {
-    width: 10em;
+    width: 100%;
     background-color: #fff;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
@@ -45,7 +45,7 @@
 
 @media screen and (min-width: 780px) {
     .study-board-btn {
-        width: 80%;
+        width: 100%;
     }
 
     .btn-group {
@@ -56,6 +56,6 @@
     }
 
     .btn-group > a {
-        width: 15em;
+        width: 100%;
     }
 }

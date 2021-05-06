@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/common/common.css" type="text/css" />
     <link rel="stylesheet" href="../css/common/gb-nav.css">
     <script defer src="../js/common/gb-nav.js"></script>
+    <script defer src="../js/common/common-popup.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -152,8 +153,8 @@
                     <span>분야</span>
                 </div>
                 <div class="detail-btn-group">
-                    <a href="../study/study-main-create.html" class="btn">수정</a>
-                    <a href="#" class="btn">삭제</a>
+                    <a href="../study/study-main-create.html" class="btn modify-btn">수정</a>
+                    <a href="#" class="btn delete-btn">삭제</a>
                 </div>
                 <div class="study-board-wrapper">
                     <a href="../study/study-list.html" class="study-board-btn">스터디 게시판 가기</a>
@@ -166,6 +167,34 @@
             </div>
             <div class="like-wrapper"><button class="btn-like"><i class="far fa-thumbs-up fa-2x"></i></button><span>이 글이 좋다면 '좋아요'를 눌러주세요</span></div>
         </section>
+        <!-- [s] message area -->
+        <section class="detail-btn-group-readOnly">
+            <input type="checkbox" name="" id="reply-btn" class="reply-checkbox">
+            <label for="reply-btn" class="reply-label">댓글쓰기</label>
+            <div class="reply-write">
+                <form>
+                    <h5>댓글을 입력하세요</h5>
+                    <textarea class="reply-content" name="reply-content" id="reply-content" cols="30" rows="10" placeholder="입력"></textarea>
+                </form>
+                <div class="reply-btn-group">
+                    <a href="#" class="reply-cancel"><label for="reply-btn">취소</label></a>
+                    <a href="#" class="reply-upload">완료</a>
+                </div>
+            </div>
+            <div class="overlay"><label for="reply-btn" class="overlay-off-btn"></label></div>                
+        </section>
+        <!-- [e] message area -->
+        <!-- Common popup [s] -->
+        <input type="checkbox" name="popup" id="common-popup" />
+        <div class="popup">
+        <p class="popup-content">정말 삭제하시겠습니까?</p>
+        <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+        </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- Common popup [e] -->
         <!-- <section class="detail-btn-group-readOnly">
                 <input type="checkbox" name="" id="reply-btn" class="reply-checkbox">
                 <label for="reply-btn" class="reply-label">댓글쓰기</label>

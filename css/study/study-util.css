@@ -395,6 +395,106 @@
 /* fixed write button[e] */
 
 
+/* message form [s] */
+.detail-btn-group-readOnly {
+  width: 80%;
+  max-width: 780px;
+  height: 55px;
+  text-align: center;
+  line-height: 3.5;
+  margin: 0 auto;
+}
+
+.reply-checkbox {
+  display: none;
+}
+
+.reply-checkbox:checked ~ .reply-write {
+    visibility: visible;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #949494;
+    background-color: #fff;
+    z-index: 4;
+    width: 80%;
+    max-width: 580px;
+}
+
+.reply-checkbox:checked ~ .overlay {
+    visibility: visible;
+}
+
+.overlay-off-btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.reply-label {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.reply-label:hover {
+  background-color: var(--primary-color);
+    color: #fff;
+    border: 0;
+}
+
+.reply-write {
+    visibility: hidden;
+}
+
+.reply-content {
+  border: 0;
+  padding: 5px;
+  width: 90%;
+  outline: none;
+  resize: none;
+}
+
+.reply-btn-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #979797;
+}
+
+.reply-btn-group a {
+  display: inline-block;
+  width: 100%;
+  max-width: 780px;
+}
+
+.reply-btn-group a:not(:first-child) {
+  border-left: 1px solid #979797;
+}
+
+.reply-cancel {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.reply-cancel > label {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.reply-upload {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* message form [e] */
+
+
 @media screen and (min-width: 1040px) {
   .btn-back {
     display: none;
