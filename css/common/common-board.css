@@ -1,0 +1,234 @@
+/* -------------------------------------------------------------------------- */
+
+body {
+
+    background-color: #F8F8F8;
+}
+
+ol, ul, li, a {
+
+    list-style-type: none;
+    text-decoration: none;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.d-none {
+    
+    display: none;
+}
+
+.icon {
+
+    text-indent: -3000px !important;
+}
+
+/* -------------------------------------------------------------------------- */
+
+button {
+    
+    border: initial;
+    cursor: pointer;
+}
+
+button.button {
+    
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 14px;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.dropdown {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+    .dropdown > li {
+        
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .dropdown .trigger {
+        
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url("../../images/icon-navigation.png") no-repeat center;
+    }
+
+    .dropdown .menu {
+
+        position: absolute;
+        width: 6rem;
+        right: 0;
+        padding: 0.5rem 0;
+        border: 1px solid #E3E3E3;
+        background-color: #fff;
+        top: 0;
+        z-index: 10;
+    }
+    
+    .dropdown .menu > li {
+        
+            text-indent: 1rem;
+            height: 2rem;
+            line-height: 2rem;
+        }
+
+        .dropdown .menu > li:hover {
+
+            background-color: #F8F8F8;
+        }
+
+/* -------------------------------------------------------------------------- */
+
+#root {
+    padding-bottom: 3rem;
+}
+
+.side {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.area {
+
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #E3E3E3;
+    border-top: none;
+}
+
+    .reply.list {
+
+        margin: 16px 0 0 16px;
+    }
+
+/* -------------------------------------------------------------------------- */
+
+.content-header {
+
+    position: relative;    
+}
+
+    .content-header > .writer.image {
+
+        width: 40px;
+        height: 40px;
+        background: center / cover url("../../images/profile.png");
+        float: left;
+    }    
+
+    .content-header > .writer.name {
+        
+        font-size : 14px;
+        font-weight: bold;
+        text-indent: 14px;
+    }
+
+    .content-header > .reg-date {
+
+        font-size: 12px;
+        text-indent: 14px;
+    }
+
+/* -------------------------------------------------------------------------- */
+
+.list > .item {
+
+    position: relative;
+    margin-top: 16px;
+}
+
+.list > .item:first-child {
+
+    margin-top: 0;
+}
+
+    .item > .writer.image {
+        
+        width: 24px;
+        height: 24px;
+        background: center / cover url("../../images/profile.png");
+        display: inline-block;
+        margin: 4px 0;
+    }
+
+    .item > .writer.name {
+
+        padding-left: 4px;
+        line-height: 32px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #292929;
+    }
+
+    .item > .reg-date {
+
+        font-size: 12px;
+        line-height: 32px;
+        color: #a6a6a6;
+        padding-left: 8px;
+    }
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 779px) {
+
+    #root .side{
+  
+        display: none;
+    }
+}
+
+@media screen and (min-width: 780px) {
+
+    #root {
+
+        min-height: inherit;
+        display: grid;
+        grid-template-columns: 1fr 780px 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+        .side {
+
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .content {
+
+            grid-column: 2/3;
+            grid-row: 2/3;
+            border-top : 0px;
+        }
+
+        .comments {
+            
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+
+    .area {
+
+        padding: 32px;
+    }
+}

@@ -23,7 +23,12 @@ ol, ul , li , a {
     padding: 0px;
 }   
 
-
+input[type="checkbox"]{
+    margin-left: 5px;
+}
+label{
+    margin-left: 5px;
+}
 
 
 .board-name-search{background-color:#F8F8F8;}
@@ -343,6 +348,30 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     
 
 }
+
+
+
+
+
+/* text write icon */
+
+
+.text-write-icon {
+
+    position: fixed;
+    left: 75vw;
+    top: 77vh;
+
+}
+
+.text-write-icon > a {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: url(../../images/icon-write.png) no-repeat ;
+}
+
+
 
 
 

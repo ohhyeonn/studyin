@@ -1,66 +1,8 @@
-
-html{
-    min-height: 100vh;
-    margin: 0px;
-}
-
-body{
-
-    min-height: inherit;
-    margin: 0px;
-    background-color: #F8F8F8;
-}
-
-.d-none{
-    display: none;
-}
-
-ol, ul , li , a {
-    list-style-type:none;
-    text-decoration: none;
-    color: #000000;
-    margin:0px;
-    padding: 0px;
-}   
-
-
-
-
-.content{background-color: #ffffff;}
 .board-name-search{background-color:#F8F8F8;}
-.reply{background-color: #ffffff;}
-
-
-
-/*  setting */
-.icon {
-
-    text-indent:-3000px !important;
-}
-
-
-.dotdotdot-sibling {
-    width: 80px; 
-    height:50px; 
-    background-color: gray; 
-    position: absolute; 
-    right: 0px;
-    top: 0px;
-    z-index: 100;
-    opacity: 0.5;
-    /* <a class="icon dotdotdot" href="">땡떙땡</a>
-<div class="d-none dotdotdot-sibling"></div> */
-}
-
-
-
-
-
-
 
 
     
-    /* lay out */
+    /* layout */
 
 
 
@@ -82,23 +24,7 @@ ol, ul , li , a {
 
     
 
-
-    .content {
-
-        padding: 15px;
-      
-        border-left: 1px solid #E3E3E3; 
-        border-right: 1px solid #E3E3E3;
-        border-bottom: 1px solid #e3e3e3;
-    }
-    .reply {
-
-        padding: 15px;
-      
-        border-left: 1px solid #E3E3E3; 
-        border-right: 1px solid #E3E3E3;
-        border-bottom: 1px solid #e3e3e3;
-    }
+ 
 
 
     main{
@@ -227,41 +153,6 @@ main > .board-name-search > :nth-child(3) {
 
 /* content  */
 
-.content-profile {
-    
-
-    display: flex;
-    align-items: center;
-
-
-}
-
-.content-profile > div:nth-child(2) {    
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    background: url(../../images/profile.png) no-repeat center;
-    background-size: cover;
-}    
-
-.content-profile > ul { margin-left: 15px;}
-.content-profile > ul > li:nth-child(1){font-size : 14px; font-weight: bold;}
-.content-profile > ul > li:nth-child(2){font-size: 12px;}
-
-.content-profile > div:nth-child(4){
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-.content-profile > div:nth-child(4) > a {
-    flex-basis: 7px;
-    background: url(../../images/icon-navigation.png) no-repeat center;
-    
-}
-
-
-
-
 .write-title > form > input{
     margin-left: 15px;
     width: 200px;
@@ -285,56 +176,23 @@ main > .board-name-search > :nth-child(3) {
 
 
 
+/* answer */
 
+    .item > .writer.name {
 
-
-
-
-/* reply */
-
-
-
-
-.reply-profile {
-    
-
-    display: flex;
-    align-items: center;
-    
-    
-
-
-}
-
-
-
-.reply-profile > ul { display: flex; align-items: center; margin-left: 15px; flex-wrap: wrap;}
-.reply-profile > ul > li:nth-child(1){ font-size: 14px; font-weight: bold;}
-.reply-profile > ul > li:nth-child(2){font-size : 14px; font-weight: bold;padding-left: 10px; }
-.reply-profile > ul > li:nth-child(3){font-size: 12px; padding-left: 30px;}
-.reply-profile > li:nth-child(3) {margin-left: auto;}
-.reply-profile > li:nth-child(3) > a {display: inline-block; width: 10px; background: url(../../images/icon-navigation.png) no-repeat center;
+        padding-left: 0;
     }
 
+    .item > .item-text {
 
-.reply-text-area {
-    padding-top: 15px;
-}
+        margin-top: 16px;
+    }
 
-.reply-text-area > form {
-    display: flex;
-    justify-content: flex-end;
-}
-.reply-text-area > form > input{
-    cursor: pointer;
-    outline: none;
-    height: 30px;
-    width: 70px;
-    border: none;
-    color: #fff;
-    border-radius: 15px;
-    background-color: var(--primary-color);
-}
+    .item > form {
+
+        margin-top: 1rem;
+        text-align: right;
+    }
 
 
 
@@ -365,45 +223,6 @@ main > .board-name-search > :nth-child(3) {
 @media screen and (min-width: 780px) and (max-width: 1079px){
   
     
-    #root{
-        
-        display: grid;
-        min-height: inherit;
-        grid-template-columns: 1fr 780px 1fr ;
-        grid-template-rows: auto auto 1fr; 
-    }
-
-
-    
-
-
-    #root > .content {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        border-top : 0px;
-
-    }
-
-    .reply {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-
-
-    /* tablet content*/
-    .content {
-
-        padding: 30px;
-    }
-
-    /*tablet reply*/
-    .reply {
-        padding:30px;
-    }
-
-
-
     /* tablet side */
 
 
@@ -509,50 +328,6 @@ main > .board-name-search > :nth-child(3) {
 
 @media screen and (min-width: 1080px){
     
-    
-    #root{
-        min-height: inherit;
-        display: grid;
-        grid-template-columns: 1fr 780px 1fr ; 
-        grid-template-rows: auto auto 1fr; 
-        
-    }
-
-
- 
-
-    #root > .content {
-        grid-column: 2/3; 
-        grid-row: 1/2;
-    }
-
-
-
-
-
-
-    .reply {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-
-    /* PC content*/
-
-    .content {
-
-        padding: 30px;
-    }
-
-
-    /* PC reply*/
-    .reply{
-        padding:30px
-    }
-
-
-
-
     /* pc side */
 
 
@@ -643,23 +418,5 @@ main > .board-name-search > :nth-child(3) {
     }
 
 
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
 }
-
-
-
 

@@ -23,6 +23,13 @@ ol, ul , li , a {
     padding: 0px;
 }   
 
+.order-search label{
+    margin-left: 5px;
+}
+.order-search input[type="checkbox"]{
+    margin-left: 5px;
+}
+
 
 
 
@@ -281,6 +288,8 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     font-weight: bold;
     font-size: 14px;
     color: #292929;
+    display: flex;
+    justify-content: space-between;
 }
 #root > .content > ol > li >p:nth-child(2) {
     padding-top: 8px;

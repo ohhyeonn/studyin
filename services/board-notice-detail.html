@@ -5,53 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/services/board-notice-detail-style.css" rel="stylesheet">
-    <link href="../css/common/common.css" type="text/css" rel="stylesheet">
-    
-    <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
-    <script defer src="../js/common/gb-nav.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
     <title>Document</title>
+    <link href="../css/common/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/common/gb-nav.css" type="text/css" rel="stylesheet">
+    <link href="../css/common/common-board.css" type="text/css" rel="stylesheet">
+    <link href="../css/services/board-notice-detail-style.css" type="text/css" rel="stylesheet">
+    <script defer src="../js/common/gb-nav.js"></script>
+    <script defer src="../js/common/common-board.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
     <script>
-        window.addEventListener("load", function(){
-            var section = document.querySelector("#root");
-            var dots = section.querySelectorAll(".dotdotdot");
-
-            section.addEventListener("click", function(e){
-                
-                if(e.target.classList.contains("dotdotdot")){
-                    
-                    e.preventDefault();
-                    e.target.parentNode.style.position = "relative";
-                    e.target.nextElementSibling.classList.toggle("d-none");
-                }else if (e.target.classList.contains("dotdotdot-sibling")){
-                    e.target.classList.toggle("d-none");
-                }
-
-            });
-
-
-            section.addEventListener("mousedown",function(e){
-                
-                if (e.target.classList.contains("dotdotdot-sibling")){
-                    return;
-                }else if(!e.target.classList.contains("dotdotdot")){
-                    for(var d of dots){
-                        d.nextElementSibling.classList.add("d-none");
-                    }
-                } 
-
-
-            });
-
-
-
-
-        });
-        
-
 
 
         window.addEventListener('load', function(){
@@ -266,23 +231,28 @@
 
 
 
-            <article class="content">
+            <article class="content area">
                 <h1 class="d-none">게시글</h1>
 
 
 
 
-                <section class="content-profile">
-                    <h1 class="d-none">content-profile</h1>
-                    <div class="icon">프로필</div>
-                    <ul>
-                        <li>작성자</li>
-                        <li>03/03 10:12</li>
+                <section class="content-header">
+                    <h1 class="d-none">content header</h1>
+                    
+                    <div class="writer image icon">프로필 이미지</div>
+                    <p class="writer name">작성자</p>
+                    <p class="reg-date">03/03 10:12</p>
+                    <ul class="dropdown">
+                        <li>
+                            <button class="trigger icon">메뉴</button>
+                            <ul class="menu d-none">
+                                <li><a class="noright">권한 없음</a></li>
+                                <li><a class="modify">수정</a></li>
+                                <li><a class="delete">삭제</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                    <div>
-                        <a class="icon dotdotdot" href="">땡떙땡</a>
-                        <div class="d-none dotdotdot-sibling"></div>
-                    </div>
                 </section>
 
 
@@ -313,7 +283,7 @@
                     <h1 class="d-none" >좋아요 구독 알림설정 부탁드려요</h1>
                     <div>  
                         <a href="" >10</a> 
-                        <a >5</a>
+                        <a>5</a>
                         <a>0</a>
                     </div>
                 </section>
@@ -321,131 +291,93 @@
             </article>
 
 
-            <section class="coments">
-                <h1 class="d-none">coments</h1>
+            <section class="comments area">
+                <h1 class="d-none">댓글 영역</h1>
 
-                <ol class="main-coments">
-                    <li>
-                        <ul>
-                            <li class="icon">프로필</li>
-                            <li>메이플</li>
-                            <li>
-                                <a class="icon dotdotdot" href="">땡떙땡</a>
-                                <div class="d-none dotdotdot-sibling"></div>
+                <ol class="comment list">
+                    <li class="item">
+                        <span class="writer image icon">프로필 이미지</span>
+                        <span class="writer name">메이플</span>
+                        <span class="reg-date">03/03 10:30</span>
+                        <p class="item-text">넥슨은요?</p>
+                        <ul class="dropdown">
+                            <li><button class="trigger icon">메뉴</button>
+                                <ul class="menu d-none">
+                                    <li><a class="noright">권한 없음</a></li>
+                                    <li><a class="modify">수정</a></li>
+                                    <li><a class="delete">삭제</a></li>
+                                </ul>
                             </li>
                         </ul>
-                        <div>넥슨은요?</div>
-                        <div>03/03 10:30</div>
-
-
-                        <ol class="sub-coments">
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li>
-                                        <a class="icon dotdotdot" href="">땡떙땡</a>
-                                        <div class="d-none dotdotdot-sibling"></div>
+                
+                        <ol class="reply list">
+                            <li class="item">
+                                <span class="writer image icon">프로필 이미지</span>
+                                <span class="writer name">서현오(글쓴이)</span>
+                                <span class="reg-date">03/03 10:30</span>
+                                <p class="item-text">lorem 답글입니다 만나서 반갑습니다</p>
+                                <ul class="dropdown">
+                                    <li><button class="trigger icon">메뉴</button>
+                                        <ul class="menu d-none">
+                                            <li><a class="noright">권한 없음</a></li>
+                                            <li><a class="modify">수정</a></li>
+                                            <li><a class="delete">삭제</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
-                                <div>대댓글입니다 만나서 l lorem 반갑습니다</div>
-                                <div>03/03 10:30</div>
                             </li>
 
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li>
-                                         <a class="icon dotdotdot" href="">땡떙땡</a>
-                                         <div class="d-none dotdotdot-sibling"></div>
+                            <li class="item">
+                                <span class="writer image icon">프로필 이미지</span>
+                                <span class="writer name">서현오(글쓴이)</span>
+                                <span class="reg-date">03/03 10:30</span>
+                                <p class="item-text">답글입니다 lorem 만나서 반갑습니다</p>
+                                <ul class="dropdown">
+                                    <li><button class="trigger icon">메뉴</button>
+                                        <ul class="menu d-none">
+                                            <li><a class="noright">권한 없음</a></li>
+                                            <li><a class="modify">수정</a></li>
+                                            <li><a class="delete">삭제</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
-                                <div>대댓글입니다 만나서 lorem 반갑습니다</div>
-                                <div>03/03 10:30</div>
                             </li>
 
-                            <li>
-                                <ul>
-                                    <li class="icon">프로필</li>
-                                    <li>서현오(글쓴이)</li>
-                                    <li>
-                                        <a class="icon dotdotdot" href="">땡떙땡</a>
-                                        <div class="d-none dotdotdot-sibling"></div>
+                            <li class="item">
+                                <span class="writer image icon">프로필 이미지</span>
+                                <span class="writer name">서현오(글쓴이)</span>
+                                <span class="reg-date">03/03 10:30</span>
+                                <p class="item-text">답글입니다 만나서 lorem 반갑습니다</p>
+                                <ul class="dropdown">
+                                    <li><button class="trigger icon">메뉴</button>
+                                        <ul class="menu d-none">
+                                            <li><a class="noright">권한 없음</a></li>
+                                            <li><a class="modify">수정</a></li>
+                                            <li><a class="delete">삭제</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
-                                <div>대댓글입니다 만나서 반갑습니다</div>
-                                <div>03/03 10:30</div>
                             </li>
 
-
-
-
-
-
-
-
+                            <li class="item input-form">
+                                <form action="">
+                                    <input type="text" placeholder="댓글을 입력하세요">
+                                    <input type="button" value="작성">
+                                    <span><input type="checkbox">&nbsp;&nbsp;비공개</span>
+                                </form>
+                            </li>
                         </ol>
-                        <form class="coment-input-text-sub" action="">
-                            <input type="text" placeholder="댓글을 입력하세요">
-                            <input type="button" value="작성">
-                            <div>
-                                <input type="checkbox">&nbsp;&nbsp;비공개
-                            </div>
-                        </form>
                     </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <li class="item input-form">
+                        <form action="">
+                            <input type="text" placeholder="댓글을 입력하세요">
+                            <input type="button" value="작성">
+                            <span><input type="checkbox">&nbsp;&nbsp;비공개</span>
+                        </form>
+                    </li>
                 </ol>
-                <form class="coment-input-text-main" action="">
-                    <input type="text" placeholder="댓글을 입력하세요">
-                    <input type="button" value="작성">
-                    <div>
-                        <input type="checkbox">&nbsp;&nbsp;비공개
-                    </div>
-                </form>
             </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -455,7 +387,7 @@
             <aside class="side">
                 <h1 class="d-none">notice or hot</h1>
 
-                <section class="gongzi">
+                <section class="gongzi top-posts">
                     <h1 class="d-none">공지사항</h1>
                     <ul>
                         <li><a href="">공지사항</a></li>
@@ -472,7 +404,7 @@
                 </section>
 
 
-                <section class="hotnotice">
+                <section class="hotnotice top-posts">
                     <h1 class="d-none">hot notice</h1>
                     <ul>
                         <li><a href="">HOT 게시글</a></li>
