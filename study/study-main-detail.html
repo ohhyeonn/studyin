@@ -161,27 +161,30 @@
                 </div>
                 <div class="btn-group">
                     <a href="#">신청</a>
-                    <a href="#">문의</a>
+                    <a href="#"><label for="message-btn">문의</label></a>
                     <!-- <a href="#">신청취소</a> -->
                 </div>
             </div>
             <div class="like-wrapper"><button class="btn-like"><i class="far fa-thumbs-up fa-2x"></i></button><span>이 글이 좋다면 '좋아요'를 눌러주세요</span></div>
         </section>
         <!-- [s] message area -->
-        <section class="detail-btn-group-readOnly">
-            <input type="checkbox" name="" id="reply-btn" class="reply-checkbox">
-            <label for="reply-btn" class="reply-label">댓글쓰기</label>
-            <div class="reply-write">
+        <section class="message-popuup">
+            <input type="checkbox" name="" id="message-btn" class="message-checkbox">
+            <!-- <label for="message-btn" class="message-label">댓글쓰기</label> -->
+            <div class="message-write">
                 <form>
-                    <h5>댓글을 입력하세요</h5>
-                    <textarea class="reply-content" name="reply-content" id="reply-content" cols="30" rows="10" placeholder="입력"></textarea>
+                    <h5>Message</h5>
+                    <div class="receiver">
+                    <span>To. <span>수신자닉네임</span></span>
+                    </div>
+                    <textarea class="message-content" name="message-content" id="message-content" cols="30" rows="10" placeholder="입력"></textarea>
                 </form>
-                <div class="reply-btn-group">
-                    <a href="#" class="reply-cancel"><label for="reply-btn">취소</label></a>
-                    <a href="#" class="reply-upload">완료</a>
+                <div class="message-btn-group">
+                    <a href="#" class="message-cancel"><label for="message-btn">취소</label></a>
+                    <a href="#" class="message-upload">전송</a>
                 </div>
             </div>
-            <div class="overlay"><label for="reply-btn" class="overlay-off-btn"></label></div>                
+            <div class="overlay"><label for="message-btn" class="overlay-off-btn"></label></div>                
         </section>
         <!-- [e] message area -->
         <!-- Common popup [s] -->

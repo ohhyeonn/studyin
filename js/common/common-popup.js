@@ -14,6 +14,22 @@ const popupFunction = () => {
         if(!e.target.classList.contains('popup-btn') && !e.target.classList.contains('popup-cancel-btn')) return;
         popup.classList.toggle('flex-active');
     });
+
+    // disable a tag of btn group
+    const btnGroup = document.querySelector('.btn-group');
+    if(btnGroup){
+        btnGroup.addEventListener('click', e => {
+           let target = e.target;
+           if (target.tagName.toLowerCase() !== 'a') return;
+           e.preventDefault();
+           
+           let label = target.querySelector('label[for=message-btn]');
+           
+           if(!label) return;
+           let messageBtn = document.querySelector('#message-btn');
+           messageBtn.checked = true;
+        });
+    }
 }
 
 popupFunction();
