@@ -58,7 +58,7 @@
     font-weight: bold;
   }
   
-  .search-bar {
+  /* .search-bar {
     width: 80%;
     margin: 0 auto;
     padding-left: 10px;
@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
     position: relative;
-  }
+  } */
   
   .search-bar .large-input {
     padding-right: 35px !important;
@@ -396,7 +396,7 @@
 
 
 /* message form [s] */
-.detail-btn-group-readOnly {
+.message-popuup {
   width: 80%;
   max-width: 780px;
   height: 55px;
@@ -405,11 +405,11 @@
   margin: 0 auto;
 }
 
-.reply-checkbox {
+.message-checkbox {
   display: none;
 }
 
-.reply-checkbox:checked ~ .reply-write {
+.message-checkbox:checked ~ .message-write {
     visibility: visible;
     position: fixed;
     top: 50%;
@@ -422,7 +422,7 @@
     max-width: 580px;
 }
 
-.reply-checkbox:checked ~ .overlay {
+.message-checkbox:checked ~ .overlay {
     visibility: visible;
 }
 
@@ -433,7 +433,13 @@
   left: 0;
 }
 
-.reply-label {
+.btn-group > a > label[for=message-btn] {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.message-label {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   border-radius: 15px;
@@ -441,17 +447,26 @@
   cursor: pointer;
 }
 
-.reply-label:hover {
+.message-label:hover {
   background-color: var(--primary-color);
-    color: #fff;
-    border: 0;
+  color: #fff;
+  border: 0;
 }
 
-.reply-write {
+.message-write {
     visibility: hidden;
 }
 
-.reply-content {
+.message-write .receiver {
+  text-align: left;
+  padding-left: 1.5em;
+  font-size: .85rem;
+  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+  margin-bottom: 1em;
+}
+
+.message-content {
   border: 0;
   padding: 5px;
   width: 90%;
@@ -459,35 +474,35 @@
   resize: none;
 }
 
-.reply-btn-group {
+.message-btn-group {
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid #979797;
 }
 
-.reply-btn-group a {
+.message-btn-group a {
   display: inline-block;
   width: 100%;
   max-width: 780px;
 }
 
-.reply-btn-group a:not(:first-child) {
+.message-btn-group a:not(:first-child) {
   border-left: 1px solid #979797;
 }
 
-.reply-cancel {
+.message-cancel {
   color: var(--secondary-color);
   font-weight: bold;
 }
 
-.reply-cancel > label {
+.message-cancel > label {
   display: inline-block;
   width: 100%;
   cursor: pointer;
 }
 
-.reply-upload {
+.message-upload {
   color: var(--primary-color);
   font-weight: bold;
 }

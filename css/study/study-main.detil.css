@@ -28,16 +28,17 @@
     align-items: center;
     /* flex-wrap: wrap; */
     row-gap: 10px;
-    padding: 0.8em;
+    padding: 5px;
 }
 
-.btn-group > a {
+.btn-group a {
     width: 100%;
     background-color: #fff;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    padding: 5px 10px
+    padding: 5px 10px;
+    display: block;
 }
 
 
