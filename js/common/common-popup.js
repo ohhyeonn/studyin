@@ -23,7 +23,7 @@ const popupFunction = () => {
            if (target.tagName.toLowerCase() !== 'a') return;
            e.preventDefault();
            
-           let label = target.querySelector('label[for=message-btn]');
+           let label = target.querySelector('.reply');
            
            if(!label) return;
            let messageBtn = document.querySelector('#message-btn');
