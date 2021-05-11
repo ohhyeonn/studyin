@@ -30,6 +30,19 @@ const popupFunction = () => {
            messageBtn.checked = true;
         });
     }
-}
 
+    // message popupu display toggel
+    const messageCheckBtn = document.querySelector('input[type=checkbox][id=message-btn]');
+    if(messageCheckBtn){
+        messageCheckBtn.addEventListener('change', () => {
+            let messagePopuup = document.querySelector('.message-popuup');
+            if (messageCheckBtn.checked) {
+                messagePopuup.classList.remove('display-none');
+            } else {
+                messagePopuup.classList.add('display-none');
+            };
+        });
+    }
+
+}
 popupFunction();
