@@ -1,3 +1,7 @@
+main{
+
+    background-color: white;
+}
 
 html{
     min-height: 100vh;
@@ -131,7 +135,7 @@ main > .board-name-search > :nth-child(3) {
 
 /* table-order */
 
-#root > .content > .table-order > ul{
+#main-root > .content > .table-order > ul{
 
     font-size: 11px;
     max-width: 720px;
@@ -140,17 +144,17 @@ main > .board-name-search > :nth-child(3) {
     margin-right: auto;
     display: flex;
 }
-#root >.content > .table-order > ul > li{
+#main-root >.content > .table-order > ul > li{
     padding-left: 10px;
     display: flex;
     align-items: center;
 
 }
-#root >.content > .table-order > ul > li:nth-child(4){
+#main-root >.content > .table-order > ul > li:nth-child(4){
     margin-left: auto;
     margin-right: 5px;
 }
-#root >.content > .table-order > ul > li:nth-child(4) > input{
+#main-root >.content > .table-order > ul > li:nth-child(4) > input{
     margin-left: 5px;
 }
 
@@ -164,7 +168,7 @@ main > .board-name-search > :nth-child(3) {
 /* table */
 
 
-#root > .content > .table {
+#main-root > .content > .table {
     margin-top: 10px;
 }
 
@@ -172,34 +176,34 @@ main > .board-name-search > :nth-child(3) {
 
 
 
-#root > .content > .table > ul:nth-child(2) {
+#main-root > .content > .table > ul:nth-child(2) {
     background-color: var(--gray-color);
    
 }
-#root > .content > .table > ul:nth-child(2) > li {
+#main-root > .content > .table > ul:nth-child(2) > li {
     padding-left: 10px;
     background: url(../../images/separate-line.png) no-repeat 5px center;
 
 }
-#root > .content > .table > ul:nth-child(2) > li:nth-child(1) {
+#main-root > .content > .table > ul:nth-child(2) > li:nth-child(1) {
     text-align: center;
     flex-basis: 60px;
 
 }
-#root > .content > .table > ul:nth-child(2) > li:nth-child(2) {
+#main-root > .content > .table > ul:nth-child(2) > li:nth-child(2) {
     text-align: center;
     flex-basis: 400px;
     flex-shrink: 1.5;
 }
-#root > .content > .table > ul:nth-child(2) > li:nth-child(3) {
+#main-root > .content > .table > ul:nth-child(2) > li:nth-child(3) {
     text-align: center;
     flex-basis: 100px;
 }
-#root > .content > .table > ul:nth-child(2) > li:nth-child(4) {
+#main-root > .content > .table > ul:nth-child(2) > li:nth-child(4) {
     text-align: center;
     flex-basis: 100px;
 }
-#root > .content > .table > ul:nth-child(2) > li:nth-child(5) {
+#main-root > .content > .table > ul:nth-child(2) > li:nth-child(5) {
     text-align: center;
     flex-basis: 60px;
     padding-right: 10px;
@@ -207,12 +211,12 @@ main > .board-name-search > :nth-child(3) {
 
 
 
-#root > .content > .table > ul:nth-child(2) > li:first-child {
+#main-root > .content > .table > ul:nth-child(2) > li:first-child {
 
     background: none;
 }
 
-#root > .content > .table > ul:nth-child(2) ~ ul{
+#main-root > .content > .table > ul:nth-child(2) ~ ul{
     border-bottom: 1px solid #e3e3e3;
 }
 
@@ -220,7 +224,7 @@ main > .board-name-search > :nth-child(3) {
 
 
 
-#root > .content > .table > ul {
+#main-root > .content > .table > ul {
     font-size: 11px;
     min-width: 207px;
     height: 30px;
@@ -231,14 +235,14 @@ main > .board-name-search > :nth-child(3) {
     display: flex;
     align-items: center;
 }
-#root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(1) {
+#main-root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(1) {
     padding-left: 10px;
     text-align: center;
     flex-basis: 60px;
 
 
 }
-#root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(2) {
+#main-root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(2) {
 
     padding-left: 10px;
     flex-basis: 400px;
@@ -246,20 +250,20 @@ main > .board-name-search > :nth-child(3) {
     flex-shrink: 1.5;
 
 }
-#root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(3) {
+#main-root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(3) {
     padding-left: 10px;
     flex-basis: 100px;
     text-align: center;
 
 }
-#root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(4) {
+#main-root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(4) {
     padding-left: 10px;
     flex-basis: 100px;
     
     text-align: center;
 
 }
-#root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(5) {
+#main-root > .content > .table > ul:nth-child(2) ~ ul > li:nth-child(5) {
     padding-left: 10px;
     padding-right: 10px;
     flex-basis: 60px;
@@ -358,7 +362,7 @@ main > .board-name-search > :nth-child(3) {
 @media screen and (min-width: 780px) {
   
     
-    #root{
+    #main-root{
         
         display: grid;
         min-height: inherit;
@@ -369,7 +373,7 @@ main > .board-name-search > :nth-child(3) {
 
   
 
-    #root > .content {
+    #main-root > .content {
         grid-column: 2/3;
         grid-row: 1/2;
     }
@@ -387,11 +391,11 @@ main > .board-name-search > :nth-child(3) {
 
 /*tablet content*/
 
-#root > .content > ol > li {
+#main-root > .content > ol > li {
     padding: 15px 30px 15px 30px;
 }
 
-#root > .content > ol > li + div {
+#main-root > .content > ol > li + div {
     padding: 15px 30px 15px 30px;
 }
 
