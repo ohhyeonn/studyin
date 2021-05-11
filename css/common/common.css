@@ -274,3 +274,8 @@ input[type="checkbox"][name="popup"]:checked ~ .overlay {
 
 /* Common Top Category[e] */
 
+/* util [s] */
+.display-none {
+  display: none !important;
+}
+/* util [e] */
