@@ -399,10 +399,11 @@
 .message-popuup {
   width: 80%;
   max-width: 780px;
-  height: 55px;
+  /* height: 55px; */
   text-align: center;
   line-height: 3.5;
   margin: 0 auto;
+  /* display: none; */
 }
 
 .message-checkbox {
