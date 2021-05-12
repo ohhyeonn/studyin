@@ -401,7 +401,7 @@ main > .board-name-write > :nth-child(4) a {
     }
 
 
-    #root > .content {
+    #root .content {
         grid-column: 2/3;
         grid-row: 2/3;
         border-top : 1px solid #E3E3E3;
