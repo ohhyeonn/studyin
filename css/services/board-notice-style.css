@@ -58,7 +58,7 @@ label{
 
         border-bottom:1px #e3e3e3 solid;
     }
-    #root > .order-search{
+    #main-root > .order-search{
         min-height: 40px;
         max-width: 780px;
         margin-left: auto;
@@ -210,7 +210,7 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 /* order-search */
 
 
-#root > .order-search > ul {
+#main-root > .order-search > ul {
     padding: 0px 15px 0px 15px;
     min-height: inherit;
     display: flex;
@@ -219,21 +219,21 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 }
 
 
-#root > .order-search > ul > li:nth-child(1)> a{
+#main-root > .order-search > ul > li:nth-child(1)> a{
     font-size: 12px;
     color: #333333;
 }
-#root > .order-search > ul > li > a{
+#main-root > .order-search > ul > li > a{
     padding-right: 7.5px;
     font-size: 12px;
     color: #bbbbbb;
 }
-#root > .order-search > ul > li:nth-child(4){
+#main-root > .order-search > ul > li:nth-child(4){
     flex-grow: 1;
 }
 
 
-#root > .order-search > ul > li> select {
+#main-root > .order-search > ul > li> select {
     font-size: 12px;
     cursor: pointer;
     outline: none;
@@ -263,16 +263,16 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 
 /* content */
 
-#root > .content {
+#main-root > .content {
     max-width: 780px;
     margin-left: auto;
     margin-right: auto;
 }
-#root > .content > ol {
+#main-root > .content > ol {
     min-height: 110px;
 }
 
-#root > .content > ol > li {
+#main-root > .content > ol > li {
     background-color: #ffffff;
     padding: 15px;
     border-bottom: 1px solid #E3E3E3;
@@ -281,14 +281,14 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     min-height: 80px;
 }
 
-#root > .content > ol > li > div {
+#main-root > .content > ol > li > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     
 }
 
-#root > .content .content-title {
+#main-root > .content .content-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -299,15 +299,15 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
     flex-shrink: 1;
 }
 
-#root > .content .content-profile { flex-shrink: 0; display: flex; align-items: center; flex-wrap: wrap;}
-#root > .content  .content-profile > li:nth-child(1) {
+#main-root > .content .content-profile { flex-shrink: 0; display: flex; align-items: center; flex-wrap: wrap;}
+#main-root > .content  .content-profile > li:nth-child(1) {
     font-size:10px ;
     
     height: 22px;
     width: 22px;
     background: url(../../images/profile.png) no-repeat ;
 }
-#root > .content  .content-profile > li:nth-child(2) {
+#main-root > .content  .content-profile > li:nth-child(2) {
     
     font-size: 12px;
     color: #292929;
@@ -324,7 +324,7 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 
 
 
-#root > .content .content-miribogi {
+#main-root > .content .content-miribogi {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -336,7 +336,7 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 }
 
 
-#root > .content .content-date{
+#main-root > .content .content-date{
     font-size: 12px;
     flex-basis: 50px;
     flex-shrink: 0;
@@ -449,7 +449,7 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
   
 /*tablet content*/
 
-#root > .content > ol > li {
+#main-root > .content > ol > li {
     padding: 15px 30px 15px 30px;
 }
 
