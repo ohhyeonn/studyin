@@ -2,7 +2,7 @@ window.onload = addEventListener("load", function(){
     var mainBtn = document.querySelector(".main-button");
 
 
-    mainBtn.onclick = function(e){
+    mainBtn.addEventListener('click', (e) => {
         var target = e.target;
 
         if(!target.classList.contains("message"))
@@ -13,19 +13,27 @@ window.onload = addEventListener("load", function(){
             target = target.parentNode;
 
 
-            var preview = target.parentNode.querySelector(".preview");
-            var reply = target.parentNode.querySelector(".reply");
+        var preview = target.parentNode.querySelector(".preview");
+        var reply = target.parentNode.querySelector(".reply");
 
-            preview.classList.toggle("truncate");
-            preview.classList.toggle("preview-bottom");
-            reply.classList.toggle("d-none");
+        preview.classList.toggle("truncate");
+        preview.classList.toggle("preview-bottom");
+        reply.classList.toggle("d-none");
             
-            reply.onclick = function(){
-           
-                let messageBtn = document.querySelector('#message-btn');
-                messageBtn.checked = true;
-            }
-    };
+        reply.addEventListener('click', (e) => {
+            
+            let messageBtn = document.querySelector('#message-btn');
+            messageBtn.checked = true;
+            
+            let messagePopuup = document.querySelector('.message-popuup');
+                if (messageBtn.checked) {
+                        messagePopuup.classList.remove('display-none');
+                } else {
+                        messagePopuup.classList.add('display-none');
+                }
+        }); 
+    });
+});
 
 
 
@@ -73,6 +81,9 @@ const popupFunction = () => {
         if(!e.target.classList.contains('popup-btn') && !e.target.classList.contains('popup-cancel-btn')) return;
         popup.classList.toggle('flex-active');
     });
+
+
+ 
 }
 
 popupFunction();

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/common/gb-nav.css">
     <script defer src="../js/common/gb-nav.js"></script>
     <script defer src="../js/study/study-detail.js"></script>
+    <script defer src="../js/common/common-popup.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -154,8 +155,8 @@
                     <span><h5>첨부파일</h5></span><span><a href="#" class="download-text">download.file</a></span>
                 </div>
                 <div class="detail-btn-group">
-                    <a href="#" class="btn">수정</a>
-                    <a href="#" class="btn">삭제</a>
+                    <a href="#" class="btn modify-btn">수정</a>
+                    <a href="#" class="btn delete-btn">삭제</a>
                 </div>
                     <div class="like-wrapper"><button class="btn-like"><i class="far fa-thumbs-up fa-2x"></i></button><span>이 글이 좋다면 '좋아요'를 눌러주세요</span></div>
             </div>
@@ -208,6 +209,17 @@
             <a href="#" class="btn">다음</a>
         </div>
         </section>
+        <!-- Common popup [s] -->
+        <input type="checkbox" name="popup" id="common-popup" />
+        <div class="popup">
+        <p class="popup-content">정말 삭제하시겠습니까?</p>
+        <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+        </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- Common popup [e] -->
     </main>
     <!-- Main [e] -->
     <footer>

@@ -10,7 +10,7 @@
     align-items: center;
     row-gap: 20px;
     flex: 1;
-    margin: 3em auto;
+    margin-top: 1em;
     /* position: absolute;
     top: 40%;
     left: 50%;
@@ -39,8 +39,18 @@
     display: block !important;
 }
 
+.id-info {
+    width: 60%;
+    max-width: 200px;
+}
+
 .id-info, .id-info+a {
    display: none;
+}
+
+.pw-info {
+    width: 60%;
+    max-width: 200px;
 }
 
 .pw-info, .pw-info+a {
