@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/common/common.css" type="text/css" />
     <script defer src="../js/mypage/mystudy-main-written-list.js"></script>
     <script defer src="../js/common/gb-nav.js"></script>
+    <script defer src="../js/common/common-popup.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -202,108 +203,11 @@
                         </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <h3>자바 스터디</h3>
-                    <span class="period">2021-01-01 ~ 2021-12-31</span>
-                    <p class="study-description">
-                    자바를 배우고 싶은 분들 오세요.자바를 배우고 싶은 분들 오세요.자바를 배우고 싶은 분들 오세요.
-                    </>
-                    <div class="region">
-                        <span>지역 : </span><span>서울</span>
-                    </div>
-                    <div class="region">
-                        <span>인원 : </span><span>0명 중 0명</span>
-                    </div>
-                    <div class="region">
-                        <span>수준 : </span><span>초급</span>
-                    </div>
-                    <div class="info">
-                        <div class="user-info">
-                        <img src="" alt="">
-                        <h3 class="user-name">유저 닉네임</h3>
-                        <span class="time">2020/04/11 17:34</span>
-                        </div>
-                        <div class="data-info">
-                        <div class="icon-data">
-                            <i class="fas fa-eye"></i><span>1,234</span>
-                        </div>
-                        <div class="icon-data">
-                            <i class="fas fa-thumbs-up"></i><span>152</span>
-                        </div>
-                        <div class="icon-data">
-                            <i class="fas fa-comment-dots"></i><span>3</span>
-                        </div>
-                        </div>
+                    <div class="btn-wrapper">
+                        <!-- <a href="#" class="btn dropout-btn">탈퇴하기</a> -->
+                        <a href="#" class="btn terminate-btn">모집종료하기</a>
                     </div>
                 </div>
-                <div class="item">
-                    <h3>자바 스터디</h3>
-                    <span class="period">2021-01-01 ~ 2021-12-31</span>
-                    <p class="study-description">
-                    자바를 배우고 싶은 분들 오세요.자바를 배우고 싶은 분들 오세요.자바를 배우고 싶은 분들 오세요.
-                    </>
-                    <div class="region">
-                        <span>지역 : </span><span>서울</span>
-                    </div>
-                    <div class="region">
-                        <span>인원 : </span><span>0명 중 0명</span>
-                    </div>
-                    <div class="region">
-                        <span>수준 : </span><span>초급</span>
-                    </div>
-                    <div class="info">
-                        <div class="user-info">
-                        <img src="" alt="">
-                        <h3 class="user-name">유저 닉네임</h3>
-                        <span class="time">2020/04/11 17:34</span>
-                        </div>
-                        <div class="data-info">
-                        <div class="icon-data">
-                            <i class="fas fa-eye"></i><span>1,234</span>
-                        </div>
-                        <div class="icon-data">
-                            <i class="fas fa-thumbs-up"></i><span>152</span>
-                        </div>
-                        <div class="icon-data">
-                            <i class="fas fa-comment-dots"></i><span>3</span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <h3>자바 스터디</h3>
-                    <span class="period">2021-01-01 ~ 2021-12-31</span>
-                    <p class="study-description">
-                    자바를 배우고 싶은 분들 오세요.자바를 배우고 싶은 분들 오세요.자바를 배우고 싶은 분들 오세요.
-                    </>
-                    <div class="region">
-                        <span>지역 : </span><span>서울</span>
-                    </div>
-                    <div class="region">
-                        <span>인원 : </span><span>0명 중 0명</span>
-                    </div>
-                    <div class="region">
-                        <span>수준 : </span><span>초급</span>
-                    </div>
-                    <div class="info">
-                        <div class="user-info">
-                        <img src="" alt="">
-                        <h3 class="user-name">유저 닉네임</h3>
-                        <span class="time">2020/04/11 17:34</span>
-                        </div>
-                        <div class="data-info">
-                        <div class="icon-data">
-                            <i class="fas fa-eye"></i><span>1,234</span>
-                        </div>
-                        <div class="icon-data">
-                            <i class="fas fa-thumbs-up"></i><span>152</span>
-                        </div>
-                        <div class="icon-data">
-                            <i class="fas fa-comment-dots"></i><span>3</span>
-                        </div>
-                        </div>
-                    </div>
                 </div>
                 <!-- wrapper end -->
             </div>
@@ -313,6 +217,17 @@
             </div>               
         </section>
         <!-- Primary main content[e] -->
+        <!-- Common popup [s] -->
+        <input type="checkbox" name="popup" id="common-popup" />
+        <div class="popup">
+        <p class="popup-content">정말 종료하시겠습니까?</p>
+        <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+        </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- Common popup [e] -->
         <!-- fixed to the top button [s] -->
         <a href="#filter" class="fixed-toTop-btn"><i class="far fa-caret-square-up fa-2x"></i><br>TOP<a>
         <!-- fixed to the top button [e] -->

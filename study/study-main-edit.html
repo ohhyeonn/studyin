@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/study/study-main.detil.css">
+    <link rel="stylesheet" href="../css/study/study-main-create.css" type="text/css">
     <link rel="stylesheet" href="../css/study/study-util.css" type="text/css">
-    <link rel="stylesheet" href="../css/common/common.css" type="text/css" />
     <link rel="stylesheet" href="../css/common/gb-nav.css">
+    <link rel="stylesheet" href="../css/common/common.css" type="text/css" />
     <script defer src="../js/common/gb-nav.js"></script>
     <script defer src="../js/common/common-popup.js"></script>
     <link
@@ -118,79 +118,97 @@
             </a>
         </div>
         <div class="top-title-content">
-            <span>IT</span>
+            <span>스터디 수정하기</span>
         </div>
     </section>
     <!-- Common top title[e] -->
     <!-- Main [s] -->
     <main>
-        <section class="content-title">
-            <h5>자바스터디</h5>
-        </section>
-        <section class="content-detail">
-            <div class="write-info">
-                <div class="writer">
-                    <h5>작성자</h5>
-                    <p>닉네임</p>
-                </div>
-                <div class="other-info">
-                <span class="written-at">2021/03/30 00:00</span>
-                <div class="detail-icon-group">
-                    <div class="icon-data">
-                        <i class="fas fa-eye"></i><span>1,234</span>
-                    </div>
-                    <div class="icon-data">
-                        <i class="fas fa-thumbs-up"></i><span>152</span>
-                    </div>
-                    <div class="icon-data">
-                        <i class="fas fa-comment-dots"></i><span>3</span>
+        <div class="form-create-container">
+            <section class="field">
+                <h5>분야</h5>
+                <input type="checkbox" name="field" id="field">
+                <label for="field"><span>분야선택</span><i class="fas fa-caret-down"></i></label>
+                <div class="list">
+                    <div class="items">
+                    <p>프로그래밍</p>
+                    <p>디자인</p>
+                    <p>하드웨어</p>
+                    <p>소프트웨어</p>
+                    <p>시스템</p>
                     </div>
                 </div>
+                <span>선택분야</span>
+            </section>
+            <section class="region">
+                <h5>지역</h5>
+                <input type="checkbox" name="region" id="region">
+                <label for="region"><span>지역선택</span><i class="fas fa-caret-down"></i></label>
+                <div class="list">
+                    <div class="items">
+                    <p>서울</p>
+                    <p>경기</p>
+                    <p>강원</p>
+                    <p>충청</p>
+                    <p>전라</p>
+                    <p>경상</p>
+                    <p>제주</p>
+                    <p>기타</p>
+                </div>
+                </div>
+                <span>선택지역</span>
+            </section>
+            <section class="limit-number">
+                <h5>모집인원</h5>
+                <div class="limit-number-wrapper">
+                <input type="checkbox" name="isNoLimit" id="isNoLimit">
+                <label for="isNoLimit">제한없음</label>
+                <span class="mg-left">최소</span><input type="text" name="minPpl" id="minPpl" maxlength="2"><span>명</span>
+                <span>최대</span><input type="text" name="maxPpl" id="maxPpl" maxlength="2"><span>명</span>
             </div>
-            </div>
-            <div class="detail">
-                <div class="detail-form">
-                    <span>분야</span>
+            </section>
+            <section class="level">
+                <h5>모집수준</h5>
+                <input type="checkbox" name="level" id="level">
+                <label for="level"><span>수준선택</span><i class="fas fa-caret-down"></i></label>
+                <div class="list">
+                    <div class="items">
+                    <p>초급</p>
+                    <p>중급</p>
+                    <p>고급</p>
+                    <p>기타</p>
                 </div>
-                <div class="detail-btn-group">
-                    <a href="../study/study-main-edit.html" class="btn modify-btn">수정</a>
-                    <a href="#" class="btn delete-btn">삭제</a>
                 </div>
-                <div class="study-board-wrapper">
-                    <a href="../study/study-list.html" class="study-board-btn">스터디 게시판 가기</a>
+                <span>선택지역</span>
+            </section>
+            <section class="period">
+                <h5>기간</h5>
+                <div class="start-date">
+                    <p>시작일시</p>
+                    <input class="period-input" type="text" name="startYear" id="startYear" placeholder="yyyy" maxlength="4"><span>년</span>
+                    <input class="period-input" type="text" name="startMonth" id="startMonth" placeholder="mm" maxlength="2"><span>월</span>
+                    <input class="period-input" type="text" name="startDay" id="startDay" placeholder="dd" maxlength="2"><span>일</span>
                 </div>
-                <div class="btn-group">
-                    <a href="#">신청</a>
-                    <a href="#"><label for="message-btn">문의</label></a>
-                    <!-- <a href="#">신청취소</a> -->
+                <div class="end-date">
+                    <p>종료일시</p>
+                    <input class="period-input" type="text" name="endYear" id="endYear" placeholder="yyyy" maxlength="4"><span>년</span>
+                    <input class="period-input" type="text" name="endMonth" id="endMonth" placeholder="mm" maxlength="2"><span>월</span>
+                    <input class="period-input" type="text" name="endDay" id="endDay" placeholder="dd" maxlength="2"><span>일</span>
                 </div>
-            </div>
-            <div class="like-wrapper"><button class="btn-like"><i class="far fa-thumbs-up fa-2x"></i></button><span>이 글이 좋다면 '좋아요'를 눌러주세요</span></div>
-        </section>
-        <!-- [s] message area -->
-        <section class="message-popuup display-none">
-            <input type="checkbox" name="" id="message-btn" class="message-checkbox">
-            <!-- <label for="message-btn" class="message-label">댓글쓰기</label> -->
-            <div class="message-write">
-                <form>
-                    <h5>Message</h5>
-                    <div class="receiver">
-                    <span>To. <span>수신자닉네임</span></span>
-                    </div>
-                    <textarea class="message-content" name="message-content" id="message-content" cols="30" rows="10" placeholder="입력"></textarea>
+            </section>
+            <section class="form-content-wrapper">
+                <form class="form-content">
+                    <input type="text" name="studyTitle" id="studyTitle" class="study-title" placeholder="제목입력">
+                    <textarea name="studyContent" id="studyContent" rows="10" class="study-content" placeholder="내용입력(시간, 장소, 방식 등)"></textarea>
                 </form>
-                <div class="message-btn-group">
-                    <a href="#" class="message-cancel"><label for="message-btn">취소</label></a>
-                    <a href="#" class="message-upload">전송</a>
-                </div>
-            </div>
-            <div class="overlay"><label for="message-btn" class="overlay-off-btn"></label></div>                
-        </section>
-        <!-- [e] message area -->
+                <a href="#" class="btn write-btn">완료</a>
+                <a href="#" class="btn finish-btn">모집완료하기</a>
+            </section>
+        </div>
         <!-- Common popup [s] -->
         <input type="checkbox" name="popup" id="common-popup" />
         <div class="popup">
-        <p class="popup-content">정말 삭제하시겠습니까?</p>
+        <p class="popup-content">정말 모집을 마감 하시겠습니까?</p>
         <div class="popup-btn-group">
         <label for="common-popup"><a class="btn popup-btn">확인</a></label>
         <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
@@ -229,6 +247,5 @@
         </a>
     </nav>
     <!-- Global bottom[e] -->
-    
 </body>
 </html>

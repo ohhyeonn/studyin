@@ -1,8 +1,33 @@
 const popupFunction = () => {
     const deleteBtn = document.querySelectorAll('.delete-btn');
+    
+    const finishBtn = document.querySelectorAll('.finish-btn');
+
+    const terminateBtn = document.querySelectorAll('.terminate-btn');
+
+    const dropOutBtn = document.querySelectorAll('.dropout-btn');
+
     const popup = document.querySelector('.popup');
 
     deleteBtn.forEach(ele => ele.addEventListener('click', (e) => {
+        e.preventDefault();
+        //e.stopPropagation();
+        popup.classList.toggle('flex-active');
+    }));
+
+    finishBtn.forEach(ele => ele.addEventListener('click', (e) => {
+        e.preventDefault();
+        //e.stopPropagation();
+        popup.classList.toggle('flex-active');
+    }));
+
+    terminateBtn.forEach(ele => ele.addEventListener('click', (e) => {
+        e.preventDefault();
+        //e.stopPropagation();
+        popup.classList.toggle('flex-active');
+    }));
+
+    dropOutBtn.forEach(ele => ele.addEventListener('click', (e) => {
         e.preventDefault();
         //e.stopPropagation();
         popup.classList.toggle('flex-active');

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/study/study-main.detil.css">
+    <link rel="stylesheet" href="../css/study/study-content-enroll.css">
     <link rel="stylesheet" href="../css/study/study-util.css" type="text/css">
-    <link rel="stylesheet" href="../css/common/common.css" type="text/css" />
     <link rel="stylesheet" href="../css/common/gb-nav.css">
+    <link rel="stylesheet" href="../css/common/common.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="../css/util.css" type="text/css" /> -->
     <script defer src="../js/common/gb-nav.js"></script>
+    <script defer src="../js/study/content-enroll.js"></script>
     <script defer src="../js/common/common-popup.js"></script>
     <link
       rel="stylesheet"
@@ -118,86 +120,32 @@
             </a>
         </div>
         <div class="top-title-content">
-            <span>IT</span>
+            <span>스터디 게시글 수정</span>
         </div>
     </section>
     <!-- Common top title[e] -->
     <!-- Main [s] -->
     <main>
-        <section class="content-title">
-            <h5>자바스터디</h5>
+        <!-- Enroll area[s] -->
+        <section class="enroll-wrapper">
+            <form class="enroll-form" method="post" enctype="multipart/form-data">
+                <input type="text" name="title" id="" class="square enroll-title" placeholder="제목입력">
+                <div class="enroll-content">
+                    <textarea class="enroll-content-detail" name="content" id="" rows="10"></textarea>
+                </div>
+                <div class="file-attachment">
+                    <input type="file" class="uploadFile" name="uploadFile" id="uploadFile">
+                    <label for="uploadFile" class="uploadFile"><i class="fas fa-paperclip"></i><span class="fileName">파일 선택</span></label>
+                    <p>업로드 가능한 확장자 - xls, jpg, png, zip</p>
+                    <p>업로드 가능한 용량 - 10MB이내</p>
+                </div>
+                <div class="enroll-btn-group">
+                    <a href="" class="btn btn-enroll">완료</a>
+                    <a href="" class="btn btn-cancel">취소</a>
+                </div>
+            </form>
         </section>
-        <section class="content-detail">
-            <div class="write-info">
-                <div class="writer">
-                    <h5>작성자</h5>
-                    <p>닉네임</p>
-                </div>
-                <div class="other-info">
-                <span class="written-at">2021/03/30 00:00</span>
-                <div class="detail-icon-group">
-                    <div class="icon-data">
-                        <i class="fas fa-eye"></i><span>1,234</span>
-                    </div>
-                    <div class="icon-data">
-                        <i class="fas fa-thumbs-up"></i><span>152</span>
-                    </div>
-                    <div class="icon-data">
-                        <i class="fas fa-comment-dots"></i><span>3</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="detail">
-                <div class="detail-form">
-                    <span>분야</span>
-                </div>
-                <div class="detail-btn-group">
-                    <a href="../study/study-main-edit.html" class="btn modify-btn">수정</a>
-                    <a href="#" class="btn delete-btn">삭제</a>
-                </div>
-                <div class="study-board-wrapper">
-                    <a href="../study/study-list.html" class="study-board-btn">스터디 게시판 가기</a>
-                </div>
-                <div class="btn-group">
-                    <a href="#">신청</a>
-                    <a href="#"><label for="message-btn">문의</label></a>
-                    <!-- <a href="#">신청취소</a> -->
-                </div>
-            </div>
-            <div class="like-wrapper"><button class="btn-like"><i class="far fa-thumbs-up fa-2x"></i></button><span>이 글이 좋다면 '좋아요'를 눌러주세요</span></div>
-        </section>
-        <!-- [s] message area -->
-        <section class="message-popuup display-none">
-            <input type="checkbox" name="" id="message-btn" class="message-checkbox">
-            <!-- <label for="message-btn" class="message-label">댓글쓰기</label> -->
-            <div class="message-write">
-                <form>
-                    <h5>Message</h5>
-                    <div class="receiver">
-                    <span>To. <span>수신자닉네임</span></span>
-                    </div>
-                    <textarea class="message-content" name="message-content" id="message-content" cols="30" rows="10" placeholder="입력"></textarea>
-                </form>
-                <div class="message-btn-group">
-                    <a href="#" class="message-cancel"><label for="message-btn">취소</label></a>
-                    <a href="#" class="message-upload">전송</a>
-                </div>
-            </div>
-            <div class="overlay"><label for="message-btn" class="overlay-off-btn"></label></div>                
-        </section>
-        <!-- [e] message area -->
-        <!-- Common popup [s] -->
-        <input type="checkbox" name="popup" id="common-popup" />
-        <div class="popup">
-        <p class="popup-content">정말 삭제하시겠습니까?</p>
-        <div class="popup-btn-group">
-        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
-        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
-        </div>
-        </div>
-        <div class="overlay"></div>
-        <!-- Common popup [e] -->
+        <!-- Enroll area[e] -->
     </main>
     <!-- Main [e] -->
     <footer>
@@ -229,6 +177,5 @@
         </a>
     </nav>
     <!-- Global bottom[e] -->
-    
 </body>
 </html>
