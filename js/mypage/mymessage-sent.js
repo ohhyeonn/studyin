@@ -4,16 +4,61 @@ window.onload = addEventListener("load", function(){
     mainBtn.onclick = function(e){
         var target = e.target;
 
-        //message-wrapper의 자식들을 클릭하면 no가 나오는 문제
         if(!target.classList.contains("message"))
             return;
-        
-        else{
-            var title = target.parentNode.querySelector(".mes-title");
+        if(target.classList.contains("message-wrapper"))
+            target = target.firstElementChild;
+        if(target.tagName = "LI")
+            target = target.parentNode;
+            
             var preview = target.parentNode.querySelector(".preview");
 
-            title.classList.toggle("truncate");
             preview.classList.toggle("truncate");
+        };
+
+/*-----체크박스----*/
+var allCheck = document.querySelector(".all-check");
+let check= document.querySelectorAll(".message-check");
+let checkName = document.getElementsByName("check[]");
+// let checkedMessage[] = null;
+
+
+    /*-----전체 선택----*/
+    allCheck.onclick = function(){
+        for(var i = 0; i < checkName.length; i++){
+            if(allCheck.checked == true)
+                checkName[i].checked = true;
+            else if(allCheck.checked == false)
+                checkName[i].checked = false;
         }
     }
+
+    /*-----개별 선택값 배열에 담기----*/
+    check.onclick = function(e){
+        var target = e.target;
+
+        // checkedMessage[] = target.value;
+    }
+
+    
 });
+
+const popupFunction = () => {
+    const deleteBtn = document.querySelectorAll('.delete-btn');
+    const popup = document.querySelector('.popup');
+
+    deleteBtn.forEach(ele => ele.addEventListener('click', (e) => {
+        e.preventDefault();
+        //e.stopPropagation();
+        popup.classList.toggle('flex-active');
+    }));
+
+    popup.addEventListener('click', (e) => {
+        e.preventDefault();
+        // e.stopPropagation();
+        if(!e.target.classList.contains('popup-btn') && !e.target.classList.contains('popup-cancel-btn')) return;
+        popup.classList.toggle('flex-active');
+    });
+}
+
+popupFunction();

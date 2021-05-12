@@ -137,8 +137,8 @@
         <a href="message-new.html" class="btn btn-small" type="submit">새 쪽지</a>
       </div>
       <div>
-        <a class="btn btn-small" type="submit">삭제</a>
-        <input type="checkbox">
+        <a class="btn btn-small delete-btn" type="submit">삭제</a>
+        <input class="all-check" type="checkbox">
       </div>
     </section>
     <section class="message-main">
@@ -154,44 +154,83 @@
           <span class="message read">N</span>
           <ul class="message message-content">
             <li class="message sender">sender</li>
-            <li class="message mes-title truncate">쪽지 제목입니다</li>
-            <li class="message preview truncate"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다</li>
+            <li class="message preview truncate preview-bottom"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지
+              내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다내용입니다</li>
             <li class="message date">21/02/22</li>
           </ul>
-          <input class="message-check" type="checkbox">
+          <input class="message-check" name="check[]" type="checkbox">
+          <a class="btn btn-small reply d-none" type="submit">답장</a>
         </div>
         <div class="message message-wrapper">
           <span class="message read">N</span>
           <ul class="message message-content">
             <li class="message sender">sender</li>
-            <li class="message mes-title truncate">쪽지 제목입니다</li>
-            <li class="message preview truncate"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다</li>
+            <li class="message preview truncate preview-bottom"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지
+              내용입니다 내용입니다 쪽지 내용입니다</li>
             <li class="message date">21/02/22</li>
           </ul>
-          <input class="message-check" type="checkbox">
+          <input class="message-check" name="check[]" type="checkbox">
+          <a class="btn btn-small reply d-none" type="submit">답장</a>
         </div>
         <div class="message message-wrapper">
           <span class="message read">N</span>
           <ul class="message message-content">
             <li class="message sender">sender</li>
-            <li class="message mes-title truncate">쪽지 제목입니다</li>
-            <li class="message preview truncate"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다</li>
+            <li class="message preview truncate preview-bottom"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지
+              내용입니다 내용입니다 쪽지 내용입니다</li>
             <li class="message date">21/02/22</li>
           </ul>
-          <input class="message-check" type="checkbox">
+          <input class="message-check" name="check[]" type="checkbox">
+          <a class="btn btn-small reply d-none" type="submit">답장</a>
         </div>
         <div class="message message-wrapper">
           <span class="message read">N</span>
           <ul class="message message-content">
             <li class="message sender">sender</li>
-            <li class="message mes-title truncate">쪽지 제목입니다</li>
-            <li class="message preview truncate"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다</li>
+            <li class="message preview truncate preview-bottom"> 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지 내용입니다 내용입니다 쪽지
+              내용입니다 내용입니다 쪽지 내용입니다</li>
             <li class="message date">21/02/22</li>
           </ul>
-          <input class="message-check" type="checkbox">
+          <input class="message-check" name="check[]" type="checkbox">
+          <a class="btn btn-small reply d-none" type="submit">답장</a>
         </div>
       </section>
     </section>
+   
+ 
+     <!-- [s] message area -->
+     <section class="message-popuup display-none">
+      <input type="checkbox" name="" id="message-btn" class="message-checkbox">
+      <!-- <label for="message-btn" class="message-label">댓글쓰기</label> -->
+      <div class="message-write">
+          <form>
+              <h5>Message</h5>
+              <div class="receiver">
+              <span>To. <span>수신자닉네임</span></span>
+              </div>
+              <textarea class="message-content" name="message-content" id="message-content" cols="30" rows="10" placeholder="입력"></textarea>
+          </form>
+          <div class="message-btn-group">
+              <a href="#" class="message-cancel"><label for="message-btn">취소</label></a>
+              <a href="#" class="message-upload">전송</a>
+          </div>
+      </div>
+      <div class="overlay"><label for="message-btn" class="overlay-off-btn"></label></div>                
+  </section>
+  <!-- [e] message area -->
+    
+
+    <!-- Common popup [s] -->
+    <input type="checkbox" name="popup" id="common-popup" />
+    <div class="popup">
+      <p class="popup-content">정말 삭제하시겠습니까?</p>
+      <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- Common popup [e] -->
   </main>
   <!-- Main [e] -->
   <footer>

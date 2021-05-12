@@ -23,13 +23,26 @@ const popupFunction = () => {
            if (target.tagName.toLowerCase() !== 'a') return;
            e.preventDefault();
            
-           let label = target.querySelector('label[for=message-btn]');
+           let label = target.querySelector('.reply');
            
            if(!label) return;
            let messageBtn = document.querySelector('#message-btn');
            messageBtn.checked = true;
         });
     }
-}
 
+    // message popupu display toggel
+    const messageCheckBtn = document.querySelector('input[type=checkbox][id=message-btn]');
+    if(messageCheckBtn){
+        messageCheckBtn.addEventListener('change', () => {
+            let messagePopuup = document.querySelector('.message-popuup');
+            if (messageCheckBtn.checked) {
+                messagePopuup.classList.remove('display-none');
+            } else {
+                messagePopuup.classList.add('display-none');
+            };
+        });
+    }
+
+}
 popupFunction();

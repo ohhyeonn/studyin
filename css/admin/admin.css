@@ -36,7 +36,7 @@ input[type="text"]{
     display:none !important;
 }
 .truncate{
-    white-space:nowrap !important;
+    white-space:nowrap;
     overflow: hidden !important;
     text-overflow:ellipsis !important;
 }
