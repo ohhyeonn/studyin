@@ -16,7 +16,7 @@ ol, ul, li, a {
 
 .d-none {
     
-    display: none;
+    display: none !important;
 }
 
 .icon {
@@ -185,6 +185,17 @@ button.button {
         color: #a6a6a6;
         padding-left: 8px;
     }
+
+/* -------------------------------------------------------------------------- */
+/* comment modify tag style*/
+.modify-textarea { height:30px; box-sizing:border-box; padding: 5px 5px !important; overflow: hidden; display: block; min-height : 30px; width: 95%; size: 14px; outline: none; resize: none;}
+.modify-buttons {display:  flex; justify-content: flex-end; margin-top: 5px;}   
+.modify-buttons-yes { border-radius: 10px; color: white; text-align: center; line-height: 30px; background-color: #00618b;  display: inline-block; width: 53px; height:30px; margin-right: 5px; cursor: pointer;}
+.modify-buttons-no { border-radius: 10px; color: white; text-align: center; line-height: 30px; background-color: #00618b;  display: inline-block; width: 53px; height:30px; margin-right: 30px; cursor: pointer;}
+
+
+
+
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
