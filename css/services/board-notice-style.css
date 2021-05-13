@@ -455,7 +455,13 @@ main .board-name-search > div:nth-child(4) > div:nth-child(2) {
 
 
 
+.text-write-icon {
+    transition: 0.3s;
+    position: fixed;
+    left: calc(50% + 200px);
+    top: 77vh;
 
+}
 
 
 

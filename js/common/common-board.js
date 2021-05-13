@@ -251,3 +251,74 @@ window.addEventListener("load", function(){
 
 
 });
+
+
+
+
+
+
+/// scrollYOffset이 증가하거나 감소하면 글쓰기버튼 사라져볼게하는 이벤트 
+window.addEventListener("load",function(){
+    let textWriteIcon = window.document.querySelector(".text-write-icon");
+    let previousScrollYOffset = 0;
+
+
+
+    let scrollHandler =  function(){
+        window.removeEventListener("scroll", scrollHandler);
+
+        let currentScrollYOffset = window.scrollY;
+        if(currentScrollYOffset > previousScrollYOffset){
+            
+            textWriteIcon.style.opacity = 0;
+            
+            window.setTimeout(function(){
+                
+                textWriteIcon.classList.add("d-none");
+                window.addEventListener("scroll",scrollHandler);
+                previousScrollYOffset = window.scrollY; 
+
+
+            },300);
+
+
+
+
+        } else if(currentScrollYOffset < previousScrollYOffset){
+
+          
+            textWriteIcon.classList.remove("d-none");
+            window.setTimeout(function(){
+
+                textWriteIcon.style.opacity = 1;
+
+            },1);
+
+            window.setTimeout(function(){
+                
+                window.addEventListener("scroll",scrollHandler);
+                previousScrollYOffset = window.scrollY;
+
+            },300);
+           
+
+
+
+            
+        }
+
+
+
+    };
+
+
+
+    window.addEventListener("scroll",scrollHandler);
+
+
+
+
+
+
+
+});
