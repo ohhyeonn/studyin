@@ -165,22 +165,22 @@ window.addEventListener("load", function(){
             document.body.append(alert);
 
         }else if(e.target.classList.contains("modify")){
+
             let node = e.target;
-            console.log(node);
-            let editHTML = `
-            <textarea class="text-area" style =" height:30px; box-sizing:border-box; padding: 5px 5px; overflow: hidden; display: block; min-height : 30px; width: 95%; size: 14px; outline: none; resize: none; "> 만나서 좋아요</textarea>
-            <div style = "display:  flex; justify-content: flex-end; margin-top: 5px;">    
-                <span style=" border-radius: 10px; color: white; text-align: center; line-height: 30px; background-color: #00618b;  display: inline-block; width: 53px; height:30px; margin-right: 5px; cursor: pointer;" type="button" value="수정">수정</span>
-                <span style=" border-radius: 10px; color: white; text-align: center; line-height: 30px; background-color: #00618b;  display: inline-block; width: 53px; height:30px; margin-right: 30px; cursor: pointer;" type="button" value="수정">취소</span>  
-            </div>
-            `;
-            while(!node.classList.contains("dropdown")){
+
+            while(!node.classList.contains("item")){
                 node = node.parentElement;
 
             } 
-            node.previousElementSibling.classList.add("d-none"); //// d-none 이고 취소하면 다시 나타내주면되고 수정하면 json 아예 다불러오게한다 ㅇㅋ
-            node.insertAdjacentHTML("beforebegin",editHTML);
-
+            // 노드에서 .modify 얘도 d-none 해주고 취소 누르면 다시 풀어주고 저건 삭제하고 그런거 해줘야댐  아래 주석 참고
+            let innerText = node.querySelector(".item > .item-text").innerText;
+            console.log(innerText);
+            let modifyTextarea = node.querySelector(".item > .modify-textarea");
+            let modifyButtons = node.querySelector(".item > .modify-buttons");
+            node.querySelector(".item > .item-text").classList.toggle("d-none"); //// d-none 이고 취소하면 다시 나타내주면되고 수정하면 json 아예 다불러오게한다 ㅇㅋ
+            modifyTextarea.innerText = innerText;
+            modifyTextarea.classList.toggle("d-none");
+            modifyButtons.classList.toggle("d-none");
         }
 
 
