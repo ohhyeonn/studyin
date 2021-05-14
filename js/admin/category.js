@@ -1,75 +1,181 @@
-window.onload = addEventListener("load", function(){
-    // var box = document.querySelectorAll(".box");
-    
-    var chechbox = document.querySelector("checkbox");
-    var yes = document.querySelector(".popup-btn");
-    var no = document.querySelector(".popup-cancel-btn");
-    var upperCircle = document.querySelectorAll(".upper label");
-    var lower = document.querySelectorAll(".lower");
-    var lowerCircle = document.querySelectorAll(".lower label");
-    var hiddenBox = document.querySelectorAll(".hidden-box");
-    var radio = document.querySelectorAll("radio");
-    
-    var deleteBtn = document.querySelector(".delete-btn");
-    var inactiveBtn = document.querySelector(".inactive-btn");
-    var modifyBtn = document.querySelector(".modify-btn");
-    var addBtn = document.querySelector(".add-btn");
-    
-    
-    var popup = document.querySelector(".popup");
-    var selected = null;
-    
-    upperCircle.onclick = function(e){
-        e.target.classList.remove("hidden-Box");
+const delBtn = document.querySelector('.del-btn');
+const activateBtn = document.querySelector('.activate-btn');
+const editBtn = document.querySelector('.edit-btn')
+
+cancelBtn = document.querySelector('.cancel-btn');
+confirmBtn = document.querySelector('.confirm-btn');
+addBtn = document.querySelector('.add-btn');
+let cardCount = 0;
+
+/*-----체크박스----*/
+let main = document.querySelector(".main")
+let check = main.querySelectorAll("input");
+
+    /*-----개별 선택값 배열에 담기----*/
+    check.onclick = function(e){
+        var target = e.target;
+
+        // checkedMessage[] = target.value;
     }
-    function popup(){
-        popup.classList.add("active");
-    
-        //정말 삭제하겠냐는 popup이 뜬다
-    }
-    
-    function add(){
-        console.log("add");
-        // input type=text인 동그라미가 생긴다
-    }
-    
-    var selected = function(e){
-        // if(!e.target.classList.contain("classnaeme"))
-        //         return;
-    
-        // selected = e.target;
-        // selected.classList.toggle("selected");
-    
-        // return selected;
-    }
-    
-    upper.onclick = function(e){
-        hiddenBox.style.display = "initial";
-    }
-    
-    function modify(){
-    
-    }
-    function inactive(){
-        console.log("inactive");
-        //선택한 동그라미가 비활성화하면 회색으로 바뀐다
-    }
-    
-    function noResult(){
-        //동그라미가 없다면, 검색 결과가 없다는 문구가 뜬다
-    }
-    
-    function Result(){
-        //검색 결과에 맞는 결과를 내온다
-    }
-    
-    function option(){
-        //상태분류에 맞는 결과를 내온다
-    }
-    
-    deleteBtn.addEventListener("click", popup);
-    inactiveBtn.addEventListener("click", inactive);
-    modifyBtn.addEventListener("click", modify);
-    addBtn.addEventListener("click", add);
-    upper.addEventListener("click", radio);
+
+
+
+    /*---체크된 카드 비활성화---*/
+    activateBtn.addEventListener('click',function(){
+        for(let i in check){
+            if(check[i].checked == true){
+            // let selected = check[i].checked.value;
+            // console.log(selected);
+            console.log(check[i].nextElementSibling);
+            check[i].nextElementSibling.classList.toggle("inactive");
+            check[i].checked=false;
+            }
+            //selected 비활성화로 db 변경
+        }
     });
+    /*---체크된 카드 순서 변경---*/
+    /*let upBtn = document.querySelector(".up-btn");
+    let downBtn = document.querySelector(".down-btn");
+    let inputLabel = main.querySelectorAll("input+label");
+    upBtn.addEventListener('click', function(){
+        for(let i in check){
+            //위 노드와 바꿔치기
+            if(check[i].checked == true){
+                console.log(inputLabel[0]);
+                let parentDiv = check[i].parentNode;
+                let checkWrapper = check[i]+inputLabel;;
+                let checkWrapper2 = inputLabel[i].nextElementSibling+inputLabel[i].nextElementSibling.nextElementSibling;
+                console.log(checkWrapper,checkWrapper2);
+                let newNode = parentDiv.replaceChild(checkWrapper, checkWrapper2);
+                checkWrapper.insertAdjacentElement('afterend', newNode);
+
+            //db order++
+            }
+        }
+    });
+    downBtn.addEventListener('click', function(){
+        for(let i in check){
+            //아래 노드와 바꿔치기
+            if(check[i].checked == true){
+                let checkWrapper = check[i].parentNode;
+                let checkWrapper2 = checkWrapper.nextElementSibling;
+                let newNode = mainCard.replaceChild(checkWrapper, checkWrapper2);
+                checkWrapper.insertAdjacentElement('beforebegin', newNode);
+
+            //db order--s
+            }
+        }
+    });*/
+
+    /*---lower 박스 보이기---*/
+    let upper = main.querySelectorAll('.upper');
+    upper.addEventListener('click', function(e){
+        if(!e.target.classList.contains('input[type=radio]')) return;
+            let upper = e.target;
+            upper.querySelector('input')
+    });
+    /*----추가----*/
+    let label = main.querySelectorAll('label'); 
+
+    editBtn.addEventListener('click', (e) => {
+        delBtn.classList.add('d-none');
+        editBtn.classList.add('d-none');
+        activateBtn.classList.add('d-none');
+
+        cancelBtn.classList.remove('d-none');
+        confirmBtn.classList.remove('d-none');
+        addBtn.classList.remove('d-none');
+
+        for(var i in label)
+            label[i].innerHTML = `<input type="text" value="${label[i].innerText}">`;
+        
+
+        let container = null;
+        main.addEventListener('click', (e) => {
+            if(!e.target.classList.contains('click-box')) return;
+            
+            
+            container = e.target;
+            if(e.target.classList.contains('box'))
+                container = e.target.querySelector(".box>div");
+
+            container.style.backgroundColor = "#e1dfdf";
+            container.parentNode.style.backgroundColor = "#e1dfdf";
+            
+            addBtn.addEventListener('click', function(){
+                let newBox = `<input type="checkbox" id="Algorithm" name="0"><label class="" for="l1"><input type="text" value=""></label>`;
+                
+                
+                container.insertAdjacentHTML("beforeend", newBox);
+                container.style.backgroundColor = "white";
+                container.parentNode.style.backgroundColor = "white";
+                container = null;
+                e.target = null;
+                cardCount++;
+                console.log(cardCount);
+            });
+        });
+    });
+
+        cancelBtn.addEventListener('click', function(){
+            confirmBtn.classList.add('d-none');
+            addBtn.classList.add('d-none');
+            cancelBtn.classList.add('d-none');
+
+            delBtn.classList.remove('d-none');
+            editBtn.classList.remove('d-none');
+            activateBtn.classList.remove('d-none');
+
+            for(var i in label) {
+                label[i].innerHTML = `기존값db`;
+
+            while(cardCount > 0){
+                container.lastChild.remove();
+                --cardCount;
+                console.log(cardCount);
+                }
+           }
+    });
+
+       
+        
+        
+
+        confirmBtn.addEventListener('click', function(){
+            confirmBtn.classList.add('d-none');
+            addBtn.classList.add('d-none');
+            cancelBtn.classList.add('d-none');
+
+            delBtn.classList.remove('d-none');
+            editBtn.classList.remove('d-none');
+            activateBtn.classList.remove('d-none');
+
+            label = document.querySelectorAll('.label'); 
+            for(var i in label)
+                 label[i].innerHTML = `새로운값db`;
+            cardCount = 0;
+        });
+ 
+  
+
+    
+
+    const popupFunction = () => {
+        const popup = document.querySelector('.popup');
+    
+        delBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            popup.classList.toggle('flex-active');
+        });
+    
+        popup.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            if(!e.target.classList.contains('popup-btn') && !e.target.classList.contains('popup-cancel-btn')) return;
+            popup.classList.toggle('flex-active');
+        });
+    
+    }
+    
+    popupFunction();

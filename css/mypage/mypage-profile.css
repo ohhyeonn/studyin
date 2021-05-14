@@ -57,13 +57,16 @@ main{
    
 
 /* ----내 정보 조회---- */
-   .activity{
+   .profile-modify{
        margin-top:40px;
    }
 
-   .profile, .activity{
+    .profile-modify, .pw-modify{
+    display:flex;
+    flex-flow: column; 
     min-width:250px;
     width:55%;
+    margin-bottom: 10px;
 }
 
    .last-btn{
@@ -73,15 +76,19 @@ main{
     justify-content: space-between;   
 }
 
-.activity table{
-    margin-bottom:20px;
-}
 
 input[disabled]{
     background-color: #ededed;
 }
+
+.main-button input[type="text"]{
+    height: 30px;
+    margin-bottom:10px;
+    border-radius: 12px;
+}
+
 input[type="password"]{
-    height: 25px;
+    height: 30px;
     padding: 0 14px;
     margin: 0px;
     border: 1px solid #919191;
@@ -91,4 +98,5 @@ input[type="password"]{
     font-size: 0.6rem;
     border-radius: 12px;
     outline: none;
+    margin-top:10px;
 }

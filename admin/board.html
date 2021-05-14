@@ -133,7 +133,7 @@
     <section class="first-btn">
       <h1 class="d-none">첫번째 버튼</h1>
       <div>
-        <a class="btn btn-small entire-check" type="submit">전체 선택</a>
+        <a class="btn btn-small all-check" type="submit">전체 선택</a>
       </div>
       <form>
         <label>
@@ -154,7 +154,7 @@
     <section class="main-card">
       <h1 class="d-none">게시판 목록</h1>
       <div class="card-wrapper">
-        <input class="check" type="checkbox" name="check" value="">
+        <input class="check" type="checkbox" name="check[]" value="COMMUNITY">
         <span class="card-content">
           <span class="card-title truncate">COMMUNITY</span>
           <span class="date">생성일(최근 글): <span class="recent-date"> 21/02/22 (21/04/30)</span></span>
@@ -163,7 +163,7 @@
         </span>
       </div>
       <div class="card-wrapper">
-        <input class="check" type="checkbox"  name="check" value="">
+        <input class="check" type="checkbox" name="check[]" value="STUDY">
         <span class="card-content">
           <span class="card-title truncate">STUDY</span>
           <span class="date">생성일(최근 글): <span class="recent-date"> 21/02/22 (21/04/30)</span></span>
@@ -172,7 +172,7 @@
         </span>
       </div>
       <div class="card-wrapper">
-        <input class="check" type="checkbox" name="check" value="">
+        <input class="check" type="checkbox" name="check[]" value="게시판">
         <span class="card-content">
           <span class="card-title truncate">게시판 이름</span>
           <span class="date">생성일(최근 글): <span class="recent-date"> 21/02/22 (21/04/30)</span></span>
@@ -181,18 +181,35 @@
         </span>
       </div>
     </section>
-      <div class="last-btn">
-        <h1 class="d-none">마지막 버튼</h1>
-        <div>
-          <a class="btn btn-medium" type="submit">▲</a>
-          <a class="btn btn-medium" type="submit">▼</a>
-        </div>
-        <div>
-          <a class="btn btn-medium" type="submit">삭제</a>
-          <a class="btn btn-medium" type="submit">추가</a>
-          <a class="btn btn-medium" type="submit">비활성화</a>
-        </div>
+    <div class="last-btn">
+      <h1 class="d-none">마지막 버튼</h1>
+      <div>
+        <a class="btn btn-medium up-btn" type="submit">▲</a>
+        <a class="btn btn-medium down-btn" type="submit">▼</a>
       </div>
+      <div class="btn-edit">
+        <a class="btn btn-medium del-btn" type="submit">삭제</a>
+        <a class="btn btn-medium activate-btn" type="submit">비활성화</a>
+        <a class="btn btn-medium edit-btn" type="submit">편집</a>
+
+        <a class="btn btn-medium cancel-btn d-none" type="submit">취소</a>
+        <a class="btn btn-medium add-btn d-none" type="submit">추가</a>
+        <a class="btn btn-medium confirm-btn d-none" type="submit">확인</a>
+      </div>
+    </div>
+
+        <!-- Common popup [s] -->
+        <input type="checkbox" name="popup" id="common-popup" />
+        <div class="popup">
+          <p class="popup-content">정말 삭제하시겠습니까?</p>
+          <div class="popup-btn-group">
+            <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+            <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- Common popup [e] -->
+
   </main>
   <!-- Main [e] -->
   <footer>

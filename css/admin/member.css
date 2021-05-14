@@ -30,3 +30,119 @@
         margin:0px;
     }
 }
+
+/* message form [s] */
+.message-popuup {
+    width: 80%;
+    max-width: 780px;
+    /* height: 55px; */
+    text-align: center;
+    line-height: 3.5;
+    margin: 0 auto;
+    /* display: none; */
+  }
+  
+  .message-checkbox {
+    display: none;
+  }
+  
+  .message-checkbox:checked ~ .message-write {
+      visibility: visible;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #949494;
+      background-color: #fff;
+      z-index: 4;
+      width: 80%;
+      max-width: 580px;
+  }
+  
+  .message-checkbox:checked ~ .overlay {
+      visibility: visible;
+  }
+  
+  .overlay-off-btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+  
+  .btn-group > a > label[for=message-btn] {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .message-label {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .message-label:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 0;
+  }
+  
+  .message-write {
+      visibility: hidden;
+  }
+  
+  .message-write .receiver {
+    text-align: left;
+    padding-left: 1.5em;
+    font-size: .85rem;
+    border-bottom: 1px solid #e9e9e9;
+    border-top: 1px solid #e9e9e9;
+    margin-bottom: 1em;
+  }
+  
+  .message-content {
+    border: 0;
+    padding: 5px;
+    width: 90%;
+    outline: none;
+    resize: none;
+  }
+  
+  .message-btn-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #979797;
+  }
+  
+  .message-btn-group a {
+    display: inline-block;
+    width: 100%;
+    max-width: 780px;
+  }
+  
+  .message-btn-group a:not(:first-child) {
+    border-left: 1px solid #979797;
+  }
+  
+  .message-cancel {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+  
+  .message-cancel > label {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .message-upload {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  /* message form [e] */
+  
