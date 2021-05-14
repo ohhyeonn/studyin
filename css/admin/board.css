@@ -4,3 +4,9 @@
         margin:0px;
     }
 }
+
+.card-title input[type=text]{
+    font-size:15px;
+    padding-left:10px;
+    border-radius:5px;
+}

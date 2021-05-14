@@ -129,27 +129,18 @@
       <div class="every-box">
         <h1>STUDY 게시판</h1>
         <h1 class="d-none">카테고리 목록</h1>
-        <div class="box upper">
-          <div>
-            <input type="radio" id="u1" name="0"><label for="u1">IT</label>
-            <input type="radio" id="u2" name="0"><label for="u2">Job</label>
-            <input type="radio" id="u3" name="0"><label for="u3">Certification</label>
+        <div class="box upper click-box">
+          <div class="click-box">
+            <input type="radio" id="IT" name="big-category"><label class="" for="IT">IT</label>
+            <input type="radio" id="Job" name="big-category"><label class="" for="Job">Job</label>
+            <input type="radio" id="u3" name="big-category"><label class="" for="u3">Certification</label>
           </div>
         </div>
-        <div class="box lower">
-          <div>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l2" name="0"><label for="l2">Algorithm</label>
-            <input type="checkbox" id="l3" name="0"><label for="l3">Algorithm</label>
-            <input type="checkbox" id="l4" name="0"><label for="l4">Algorithm</label>
-            <input type="checkbox" id="l5" name="0"><label for="l5">Algorithm</label>
-            <input type="checkbox" id="l6" name="0"><label for="l6">Algorithm</label>
-            <input type="checkbox" id="l7" name="0"><label for="l7">Algorithm</label>
-            <input type="checkbox" id="l8" name="0"><label for="l8">Algorithm</label>
-            <input type="checkbox" id="l9" name="0"><label for="l9">Algorithm</label>
-            <input type="checkbox" id="l10" name="0"><label for="l10">Algorithm</label>
-            <input type="checkbox" id="l11" name="0"><label for="l11">Algorithm</label>
-           </div>
+        <div class="box lower click-box d-none">
+          <div class="click-box">
+            <input type="checkbox" id="Algorithm4" name="small-category"><label class="" for="Algorithm4">Algorithm4</label>
+            <input type="checkbox" id="Algorithm5" name="small-category"><label class="" for="Algorithm5">Algorithm5</label>
+          </div>
         </div>
       </div>
 
@@ -157,40 +148,50 @@
       <div class="every-box">
         <h1>COMMUNITY 게시판</h1>
         <h1 class="d-none">카테고리 목록</h1>
-        <div class="box upper">
-          <div>
-            <input type="checkbox" id="u1" name="0"><label for="u1">IT</label>
-            <input type="checkbox" id="u2" name="0"><label for="u2">Job</label>
-            <input type="checkbox" id="u3" name="0"><label for="u3">Certification</label>
+        <div class="box upper click-box">
+          <div class="click-box">
+            <input type="radio" id="IT" name="0"><label class="" for="IT">IT</label>
+            <input type="radio" id="Job" name="0"><label class="" for="Job">Job</label>
+            <input type="radio" id="Certification" name="0"><label for="Certification">Certification</label>
           </div>
         </div>
-        <div class="box lower">
-          <div>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l2" name="0"><label for="l2">Algorithm</label>
-            <input type="checkbox" id="l3" name="0"><label for="l3">Algorithm</label>
-            <input type="checkbox" id="l4" name="0"><label for="l4">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
-            <input type="checkbox" id="l1" name="0"><label for="l1">Algorithm</label>
+        <div class="box lower click-box d-none">
+          <div class="click-box">
+            <input type="checkbox" id="Algorithm" name="0"><label class="" for="Algorithm">Algorithm</label>
+            <input type="checkbox" id="Algorithm2" name="0"><label class="" for="Algorithm2">Algorithm2</label>
+            <input type="checkbox" id="Algorithm3" name="0"><label class="" for="Algorithm3">Algorithm3</label>
           </div>
         </div>
       </div>
 
       <div class="last-btn">
         <h1 class="d-none">테이블 밑</h1>
-        <a class="btn btn-medium delete-btn" type="submit">삭제</a>
         <div>
-          <a class="btn btn-medium inactive-btn" type="submit">비활성화</a>
-          <a class="btn btn-medium modify-btn" type="submit">수정</a>
-          <a class="btn btn-medium add-btn" type="submit">추가</a>
+          <a class="btn btn-medium up-btn" type="submit">◀︎</a>
+          <a class="btn btn-medium down-btn" type="submit">▶︎</a>
+        </div>
+        <div>
+          <a class="btn btn-medium del-btn" type="submit">삭제</a>
+          <a class="btn btn-medium activate-btn" type="submit">비활성화</a>
+          <a class="btn btn-medium edit-btn" type="submit">편집</a>
+          
+          <a class="btn btn-medium cancel-btn d-none" type="submit">취소</a>
+          <a class="btn btn-medium add-btn d-none" type="submit">추가</a>
+          <a class="btn btn-medium confirm-btn d-none" type="submit">확인</a>
         </div>
       </div>
     </section>
+           <!-- Common popup [s] -->
+           <input type="checkbox" name="popup" id="common-popup" />
+           <div class="popup">
+             <p class="popup-content">정말 삭제하시겠습니까?</p>
+             <div class="popup-btn-group">
+               <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+               <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+             </div>
+           </div>
+           <div class="overlay"></div>
+           <!-- Common popup [e] -->
   </main>
 
   <!-- Main [e] -->

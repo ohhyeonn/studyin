@@ -31,9 +31,6 @@
     
 }
 
-.box label:hover{
-    opacity:0.7;
-}
 .box label{
     border: none;
     border-radius: 13px;
@@ -55,7 +52,7 @@
     background-color: var(--secondary-color);
 }
 
-input[type=checkbox], input[type=radio] {
+.box input[type=checkbox], input[type=radio] {
     display: none;
 }
 
@@ -67,13 +64,30 @@ input[type=checkbox], input[type=radio] {
 .box input[type=checkbox]:checked+label{
     font-weight: bolder; 
     text-align: center;
-    border: 2px solid #e55800;
-    background-color: #e55800;
+    border: 2px solid black;
 }
 
 .box input[type=radio]:checked+label{
     font-weight: bolder; 
     text-align: center;
-    border: 2px solid #04103d;
-    background-color: #04103d;
+    border: 2px solid black;
+}
+
+.box input[type=text]{
+    font-size:15px;
+    padding:0px;
+    margin: 0;
+    width:50px;
+    border: none;
+    border-radius: 2px;
+    font-weight: lighter;
+    
+    white-space:nowrap;
+}
+label.inactive{
+    background-color: gray;
+}
+
+.every-box h1{
+    margin-left:15px;
 }

@@ -10,105 +10,112 @@
   <link href="../css/admin/admin.css" type="text/css" rel="stylesheet">
   <link href="../css/common/gb-nav.css" rel="stylesheet">
   <script defer src="../js/common/gb-nav.js"></script>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-  integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-  crossorigin="anonymous"
-/>
+  <script defer src="../js/admin/member.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
 </head>
+
 <body>
   <!-- Global top [s] -->
   <header class="header">
     <section class="gb-top-nav">
-        <div class="logo">
-            <a href="../index.html">study in</a>
+      <div class="logo">
+        <a href="../index.html">study in</a>
+      </div>
+      <div class="search-bar">
+        <div class="search-wrapper">
+          <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
+          <a href="../index.html" class="search-btn"><i class="fas fa-search"></i></a>
         </div>
-        <div class="search-bar">
-            <div class="search-wrapper">
-            <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
-            <a href="../index.html" class="search-btn"><i class="fas fa-search"></i></a>
-            </div>
-        </div>
-        <div class="menu-button">
-            <input type="checkbox" name="" id="menuBtn">
-            <label for="menuBtn">
-                <span class="menu-button-bar"></span>
-                <span class="menu-button-bar"></span>
-                <span class="menu-button-bar"></span>
-            </label>
-            <aside class="menu">
-            <ul>
-                <span>STUDY IN</span>
-                <p>로그인이 필요합니다</p>
-                <p>User님, 안녕하세요</p>
-                <a href="../member/login.html"><li>Login</li></a>
-                <a href="../member/sign-up.html"><li>Sign Up</li></a>
-                <a href="../index.html"><li>Logout</li></a>
-                <a href="../mypage/mypage.html"><li>My page</li></a>
-            </ul>
-            </aside>
-            <div class="overlay"><label for="menuBtn"></label></label></div>
-        </div>
-        <div class="icon-category">
-          <i class="fas fa-grip-horizontal fa-2x"></i>
+      </div>
+      <div class="menu-button">
+        <input type="checkbox" name="" id="menuBtn">
+        <label for="menuBtn">
+          <span class="menu-button-bar"></span>
+          <span class="menu-button-bar"></span>
+          <span class="menu-button-bar"></span>
+        </label>
+        <aside class="menu">
+          <ul>
+            <span>STUDY IN</span>
+            <p>로그인이 필요합니다</p>
+            <p>User님, 안녕하세요</p>
+            <a href="../member/login.html">
+              <li>Login</li>
+            </a>
+            <a href="../member/sign-up.html">
+              <li>Sign Up</li>
+            </a>
+            <a href="../index.html">
+              <li>Logout</li>
+            </a>
+            <a href="../mypage/mypage.html">
+              <li>My page</li>
+            </a>
+          </ul>
+        </aside>
+        <div class="overlay"><label for="menuBtn"></label></label></div>
+      </div>
+      <div class="icon-category">
+        <i class="fas fa-grip-horizontal fa-2x"></i>
       </div>
     </section>
-</header>
-<nav class="sub-header">
+  </header>
+  <nav class="sub-header">
     <div class="menu-nav">
-        <a href="../study/study-group-list.html">STUDY</a>
-        <a href="../community/board-list.html">COMMUNITY</a>
-        <a href="../services/board-query.html">SERVICES</a>
+      <a href="../study/study-group-list.html">STUDY</a>
+      <a href="../community/board-list.html">COMMUNITY</a>
+      <a href="../services/board-query.html">SERVICES</a>
     </div>
-</nav>
-<!-- Global top [e] -->
-<!-- Category Side [s] -->
-<aside>
+  </nav>
+  <!-- Global top [e] -->
+  <!-- Category Side [s] -->
+  <aside>
     <div class="category-container">
-        <div class="main-category">
-            <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
-            <label for="toggle-study">
-            <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3> 
-            </label>
-            <div class="sub-category">
-                <ul>
-                    <li><a href="../study/study-list.html">IT</a></li>
-                    <li><a href="../study/study-list.html">JOB</a></li>
-                    <li><a href="../study/study-list.html">CERTIFICATION</a></li>
-                </ul>
-            </div>
+      <div class="main-category">
+        <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
+        <label for="toggle-study">
+          <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3>
+        </label>
+        <div class="sub-category">
+          <ul>
+            <li><a href="../study/study-list.html">IT</a></li>
+            <li><a href="../study/study-list.html">JOB</a></li>
+            <li><a href="../study/study-list.html">CERTIFICATION</a></li>
+          </ul>
         </div>
-        <div class="main-category">
-            <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
-            <label for="toggle-community">
-            <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3> 
-            </label>
-            <div class="sub-category">
-                <ul>
-                    <li><a href="../community/board-list.html">게시판1</a></li>
-                    <li><a href="../community/board-list.html">게시판2</a></li>
-                    <li><a href="../community/board-list.html">게시판3</a></li>
-                </ul>
-            </div>
+      </div>
+      <div class="main-category">
+        <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
+        <label for="toggle-community">
+          <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3>
+        </label>
+        <div class="sub-category">
+          <ul>
+            <li><a href="../community/board-list.html">게시판1</a></li>
+            <li><a href="../community/board-list.html">게시판2</a></li>
+            <li><a href="../community/board-list.html">게시판3</a></li>
+          </ul>
         </div>
-        <div class="main-category">
-            <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
-            <label for="toggle-services">
-            <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3> 
-            </label>
-            <div class="sub-category">
-                <ul>
-                    <li><a href="../services/board-notice.html">공지사항</a></li>
-                    <li><a href="../services/board-query.html">FAQ</a></li>
-                    <li><a href="../services/board-make-query.html">1:1문의하기</a></li>
-                </ul>
-            </div>
+      </div>
+      <div class="main-category">
+        <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
+        <label for="toggle-services">
+          <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3>
+        </label>
+        <div class="sub-category">
+          <ul>
+            <li><a href="../services/board-notice.html">공지사항</a></li>
+            <li><a href="../services/board-query.html">FAQ</a></li>
+            <li><a href="../services/board-make-query.html">1:1문의하기</a></li>
+          </ul>
         </div>
+      </div>
     </div>
     <div class="category-switch"></div>
-</aside>
-<!-- Category Side [e] -->
+  </aside>
+  <!-- Category Side [e] -->
   <nav class="top-category-title">
     <div class="top-category-title-wrapper">
       <a href="../admin/study.html">Study</a>
@@ -118,7 +125,7 @@
       <a href="../admin/post.html">Post</a>
     </div>
   </nav>
-<!-- Main [s] -->
+  <!-- Main [s] -->
   <main>
     <section class="title">
       <h1 class="big-title">회원 관리</h1>
@@ -126,7 +133,7 @@
     <section class="first-btn">
       <h1 class="d-none">첫번째 버튼</h1>
       <div>
-        <a class="btn btn-small entire-check" type="submit">전체 선택</a>
+        <a class="btn btn-small all-check" type="submit">전체 선택</a>
       </div>
       <form>
         <label>
@@ -152,94 +159,114 @@
     <section class="main-card">
       <h1 class="d-none">게시판 목록</h1>
       <div class="card-wrapper">
-        <input class="check" type="checkbox">
+        <input class="check" type="checkbox" name="check[]">
         <span class="card-content">
           <span class="card-title">닉네임(이름)</span>
-          <span class="email-form">이메일:  <span class="email"> eee@gmail.com</span></span>
+          <span class="email-form">이메일: <span class="email"> eee@gmail.com</span></span>
           <span class="phone">연락처: 010-0000-0000</span>
           <span class="join-">가입일: 21/03/03</span>
         </span>
       </div>
       <div class="card-wrapper">
-        <input class="check" type="checkbox">
+        <input class="check" type="checkbox" name="check[]">
         <span class="card-content">
           <span class="card-title">닉네임(이름)</span>
-          <span class="email-form">이메일:  <span class="email"> eee@gmail.com</span></span>
+          <span class="email-form">이메일: <span class="email"> eee@gmail.com</span></span>
           <span class="phone">연락처: 010-0000-0000</span>
           <span class="join-">가입일: 21/03/03</span>
         </span>
       </div>
       <div class="card-wrapper">
-        <input class="check" type="checkbox">
+        <input class="check" type="checkbox" name="check[]">
         <span class="card-content">
           <span class="card-title">닉네임(이름)</span>
-          <span class="email-form">이메일:  <span class="email"> eee@gmail.com</span></span>
+          <span class="email-form">이메일: <span class="email"> eee@gmail.com</span></span>
           <span class="phone">연락처: 010-0000-0000</span>
           <span class="join-">가입일: 21/03/03</span>
         </span>
       </div>
     </section>
-      <div class="last-btn">
-        <h1 class="d-none">테이블 밑</h1>
-        <a class="btn btn-medium" type="submit">삭제</a>
-        <nav class="pager">
-          <h1 class="d-none">페이저</h1>
-          <div>이전</div>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-          </ul>
-          <div>다음</div>
-        </nav>
-        <a class="btn btn-medium" type="submit">비활성화</a>
+    <div class="last-btn">
+      <h1 class="d-none">테이블 밑</h1>
+      <a class="btn btn-medium entire-message-btn" type="submit">전체 쪽지</a>
+      <nav class="pager">
+        <h1 class="d-none">페이저</h1>
+        <div>이전</div>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+        <div>다음</div>
+      </nav>
+      <a class="btn btn-medium activate-btn" type="submit">비활성화</a>
+    </div>
+
+    <!-- [s] message area -->
+    <section class="message-popuup display-none">
+      <input type="checkbox" name="" id="message-btn" class="message-checkbox">
+      <!-- <label for="message-btn" class="message-label">댓글쓰기</label> -->
+      <div class="message-write">
+        <form>
+          <h5>Message</h5>
+          <div class="receiver">
+            <span>To. <span>수신자닉네임</span></span>
+          </div>
+          <textarea class="message-content" name="message-content" id="message-content" cols="30" rows="10"
+            placeholder="입력"></textarea>
+        </form>
+        <div class="message-btn-group">
+          <a href="#" class="message-cancel"><label for="message-btn">취소</label></a>
+          <a href="#" class="message-upload">전송</a>
+        </div>
       </div>
+      <div class="overlay"><label for="message-btn" class="overlay-off-btn"></label></div>
+    </section>
+    <!-- [e] message area -->
+
+
+    <!-- Common popup [s] -->
+    <input type="checkbox" name="popup" id="common-popup" />
+    <div class="popup">
+      <p class="popup-content">정말 비활성화하시겠습니까?</p>
+      <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+      </div>
+    </div>
+    <div class="overlay"></div>
   </main>
-<!-- Main [e] -->
-<footer>
-  <div class="footer-wrapper">
+  <!-- Main [e] -->
+  <footer>
+    <div class="footer-wrapper">
       <span>Copyright &copy; 2021 STUDY IN All rights reserved</span>
-  </div>
-</footer>
-<!-- Global bottom[s] -->
-<nav class="gb-bottom-nav">
-  <a href="#" class="bottom-nav-btn" id="category-bottom-button">
+    </div>
+  </footer>
+  <!-- Global bottom[s] -->
+  <nav class="gb-bottom-nav">
+    <a href="#" class="bottom-nav-btn" id="category-bottom-button">
       <i class="fas fa-bars"></i>
       <span>카테고리</span>
-  </a>
-  <a href="../mypage/mystudy-main-list.html" class="bottom-nav-btn">
+    </a>
+    <a href="../mypage/mystudy-main-list.html" class="bottom-nav-btn">
       <i class="fas fa-book"></i>
       <span class="study-btn">스터디</span>
-  </a>
-  <a href="../index.html" class="bottom-nav-btn">
+    </a>
+    <a href="../index.html" class="bottom-nav-btn">
       <i class="fas fa-home"></i>
       <span class="home-btn">홈</span>
-  </a>
-  <a href="../mypage/mymessage-rec.html" class="bottom-nav-btn">
+    </a>
+    <a href="../mypage/mymessage-rec.html" class="bottom-nav-btn">
       <i class="fas fa-envelope-square"></i>
       <span class="message-btn">쪽지함</span>
-  </a>
-  <a href="../mypage/mypage.html" class="bottom-nav-btn">
+    </a>
+    <a href="../mypage/mypage.html" class="bottom-nav-btn">
       <i class="far fa-user"></i>
       <span class="mypage-btn">마이페이지</span>
-  </a>
-</nav>
-<!-- Global bottom[e] -->
-  <!-- Common popup [s] -->
-    <!-- <input type="checkbox" name="popup" id="common-popup" />
-    <div class="popup active">
-      <h1 class="d-none">delete massage</h1>
-      <form action="post-popup" method="POST">
-        <p class="popup-content">정말 삭제하시겠습니까?</p>
-        <div class="popup-btn-group">
-          <label for="common-popup"><a class="btn popup-btn">확인</a></label>
-          <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
-        </div>
-      </form>
-    </div>
-    <div class="overlay"></div> -->
-  <!-- Common popup [e] -->
+    </a>
+  </nav>
 </body>
+
 </html>

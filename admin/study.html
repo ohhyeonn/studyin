@@ -124,7 +124,7 @@
     <section class="first-btn">
       <h1 class="d-none">첫번째 버튼</h1>
       <div>
-        <a class="btn btn-small entire-check" type="submit">전체 선택</a>
+        <a class="btn btn-small all-check" type="submit">전체 선택</a>
       </div>
       <form>
         <label>
@@ -145,7 +145,7 @@
     <section class="main-card">
       <h1 class="d-none">게시판 목록</h1>
       <div class="card-wrapper">
-        <input class="check" type="checkbox">
+        <input class="check" type="checkbox" name="check[]">
         <span class="card-content">
           <span class="card-title truncate">스터디 이름</span>
           <span class="writer-id">작성자: <span class="writer">작성자 이름</span></span>
@@ -155,7 +155,7 @@
     </section>
       <div class="last-btn">
         <h1 class="d-none">테이블 밑</h1>
-        <a class="btn btn-medium" type="submit">삭제</a>
+        <a class="btn btn-medium entire-message-btn" type="submit">스터디장에게 쪽지</a>
         <nav class="pager">
           <h1 class="d-none">페이저</h1>
           <div>이전</div>
@@ -168,9 +168,44 @@
           </ul>
           <div>다음</div>
         </nav>
-        <a class="btn btn-medium" type="submit">비활성화</a>
+        <a class="btn btn-medium activate-btn" type="submit">비활성화</a>
       </div>
     </section>
+
+    <!-- [s] message area -->
+    <section class="message-popuup display-none">
+      <input type="checkbox" name="" id="message-btn" class="message-checkbox">
+      <!-- <label for="message-btn" class="message-label">댓글쓰기</label> -->
+      <div class="message-write">
+        <form>
+          <h5>Message</h5>
+          <div class="receiver">
+            <span>To. <span>수신자닉네임</span></span>
+          </div>
+          <textarea class="message-content" name="message-content" id="message-content" cols="30" rows="10"
+            placeholder="입력"></textarea>
+        </form>
+        <div class="message-btn-group">
+          <a href="#" class="message-cancel"><label for="message-btn">취소</label></a>
+          <a href="#" class="message-upload">전송</a>
+        </div>
+      </div>
+      <div class="overlay"><label for="message-btn" class="overlay-off-btn"></label></div>
+    </section>
+    <!-- [e] message area -->
+
+    
+        <!-- Common popup [s] -->
+        <input type="checkbox" name="popup" id="common-popup" />
+        <div class="popup">
+          <p class="popup-content">정말 비활성화 하시겠습니까?</p>
+          <div class="popup-btn-group">
+            <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+            <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- Common popup [e] -->
   </main>
   <!-- Main [e] -->
   <footer>

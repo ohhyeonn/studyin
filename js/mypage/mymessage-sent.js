@@ -25,7 +25,7 @@ let checkName = document.getElementsByName("check[]");
 
     /*-----전체 선택----*/
     allCheck.onclick = function(){
-        for(var i = 0; i < checkName.length; i++){
+        for(var i in checkName){
             if(allCheck.checked == true)
                 checkName[i].checked = true;
             else if(allCheck.checked == false)
@@ -60,5 +60,4 @@ const popupFunction = () => {
         popup.classList.toggle('flex-active');
     });
 }
-
 popupFunction();

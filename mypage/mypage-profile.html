@@ -10,6 +10,7 @@
     <link href="../css/admin/admin.css" type="text/css" rel="stylesheet">
     <link href="../css/common/gb-nav.css" rel="stylesheet">
     <script defer src="../js/common/gb-nav.js"></script>
+    <script defer src="../js/mypage/mypage-profile.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -24,8 +25,8 @@
             </div>
             <div class="search-bar">
                 <div class="search-wrapper">
-                <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
-                <a href="../index.html" class="search-btn"><i class="fas fa-search"></i></a>
+                    <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
+                    <a href="../index.html" class="search-btn"><i class="fas fa-search"></i></a>
                 </div>
             </div>
             <div class="menu-button">
@@ -36,15 +37,23 @@
                     <span class="menu-button-bar"></span>
                 </label>
                 <aside class="menu">
-                <ul>
-                    <span>STUDY IN</span>
-                    <p>로그인이 필요합니다</p>
-                    <p>User님, 안녕하세요</p>
-                    <a href="../member/login.html"><li>Login</li></a>
-                    <a href="../member/sign-up.html"><li>Sign Up</li></a>
-                    <a href="../index.html"><li>Logout</li></a>
-                    <a href="../mypage/mypage.html"><li>My page</li></a>
-                </ul>
+                    <ul>
+                        <span>STUDY IN</span>
+                        <p>로그인이 필요합니다</p>
+                        <p>User님, 안녕하세요</p>
+                        <a href="../member/login.html">
+                            <li>Login</li>
+                        </a>
+                        <a href="../member/sign-up.html">
+                            <li>Sign Up</li>
+                        </a>
+                        <a href="../index.html">
+                            <li>Logout</li>
+                        </a>
+                        <a href="../mypage/mypage.html">
+                            <li>My page</li>
+                        </a>
+                    </ul>
                 </aside>
                 <div class="overlay"><label for="menuBtn"></label></label></div>
             </div>
@@ -67,7 +76,7 @@
             <div class="main-category">
                 <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
                 <label for="toggle-study">
-                <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3> 
+                    <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3>
                 </label>
                 <div class="sub-category">
                     <ul>
@@ -80,7 +89,7 @@
             <div class="main-category">
                 <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
                 <label for="toggle-community">
-                <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3> 
+                    <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3>
                 </label>
                 <div class="sub-category">
                     <ul>
@@ -93,7 +102,7 @@
             <div class="main-category">
                 <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
                 <label for="toggle-services">
-                <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3> 
+                    <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3>
                 </label>
                 <div class="sub-category">
                     <ul>
@@ -123,50 +132,40 @@
         </section>
         <section class="main-button">
             <h1 class="d-none">프로필</a></h1>
-                <div class="icon"></div>
-                <a class="btn btn-medium" type="submit">프로필 사진 수정</a>
-            <div class="activity">
-                <table>
-                    <tr>
-                        <td class="w-2" id="title">이름</td>
-                        <td><input type="text" disabled value="기존 이름"></td>
-                    </tr>
-                    <tr>
-                        <td class="w-2" id="title">이메일</td>
-                        <td>
-                            <input type="text" disabled value="email@gmail.com">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="w-2" id="title">닉네임</td>
-                        <td><input type="text" value="기존 닉네임">
-                    </tr>
-                    <tr>
-                        <td class="w-2" id="title">전화번호</td>
-                        <td>
-                            <input type="text" disabled value="010-0000-0000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="w-2" id="title">비밀번호<strong>*</strong></td>
-                        <td>
-                            <input type="password" name="password" maxlength="50" value="">
-                        </td>
-                    </tr>
-
-                </table>
-
+            <div class="icon"></div>
+            <a class="btn btn-medium" type="submit">프로필 사진 수정</a>
+            <div class="profile-modify">
+                <input type="text" disabled value="이름">
+                <input type="text" disabled value="email@gmail.com">
+                <input type="text" value="기존 닉네임">
+                <input type="text" disabled value="010-0000-0000">
+            </div>
+            <div class="pw-modify">
+                <span>비밀번호 변경</span>
+                <input type="password" name="password" maxlength="50" value="" placeholder="새 비밀번호">
+                <input type="password" name="password" maxlength="50" value="" placeholder="새 비밀번호 확인">
             </div>
             <div class="last-btn">
                 <h1 class="d-none">마지막 버튼</h1>
                 <div>
-                    <a class="btn btn-medium" type="submit">탈퇴</a>
+                    <a class="btn btn-medium bye-btn" type="submit">탈퇴</a>
                 </div>
                 <div>
-                    <a class="btn btn-medium" type="submit">수정</a>
+                    <a class="btn btn-medium modify-btn" type="submit">수정</a>
                 </div>
             </div>
         </section>
+            <!-- Common popup [s] -->
+    <input type="checkbox" name="popup" id="common-popup" />
+    <div class="popup">
+      <p class="popup-content">정말 수정하시겠습니까?</p>
+      <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- Common popup [e] -->
     </main>
     <!-- Main [e] -->
     <footer>

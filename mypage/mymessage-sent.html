@@ -125,20 +125,20 @@
     <section class="btn-list">
       <h1 class="d-none">받은 쪽지함 가기</h1>
       <div>
-        <a href="mymessage-rec.html" class="btn btn-small" type="submit">받은 쪽지함 가기</a>
-        <a href="message-new.html" class="btn btn-small" type="submit">새 쪽지</a>
+        <a href="./mymessage-rec.html" class="btn btn-small" type="submit">받은 쪽지함 가기</a>
+        <a href="./message-new.html" class="btn btn-small" type="submit">새 쪽지</a>
       </div>
       <div>
-        <a class="btn btn-small" type="submit">삭제</a>
+        <a class="btn btn-small delete-btn" type="submit">삭제</a>
         <input class="all-check" type="checkbox">
       </div>
     </section>
     <section class="message-main">
       <!--aside---->
       <nav class="message-side">
-        <a href="mymessage-rec.html">받은 쪽지함</a>
-        <a href="mymessage-sent.html">보낸 쪽지함</a>
-        <a href="message-new.html">새 쪽지</a>
+        <a href="./mymessage-rec.html">받은 쪽지함</a>
+        <a href="./mymessage-sent.html">보낸 쪽지함</a>
+        <a href="./message-new.html">새 쪽지</a>
       </nav>
       <section class="main-button">
         <h1 class="d-none">보낸 쪽지함</h1>
@@ -189,6 +189,18 @@
         </div>
       </section>
     </section>
+
+    <!-- Common popup [s] -->
+    <input type="checkbox" name="popup" id="common-popup" />
+    <div class="popup">
+      <p class="popup-content">정말 삭제하시겠습니까?</p>
+      <div class="popup-btn-group">
+        <label for="common-popup"><a class="btn popup-btn">확인</a></label>
+        <label for="common-popup"><a class="btn popup-cancel-btn">취소</a></label>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- Common popup [e] -->
   </main>
   <!-- Main [e] -->
   <footer>

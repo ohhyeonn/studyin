@@ -47,7 +47,7 @@ let checkName = document.getElementsByName("check[]");
 
     /*-----전체 선택----*/
     allCheck.onclick = function(){
-        for(var i = 0; i < checkName.length; i++){
+        for(var i in checkName){
             if(allCheck.checked == true)
                 checkName[i].checked = true;
             else if(allCheck.checked == false)
@@ -62,8 +62,7 @@ let checkName = document.getElementsByName("check[]");
         // checkedMessage[] = target.value;
     }
 
-    
-});
+
 
 const popupFunction = () => {
     const deleteBtn = document.querySelectorAll('.delete-btn');
@@ -81,9 +80,6 @@ const popupFunction = () => {
         if(!e.target.classList.contains('popup-btn') && !e.target.classList.contains('popup-cancel-btn')) return;
         popup.classList.toggle('flex-active');
     });
-
-
- 
 }
 
 popupFunction();

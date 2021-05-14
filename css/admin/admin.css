@@ -49,6 +49,7 @@ input[type="text"]{
     color: var(--second-color);
 }
 
+
 /*--------------select-box btn css--------*/
 select{
     border:none;
@@ -119,6 +120,10 @@ select{
     }
         .card-wrapper:hover{
             border: 1px solid var(--primary-color);
+        }
+
+        .card-wrapper.inactive{
+            background-color: #e7e7ee;
         }
 
 .card-content{
