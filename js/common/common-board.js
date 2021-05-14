@@ -36,8 +36,8 @@ window.addEventListener("load", function(){
     alert.innerHTML = `<div style=" size: 20px; height: 30px; line-height: 30px; border-bottom: 1px #E3E3E3 solid;">
                                 댓글삭제
                             </div>
-                            <div style=" display: flex; padding-top: 5px;  ">
-                                <div style="display: inline-block;"> 삭제 하시겠습니까? </div><input style=" border-radius: 10px; border-style: none; cursor: pointer; background-color: #00618b; color: white; width: 40px; margin-left : auto" type="button" value="네"><input style=" border-radius: 10px; background-color: #00618b; color: white; border-style: none; cursor: pointer; width: 50px; margin-left : 15px" type="button" value="아니요">
+                            <div style=" display: flex; padding-top: 8px;  ">
+                                <div style="display: inline-block;"> 삭제 하시겠습니까? </div><input class="yes-button" style=" border-radius: 10px; border-style: none; cursor: pointer; background-color: #00618b; color: white; width: 40px; margin-left : auto" type="button" value="네"><input class="no-button" style=" border-radius: 10px; background-color: #00618b; color: white; border-style: none; cursor: pointer; width: 50px; margin-left : 15px" type="button" value="아니요">
                             </div>
                     `;
     document.querySelector(".content").addEventListener("click",function(e){ 
@@ -81,6 +81,14 @@ window.addEventListener("load", function(){
             
             document.body.append(screen);
             document.body.append(alert);
+            
+            alert.querySelector(".no-button").onclick = function(){
+                screen.style.opacity = "0";
+                alert.style.opacity = "0";
+                screen.remove();
+                alert.remove();
+
+            };
 
         }
 
@@ -118,8 +126,8 @@ window.addEventListener("load", function(){
     alert.innerHTML = `<div style=" size: 20px; height: 30px; line-height: 30px; border-bottom: 1px #E3E3E3 solid;">
                                 댓글삭제
                             </div>
-                            <div style=" display: flex; padding-top: 5px;  ">
-                                <div style="display: inline-block;"> 삭제 하시겠습니까? </div><input style=" border-radius: 10px; border-style: none; cursor: pointer; background-color: #00618b; color: white; width: 40px; margin-left : auto" type="button" value="네"><input style=" border-radius: 10px; background-color: #00618b; color: white; border-style: none; cursor: pointer; width: 50px; margin-left : 15px" type="button" value="아니요">
+                            <div style=" display: flex; padding-top: 8px;">
+                                <div style="display: inline-block;"> 삭제 하시겠습니까? </div><input class="yes-button" style=" border-radius: 10px; border-style: none; cursor: pointer; background-color: #00618b; color: white; width: 40px; margin-left : auto" type="button" value="네"><input class="no-button" style=" border-radius: 10px; background-color: #00618b; color: white; border-style: none; cursor: pointer; width: 50px; margin-left : 15px" type="button" value="아니요">
                             </div>
                     `;
     document.querySelector(".comments").addEventListener("click",function(e){ 
@@ -163,24 +171,31 @@ window.addEventListener("load", function(){
             
             document.body.append(screen);
             document.body.append(alert);
+            
+            alert.querySelector(".no-button").onclick = function(){
+                screen.style.opacity = "0";
+                alert.style.opacity = "0";
+                screen.remove();
+                alert.remove();
 
-        }else if(e.target.classList.contains("modify")){
+            };
+
+        }else if(e.target.classList.contains("modify") || e.target.classList.contains("modify-buttons-no")){
+
             let node = e.target;
-            console.log(node);
-            let editHTML = `
-            <textarea class="text-area" style =" height:30px; box-sizing:border-box; padding: 5px 5px; overflow: hidden; display: block; min-height : 30px; width: 95%; size: 14px; outline: none; resize: none; "> 만나서 좋아요</textarea>
-            <div style = "display:  flex; justify-content: flex-end; margin-top: 5px;">    
-                <span style=" border-radius: 10px; color: white; text-align: center; line-height: 30px; background-color: #00618b;  display: inline-block; width: 53px; height:30px; margin-right: 5px; cursor: pointer;" type="button" value="수정">수정</span>
-                <span style=" border-radius: 10px; color: white; text-align: center; line-height: 30px; background-color: #00618b;  display: inline-block; width: 53px; height:30px; margin-right: 30px; cursor: pointer;" type="button" value="수정">취소</span>  
-            </div>
-            `;
-            while(!node.classList.contains("dropdown")){
+
+            while(!node.classList.contains("item")){
                 node = node.parentElement;
 
             } 
-            node.previousElementSibling.classList.add("d-none"); //// d-none 이고 취소하면 다시 나타내주면되고 수정하면 json 아예 다불러오게한다 ㅇㅋ
-            node.insertAdjacentHTML("beforebegin",editHTML);
-
+            // 노드에서 .modify 얘도 d-none 해주고 취소 누르면 다시 풀어주고 저건 삭제하고 그런거 해줘야댐  아래 주석 참고
+            let innerText = node.querySelector(".item > .item-text").innerText;
+            let modifyTextarea = node.querySelector(".item > .modify-textarea");
+            let modifyButtons = node.querySelector(".item > .modify-buttons");
+            node.querySelector(".item > .item-text").classList.toggle("d-none"); //// d-none 이고 취소하면 다시 나타내주면되고 수정하면 json 아예 다불러오게한다 ㅇㅋ
+            modifyTextarea.innerText = innerText;
+            modifyTextarea.classList.toggle("d-none");
+            modifyButtons.classList.toggle("d-none");
         }
 
 
@@ -190,7 +205,6 @@ window.addEventListener("load", function(){
 
 
 
-        
     screen.addEventListener("click", function(){
 
 
@@ -231,6 +245,77 @@ window.addEventListener("load", function(){
 
         
     });
+
+
+
+
+
+});
+
+
+
+
+
+
+/// scrollYOffset이 증가하거나 감소하면 글쓰기버튼 사라져볼게하는 이벤트 
+window.addEventListener("load",function(){
+    let textWriteIcon = window.document.querySelector(".text-write-icon");
+    let previousScrollYOffset = 0;
+
+
+
+    let scrollHandler =  function(){
+        window.removeEventListener("scroll", scrollHandler);
+
+        let currentScrollYOffset = window.scrollY;
+        if(currentScrollYOffset > previousScrollYOffset){
+            
+            textWriteIcon.style.opacity = 0;
+            
+            window.setTimeout(function(){
+                
+                textWriteIcon.classList.add("d-none");
+                window.addEventListener("scroll",scrollHandler);
+                previousScrollYOffset = window.scrollY; 
+
+
+            },300);
+
+
+
+
+        } else if(currentScrollYOffset < previousScrollYOffset){
+
+          
+            textWriteIcon.classList.remove("d-none");
+            window.setTimeout(function(){
+
+                textWriteIcon.style.opacity = 1;
+
+            },1);
+
+            window.setTimeout(function(){
+                
+                window.addEventListener("scroll",scrollHandler);
+                previousScrollYOffset = window.scrollY;
+
+            },300);
+           
+
+
+
+            
+        }
+
+
+
+    };
+
+
+
+    window.addEventListener("scroll",scrollHandler);
+
+
 
 
 
