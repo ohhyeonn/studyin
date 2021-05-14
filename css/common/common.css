@@ -274,8 +274,39 @@ input[type="checkbox"][name="popup"]:checked ~ .overlay {
 
 /* Common Top Category[e] */
 
+/* Common Visual[s] */
+.visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.visual h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.visual p {
+  font-size: 1.5rem;
+}
+/* Common Visual[e] */
+
 /* util [s] */
 .display-none {
   display: none !important;
+}
+
+.mg-top-visual {
+  margin-top: -2.3em;
+}
+
+.mg-bt-visual {
+  margin-bottom: 2em;
 }
 /* util [e] */
