@@ -5,14 +5,16 @@ const editBtn = document.querySelector('.edit-btn')
 cancelBtn = document.querySelector('.cancel-btn');
 confirmBtn = document.querySelector('.confirm-btn');
 addBtn = document.querySelector('.add-btn');
+
+let everyBox = document.querySelector('every-box');
+let box = document.querySelector('.box');
 let cardCount = 0;
 
 /*-----체크박스----*/
-let main = document.querySelector(".main")
-let check = main.querySelectorAll("input");
+// let check = everyBox.querySelectorAll('input');
 
     /*-----개별 선택값 배열에 담기----*/
-    check.onclick = function(e){
+    box.onclick = function(e){
         var target = e.target;
 
         // checkedMessage[] = target.value;
@@ -33,6 +35,19 @@ let check = main.querySelectorAll("input");
             //selected 비활성화로 db 변경
         }
     });
+
+    /*---lower 박스 보이기---*/
+    let upperBox = document.querySelector('.upper-box');
+    let lower = document.querySelector('.lower');
+    upperBox.addEventListener('click', function(e){
+        if(e.target.tagName != "LABEL") {
+            console.log("text");
+            return;
+        };
+        
+        lower.classList.toggle('d-none');
+        });
+    
     /*---체크된 카드 순서 변경---*/
     /*let upBtn = document.querySelector(".up-btn");
     let downBtn = document.querySelector(".down-btn");
@@ -67,15 +82,9 @@ let check = main.querySelectorAll("input");
         }
     });*/
 
-    /*---lower 박스 보이기---*/
-    let upper = main.querySelectorAll('.upper');
-    upper.addEventListener('click', function(e){
-        if(!e.target.classList.contains('input[type=radio]')) return;
-            let upper = e.target;
-            upper.querySelector('input')
-    });
+
     /*----추가----*/
-    let label = main.querySelectorAll('label'); 
+
 
     editBtn.addEventListener('click', (e) => {
         delBtn.classList.add('d-none');
@@ -91,7 +100,7 @@ let check = main.querySelectorAll("input");
         
 
         let container = null;
-        main.addEventListener('click', (e) => {
+        everyBox.addEventListener('click', (e) => {
             if(!e.target.classList.contains('click-box')) return;
             
             
@@ -176,6 +185,6 @@ let check = main.querySelectorAll("input");
             popup.classList.toggle('flex-active');
         });
     
-    }
+    };
     
     popupFunction();
