@@ -6,3 +6,6 @@ This is an website for a study platform in which people can make groups to study
 - SERVLET 
 - ORACLE 
 - JDBC
+
+## IDE
+- eclipse
