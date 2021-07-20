@@ -1,5 +1,5 @@
 > This project was designed to study the basic skills of web applications.
-> It's impossible to execute. because of database
+> It's impossible to execute because of database
 
 
 # 👋studyin
